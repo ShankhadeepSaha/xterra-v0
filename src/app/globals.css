@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: 'Switzer';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/SwitzerMedium.otf) format('otf');
+  }
+}
