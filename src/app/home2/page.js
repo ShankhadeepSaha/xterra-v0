@@ -7,6 +7,9 @@ import { useInView } from 'react-intersection-observer';
 import Navbar from '@/components/navbars/Navbar2';
 import HeroVideo from '@/components/heroVideos/HeroVideo';
 import Hero from '@/components/heroes/Hero3';
+import Incubation from '@/components/incubationSections/Incubation3';
+import BelowHero from '@/components/belowHeroComponents/BelowHero';
+import ImageCard from '@/components/imageCards/ImageCard';
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -57,13 +60,18 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-grow">
-        <HeroVideo />
 
         {/* Hero Header Section */}
         <Hero ref={heroRef} />
 
+        <BelowHero />
+
+        <ImageCard /> 
+
+        <Incubation />
+
         {/* Feature Section */}
-        <div className="py-12 bg-white" ref={featureRef}>
+        <div className="py-12" ref={featureRef}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
               <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Expertise</h2>
