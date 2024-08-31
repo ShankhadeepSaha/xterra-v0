@@ -5,16 +5,16 @@ import CareerTextSection from "@/components/miregoWebsite/Career";
 import CareerTable from "@/components/miregoWebsite/CareerTable";
 import CultivateSection from "@/components/miregoWebsite/CultivateSection";
 import CultureThatWins from "@/components/miregoWebsite/CultureThatWins";
-import Footer from "@/components/miregoWebsite/footer/Footer";
+import Footer from "@/components/footer/Footer";
 import ImageBento from "@/components/miregoWebsite/ImageBento";
 import JobOpenings from "@/components/miregoWebsite/JobOpenings";
-import Navbar from "@/components/miregoWebsite/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import HomeTextCombo from "@/components/miregoWebsite/HomeTextCombo";
 import WordReveal from '@/components/animations/WordReveal';
 import ImageZoom from '@/components/ImageZoom';
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
-import Footercurve from "@/components/Footercurve";
+import Footercurve from "@/components/footer/Footercurve";
 
 export default function Home() {
 

@@ -1,7 +1,7 @@
 "use client"
 
-import Footer from '@/components/miregoWebsite/footer/Footer'
-import Navbar from '@/components/miregoWebsite/Navbar'
+import Footer from '@/components/footer/Footer'
+import Navbar from '@/components/navbar/Navbar'
 import Comparison from '@/components/robot/Comparison'
 import Ctas from '@/components/robot/Ctas'
 import DoubleImage from '@/components/robot/DoubleImage'

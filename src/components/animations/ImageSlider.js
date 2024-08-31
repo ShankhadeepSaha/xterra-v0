@@ -7,7 +7,7 @@ import Lenis from 'lenis';
 
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-import Footercurve from '../Footercurve';
+import Footercurve from '../footer/Footercurve';
 
 export default function Home() {
   const container = useRef();

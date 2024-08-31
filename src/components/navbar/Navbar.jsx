@@ -41,9 +41,10 @@ const Navbar = () => {
         ease: 'power2.inOut',
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'bottom 20%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none reverse',
+          start: 'top top',
+          end: '+=100',
+          scrub: true,
+          toggleActions: 'play reverse play reverse',
         },
       }
     );

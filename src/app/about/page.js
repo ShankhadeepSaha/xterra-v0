@@ -5,10 +5,10 @@ import RevolvingSlider from "@/components/animations/RevolvingSlider";
 import CircularCarouselSlider from "@/components/animations/RevolvingSlider2";
 import SwiperPhotoGallery from "@/components/animations/SwiperPhotoGallery7";
 import WordReveal from "@/components/animations/WordReveal";
-import Footer from "@/components/miregoWebsite/footer/Footer";
+import Footer from "@/components/footer/Footer";
 import HeadingSection from "@/components/miregoWebsite/HeadingSection";
 import HeadingSectionDark from "@/components/miregoWebsite/HeadingSectionDark";
-import Navbar from "@/components/miregoWebsite/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import NumberCard1 from "@/components/miregoWebsite/numberCardVariants/NumberCard1";
 import NumberCard2 from "@/components/miregoWebsite/numberCardVariants/NumberCard2";
 import NumberCard3 from "@/components/miregoWebsite/numberCardVariants/NumberCard3";
@@ -18,7 +18,7 @@ import SectionTextDark from "@/components/miregoWebsite/SectionTextDark";
 import SectionTextDarkLarge from "@/components/miregoWebsite/SectionTextDarkLarge";
 import SectionTextLeft from "@/components/miregoWebsite/SectionTextLeft";
 import SectionTextSmall from "@/components/miregoWebsite/SectionTextSmall";
-import Team from "@/components/miregoWebsite/Team";
+import Team from "@/components/Team";
 import TeamCard1 from "@/components/miregoWebsite/teamCardVariants/TeamCard1";
 import TeamHeading from "@/components/miregoWebsite/TeamHeading";
 import TeamSection from "@/components/miregoWebsite/TeamSection";
@@ -29,7 +29,7 @@ import OurStory from "@/components/OurStory";
 import Lenis from "lenis";
 import Image from 'next/image'
 import { useEffect, useRef } from "react";
-import Footercurve from "@/components/Footercurve";
+import Footercurve from "@/components/footer/Footercurve";
 import Testimonials from "@/components/miregoWebsite/Testimonials";
 
 export default function Home() {
@@ -87,13 +87,13 @@ export default function Home() {
         </div> */}
       </div>
       <Team />
+
+      
       <OurStory />
-      {/* <SwiperPhotoGallery /> */}
+
+
       <Footercurve />
-
       <Footer />
-
-
     </div>
   );
 }

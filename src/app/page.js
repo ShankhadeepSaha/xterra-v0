@@ -1,20 +1,20 @@
 "use client"
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import Navbar from "@/components/miregoWebsite/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import FutureOrganizations from "@/components/miregoWebsite/FutureOrganisations";
 import HomeFeatureIcons from "@/components/miregoWebsite/HomeFeatureIcons";
 import HomeTextCombo from "@/components/miregoWebsite/HomeTextCombo";
 import GridSection from "@/components/miregoWebsite/GridSection";
 import HomeTestimonials from "@/components/miregoWebsite/HomeTestimonials";
 import ContactUs from "@/components/miregoWebsite/ContactUs";
-import Footer from "@/components/miregoWebsite/footer/Footer";
+import Footer from "@/components/footer/Footer";
 import LandingPostText from "@/components/miregoWebsite/LandingPostText";
 import CultureThatWins from "@/components/miregoWebsite/CultureThatWins";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import Footercurve from '@/components/Footercurve';
+import Footercurve from '@/components/footer/Footercurve';
 
 gsap.registerPlugin(ScrollTrigger);
 

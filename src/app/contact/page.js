@@ -1,12 +1,12 @@
 "use client"
 import ContinuousImageSlider from "@/components/animations/ImageSlider";
 import ContactUs from "@/components/miregoWebsite/ContactUs";
-import Footer from "@/components/miregoWebsite/footer/Footer";
-import Navbar from "@/components/miregoWebsite/Navbar";
+import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navbar/Navbar";
 import Lenis from "lenis";
 import WordReveal from '@/components/animations/WordReveal';
 import React, { useEffect, useRef, useState } from "react";
-import Footercurve from "@/components/Footercurve";
+import Footercurve from "@/components/footer/Footercurve";
 
 export default function Home() {
   const [name, setName] = useState('');
