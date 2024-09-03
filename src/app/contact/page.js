@@ -1,6 +1,5 @@
 "use client"
 import ContinuousImageSlider from "@/components/animations/ImageSlider";
-import ContactUs from "@/components/miregoWebsite/ContactUs";
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import Lenis from "lenis";

@@ -3,9 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Navbar from "@/components/navbar/Navbar";
 import FutureOrganizations from "@/components/miregoWebsite/FutureOrganisations";
-import HomeFeatureIcons from "@/components/miregoWebsite/HomeFeatureIcons";
 import HomeTextCombo from "@/components/miregoWebsite/HomeTextCombo";
-import GridSection from "@/components/miregoWebsite/GridSection";
 import HomeTestimonials from "@/components/miregoWebsite/HomeTestimonials";
 import ContactUs from "@/components/miregoWebsite/ContactUs";
 import Footer from "@/components/footer/Footer";

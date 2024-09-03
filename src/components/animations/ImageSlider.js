@@ -1,13 +1,10 @@
 'use client'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Picture1 from '../../../public/images/homeImage.png'
-import Picture2 from '../../../public/images/homeImage.png'
-import Picture3 from '../../../public/images/homeImage.png'
 import Lenis from 'lenis';
 
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-import Footercurve from '../footer/Footercurve';
 
 export default function Home() {
   const container = useRef();
@@ -31,8 +28,6 @@ export default function Home() {
     <main className="overflow-hidden">
       <div ref={container} className="pt-16 sm:pt-24 md:pt-32 lg:pt-40">
         <Slide src={Picture1} direction={'left'} left={"-40%"} progress={scrollYProgress} />
-        <Slide src={Picture2} direction={'right'} left={"-25%"} progress={scrollYProgress} />
-        <Slide src={Picture3} direction={'left'} left={"-65%"} progress={scrollYProgress} />
       </div>
     </main>
   );
@@ -57,11 +52,13 @@ const Slide = (props) => {
 
 const Phrase = ({ src }) => {
   return (
-    <div className={'px-3 sm:px-2 md:px-3 flex gap-3 sm:gap-2 md:gap-2 items-center'}>
-      <p className='text-[3vw] text-[black] font-almirego'>xTerra Robotics</p>
-      <span className="relative h-[3vw] aspect-[4/2] rounded-3xl overflow-hidden">
-        <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
-      </span>
-    </div>
+    <div className="px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 sm:gap-6 py-4">
+    <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-almirego text-center sm:text-left">
+      xTerra Robotics
+    </p>
+    {/* <span className="relative h-12 sm:h-16 md:h-20 lg:h-24 aspect-[4/2] rounded-3xl overflow-hidden">
+      <Image src={src} alt="xTerra Robotics logo" layout="fill" objectFit="cover" />
+    </span> */}
+  </div>
   )
 }

@@ -1,15 +1,11 @@
 "use client"
 
-import BlandBrands from "@/components/miregoWebsite/BlandBrands";
-import CareerTextSection from "@/components/miregoWebsite/Career";
 import CareerTable from "@/components/miregoWebsite/CareerTable";
 import CultivateSection from "@/components/miregoWebsite/CultivateSection";
 import CultureThatWins from "@/components/miregoWebsite/CultureThatWins";
 import Footer from "@/components/footer/Footer";
-import ImageBento from "@/components/miregoWebsite/ImageBento";
 import JobOpenings from "@/components/miregoWebsite/JobOpenings";
 import Navbar from "@/components/navbar/Navbar";
-import HomeTextCombo from "@/components/miregoWebsite/HomeTextCombo";
 import WordReveal from '@/components/animations/WordReveal';
 import ImageZoom from '@/components/ImageZoom';
 import Lenis from "lenis";
@@ -57,10 +53,6 @@ export default function Home() {
       <CultureThatWins />
 
       <ImageZoom />
-
-      {/* <ImageBento /> */}
-
-      {/* <BlandBrands /> */}
 
       <JobOpenings />
 
