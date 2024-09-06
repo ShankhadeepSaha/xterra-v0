@@ -1,18 +1,19 @@
 "use client"
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import Navbar from "@/components/navbar/Navbar";
-import FutureOrganizations from "@/components/miregoWebsite/FutureOrganisations";
-import HomeTextCombo from "@/components/miregoWebsite/HomeTextCombo";
-import HomeTestimonials from "@/components/miregoWebsite/HomeTestimonials";
-import ContactUs from "@/components/miregoWebsite/ContactUs";
+import Navbar from "@/components/Navbar";
+import FutureOrganizations from "@/components/FutureOrganisations";
+import HomeTextCombo from "@/components/HomeTextCombo";
+import HomeTestimonials from "@/components/HomeTestimonials";
+import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/footer/Footer";
-import LandingPostText from "@/components/miregoWebsite/LandingPostText";
-import CultureThatWins from "@/components/miregoWebsite/CultureThatWins";
+import LandingPostText from "@/components/LandingPostText";
+import CultureThatWins from "@/components/CultureThatWins";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import Footercurve from '@/components/footer/Footercurve';
+// import Lenis from '@studio-freight/lenis';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -155,7 +156,6 @@ export default function Home() {
       />
       <HomeTestimonials />
       <ContactUs />
-      <Footercurve />
       <Footer />
     </div>
   );

@@ -1,11 +1,11 @@
 "use client"
 
-import CareerTable from "@/components/miregoWebsite/CareerTable";
-import CultivateSection from "@/components/miregoWebsite/CultivateSection";
-import CultureThatWins from "@/components/miregoWebsite/CultureThatWins";
+import CareerTable from "@/components/CareerTable";
+import CultivateSection from "@/components/CultivateSection";
+import CultureThatWins from "@/components/CultureThatWins";
 import Footer from "@/components/footer/Footer";
-import JobOpenings from "@/components/miregoWebsite/JobOpenings";
-import Navbar from "@/components/navbar/Navbar";
+import JobOpenings from "@/components/JobOpenings";
+import Navbar from "@/components/Navbar";
 import WordReveal from '@/components/animations/WordReveal';
 import ImageZoom from '@/components/ImageZoom';
 import Lenis from "lenis";
@@ -56,7 +56,7 @@ export default function Home() {
 
       <JobOpenings />
 
-      <Footercurve />
+
 
       <Footer />
 

@@ -1,10 +1,12 @@
 import React from 'react'
 import BlinkingText from '@/components/animations/BlinkingText';
 import { GoArrowRight } from "react-icons/go";
+import Footercurve from './Footercurve';
 
 export default function Footer() {
   return (
     <div className='w-full bg-white'>
+      <Footercurve />
       <Content />
     </div>
   )

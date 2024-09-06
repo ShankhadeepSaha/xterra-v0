@@ -3,7 +3,7 @@ import React from 'react'
 const Founder = ({ name, title, image, description }) => (
   <div className="w-full md:w-1/2 p-4">
     <div className="bg-gray-100 rounded-3xl overflow-hidden">
-      <img src={image} alt={name} className="w-full h-80 object-cover" />
+      <img src={image} alt={name} className="w-full h-0 object-cover" />
     </div>
     <h3 className="text-3xl font-bold mt-4 mb-1 font-almirego text-[#050307]">{name}</h3>
     <p className="text-sm text-gray-600 mb-3 font-almirego">{title}</p>
