@@ -89,3 +89,10 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@layer utilities {
+  .text-128 {
+    font-size: 128px;
+    line-height: 128px;
+  }
+}
