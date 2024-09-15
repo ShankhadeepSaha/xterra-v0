@@ -127,6 +127,7 @@ export default function Home() {
     <div>
       <Navbar />
       <FutureOrganizations />
+      {/* <TextScramble /> */}
 
       <div ref={imageSequenceRef} className="h-[300vh] relative">
         <div className="sticky top-0 w-full h-screen">

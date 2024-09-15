@@ -95,16 +95,16 @@ const Navbar = () => {
               </div>
             </a> */}
             <a href="/robots" className="w-1/5 text-center text-base font-almirego text-[#050307]">Robots</a>
-            <a href="/#" className="w-1/5 text-center text-base font-almirego text-[#050307]">Actuators</a>
-            <a href="/#" className="w-1/5 text-center text-base font-almirego text-[#050307]">Solutions</a>
+            <a href="/actuators" className="w-1/5 text-center text-base font-almirego text-[#050307]">Actuators</a>
+            <a href="/solutions" className="w-1/5 text-center text-base font-almirego text-[#050307]">Solutions</a>
             <a href="/about" className="w-1/5 text-center text-base font-almirego text-[#050307]">About</a>
             <a href="/careers" className="w-1/5 text-center text-base font-almirego text-[#050307]">Careers</a>
           </div>
           
           <div className="hidden md:flex pe-4 md:pe-12 justify-end space-x-2">
-            <button className="text-[#050307] bg-white/30 backdrop-blur-md font-almirego px-4 md:px-6 py-2 border border-[rgba(165,164,166,.33)] rounded-full text-sm md:text-base">
+          <a href="/news" className="text-[#050307] bg-white/30 backdrop-blur-md font-almirego px-4 md:px-6 py-2 border border-[rgba(165,164,166,.33)] rounded-full text-sm md:text-base">
               News
-            </button>
+            </a>
             <a href="/contact" className="text-[#050307] bg-white/30 backdrop-blur-md font-almirego px-4 md:px-6 py-2 border border-[rgba(165,164,166,.33)] rounded-full text-sm md:text-base">
               Contact
             </a>
@@ -120,11 +120,11 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden fixed top-[88px] left-0 right-0 bg-white/90 backdrop-blur-md p-4 rounded-b-xl shadow-lg">
             <a href="/robots" className="block py-2 text-center text-base font-almirego text-[#050307]">Robots</a>
-            <a href="/#" className="block py-2 text-center text-base font-almirego text-[#050307]">Actuators</a>
-            <a href="/#" className="block py-2 text-center text-base font-almirego text-[#050307]">Solutions</a>
+            <a href="/actuators" className="block py-2 text-center text-base font-almirego text-[#050307]">Actuators</a>
+            <a href="/solutions" className="block py-2 text-center text-base font-almirego text-[#050307]">Solutions</a>
             <a href="/about" className="block py-2 text-center text-base font-almirego text-[#050307]">About</a>
             <a href="/careers" className="block py-2 text-center text-base font-almirego text-[#050307]">Careers</a>
-            <a href="/#" className="block py-2 text-center text-base font-almirego text-[#050307]">News</a>
+            <a href="/news" className="block py-2 text-center text-base font-almirego text-[#050307]">News</a>
             <a href="/contact" className="block py-2 text-center text-base font-almirego text-[#050307]">Contact</a>
           </div>
         )}
