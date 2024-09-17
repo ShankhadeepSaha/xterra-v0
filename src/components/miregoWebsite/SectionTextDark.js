@@ -1,5 +1,5 @@
 import React from 'react';
-import withFadeInAnimation from './animations/WithFadeInAnimation';
+import withFadeInAnimation from '../animations/WithFadeInAnimation';
 
 function SectionTextDark() {
   return (
