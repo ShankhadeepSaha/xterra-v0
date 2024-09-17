@@ -176,7 +176,7 @@ const Navbar = () => {
         <div ref={navbarRef} className="flex items-center fixed justify-between px-4 w-full">
           <a href="/" className="ps-4 md:ps-12 flex items-center">
             <img src="/images/logo.svg" alt="xterra" className="w-8 md:w-12" />
-            <span ref={logoRef} className="text-lg md:text-xl font-bold font-almirego text-[#4E148C]">XTERRA</span>
+            <span ref={logoRef} className="text-lg md:text-xl font-bold font-almiregodb text-[#4E148C]">XTERRA</span>
           </a>
           
           {/* Desktop Menu */}
