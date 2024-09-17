@@ -1,6 +1,6 @@
 import React from 'react'
-import withFadeInAnimation from './animations/WithFadeInAnimation'
-import WordReveal from './animations/WordReveal'
+import withFadeInAnimation from '../animations/WithFadeInAnimation'
+import WordReveal from '../animations/WordReveal'
 
 function HomeTextCombo({ heading, text, cta}) {
   return (

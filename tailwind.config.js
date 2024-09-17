@@ -1,3 +1,5 @@
+// const { Newsreader } = require('next/font/google');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -19,6 +21,10 @@ module.exports = {
     extend: {
       fontFamily: {
         almirego: ['Almirego', 'sans-serif'],
+        almiregodl: ['Almiregodl', 'sans-serif'],
+        almiregod: ['Almiregod', 'sans-serif'],
+        almiregodb: ['Almiregodb', 'sans-serif'],
+        newsreader : ['Newsreader', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
