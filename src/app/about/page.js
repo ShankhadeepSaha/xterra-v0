@@ -1,17 +1,30 @@
 "use client"
 
 import Footer from "@/components/footer/Footer";
+import HeadingSection from "@/components/miregoWebsite/HeadingSection";
 import HeadingSectionDark from "@/components/miregoWebsite/HeadingSectionDark";
 import Navbar from "@/components/navbar/Navbar";
+import NumberCard1 from "@/components/miregoWebsite/numberCardVariants/NumberCard1";
+import NumberCard2 from "@/components/miregoWebsite/numberCardVariants/NumberCard2";
+import NumberCard3 from "@/components/miregoWebsite/numberCardVariants/NumberCard3";
+import NumberCard4 from "@/components/miregoWebsite/numberCardVariants/NumberCard4";
 import SectionText from "@/components/miregoWebsite/SectionText";
 import SectionTextDark from "@/components/miregoWebsite/SectionTextDark";
 import SectionTextDarkLarge from "@/components/miregoWebsite/SectionTextDarkLarge";
+import SectionTextLeft from "@/components/miregoWebsite/SectionTextLeft";
+import SectionTextSmall from "@/components/miregoWebsite/SectionTextSmall";
 import Team from "@/components/Team";
+import TeamCard1 from "@/components/miregoWebsite/teamCardVariants/TeamCard1";
+import TeamHeading from "@/components/miregoWebsite/TeamHeading";
+import TeamSection from "@/components/miregoWebsite/TeamSection";
+import ValueCard1 from "@/components/miregoWebsite/valueCardVariants/ValueCard1";
+import VideoSection from "@/components/miregoWebsite/VideoSection";
 import TextCard from "@/components/TextCard";
 import OurStory from "@/components/OurStory";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 import Footercurve from "@/components/footer/Footercurve";
+import Testimonials from "@/components/miregoWebsite/Testimonials";
 
 export default function Home() {
 
@@ -45,7 +58,7 @@ export default function Home() {
       <Team />
       <OurStory />
 
-      <Footercurve />
+
       <Footer />
     </div>
   );

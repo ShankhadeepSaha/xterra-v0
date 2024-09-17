@@ -1,7 +1,7 @@
 import React from 'react'
 
 function JobOpenings() {
-  const email = 'info@xterrarobotics.com';
+  const email = 'careers@xterrarobotics.com';
 
   return (
     <div className='container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32'>

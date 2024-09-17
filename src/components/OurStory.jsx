@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import HomeTestimonials from "./miregoWebsite/HomeTestimonials";
+import HomeTestimonials from "./HomeTestimonials";
 
 function OurStory() {
   const logos = [
