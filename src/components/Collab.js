@@ -1,4 +1,15 @@
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
+
+// Example image URLs - replace these with your actual image URLs
+const logos = [
+    '/images/companylogo/Ansys.svg',
+    '/images/companylogo/cadfem.svg',
+    '/images/companylogo/eta.png',
+    '/images/companylogo/google.png',
+    '/images/companylogo/iitk.png',
+    '/images/companylogo/nvidia.png'
+];
 
 export default function Home() {
   return (
@@ -21,7 +32,7 @@ const InfiniteSlide = ({ direction }) => {
     if (!container || !content) return;
 
     const totalWidth = content.offsetWidth;
-    const animationDuration = 2; // seconds
+    const animationDuration = 30; // seconds
 
     const animate = () => {
       const currentTranslate = direction === 'left' ? 
@@ -39,34 +50,35 @@ const InfiniteSlide = ({ direction }) => {
     <div ref={containerRef} className="relative overflow-hidden">
       <div 
         ref={contentRef} 
-        className="flex whitespace-nowrap"
+        className="flex items-center whitespace-nowrap"
         style={{ 
           willChange: 'transform',
         }}
       >
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
-        <Phrase />
+        {[...Array(2)].map((_, outerIndex) => (
+          <React.Fragment key={outerIndex}>
+            {logos.map((src, index) => (
+              <LogoWrapper key={`${outerIndex}-${index}`} src={src} />
+            ))}
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );
 };
 
-const Phrase = () => {
+const LogoWrapper = ({ src }) => {
   return (
-    <div className="px-4 sm:px-6 md:px-8 flex items-center justify-center sm:justify-start gap-4 sm:gap-6 py-4">
-      <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-almirego text-center sm:text-left">
-        xTerra Robotics
-      </p>
+    <div className="px-4 sm:px-6 md:px-8 flex items-center justify-center h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56">
+      <div className="relative w-full h-full flex items-center justify-center">
+        <Image
+          src={src}
+          alt="Company logo"
+          layout="fill"
+          objectFit="contain"
+          className="p-2"
+        />
+      </div>
     </div>
   );
 };
