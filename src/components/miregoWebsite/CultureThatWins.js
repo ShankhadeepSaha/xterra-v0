@@ -23,7 +23,7 @@ const CultureThatWins = () => {
             <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307]">Fuelled by passion</p>
           </CultureCard>
           <CultureCard extraClasses='lg:col-span-2 lg:row-span-3'>
-            <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307]">Innovate using Al</p>
+            <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307]">Innovate using AI</p>
           </CultureCard>
           <CultureCard extraClasses='sm:col-span-2 lg:col-span-3 lg:row-span-3 py-4 sm:py-6 lg:py-10'>
             <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307]">Think by first principles</p>
