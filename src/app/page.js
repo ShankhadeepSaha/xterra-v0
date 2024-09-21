@@ -53,7 +53,7 @@ export default function Home() {
     const frameCount = isMobile ? 90 : 180; // Reduce frames for mobile
     const step = isMobile ? 2 : 1; // Load every other frame for mobile
     const imageSources = Array.from({ length: frameCount }, (_, i) =>
-      `/m2/frame_${((i * step) + 1).toString().padStart(4, '0')}.jpg`
+      `/m2/frame_${((i * step) + 1).toString().padStart(4, '0')}.webp`
     );
 
     try {

@@ -9,7 +9,6 @@ import Footercurve from "@/components/footer/Footercurve";
 
 export default function Home() {
 
-
   useEffect(() => {
     const lenis = new Lenis()
     function raf(time) {
