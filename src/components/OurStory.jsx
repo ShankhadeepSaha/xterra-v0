@@ -18,22 +18,6 @@ function OurStory() {
 
   return (
     <>
-      {/* <div className="flex flex-col items-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-white">
-        <div className="w-full max-w-6xl text-center px-4">
-          <div className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-tight font-almirego text-[#050307] mb-8">
-            Our Story
-            <br />
-            An Indian Deep-Tech Robotics Startup
-          </div>
-          <div className="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-light font-almirego text-[#050307] mb-16">
-            xTerra is an Indian Deep-Tech Robotics Startup, founded by a team of
-            highly skilled and passionate engineers. Incubated at IIT Kanpur and
-            spun off from the Mobile Robotics Laboratory at IIT Kanpur, we are
-            committed to solving complex locomotion challenges with world-class
-            solutions.
-          </div>
-        </div>
-      </div> */}
       <div className="flex flex-col items-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-white">
         <div className="w-full max-w-6xl text-center px-4">
           <div className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-tight font-almirego text-[#050307] mb-8">
@@ -52,7 +36,7 @@ function OurStory() {
                       alt={logo.alt}
                       width={120}
                       height={60}
-                      objectFit="contain"
+                      // objectFit="contain"
                       className="max-w-full h-auto"
                     />
                   </div>

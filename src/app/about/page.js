@@ -9,6 +9,7 @@ import SectionTextDarkLarge from "@/components/miregoWebsite/SectionTextDarkLarg
 import Team from "@/components/Team";
 import TextCard from "@/components/TextCard";
 import OurStory from "@/components/OurStory";
+import Collab from "@/components/Collab";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 import Footercurve from "@/components/footer/Footercurve";
@@ -43,6 +44,7 @@ export default function Home() {
         <SectionTextDarkLarge />
       </div>
       <Team />
+      {/* <Collab /> */}
       <OurStory />
 
       <Footercurve />
