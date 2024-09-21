@@ -44,7 +44,8 @@ const Section2 = () => {
           </div>
           <div className='flex flex-wrap gap-4'>
             <BlinkingText className='text-base sm:text-lg md:text-xl font-almirego font-normal' text='Linkedin' icon={true} />
-            <BlinkingText className='text-base sm:text-lg md:text-xl font-almirego font-normal' text='Github' icon={true} />
+            <BlinkingText className='text-base sm:text-lg md:text-xl font-almirego font-normal' text='Instagram' icon={true} />
+            <BlinkingText className='text-base sm:text-lg md:text-xl font-almirego font-normal' text='X' icon={true} />
             <BlinkingText className='text-base sm:text-lg md:text-xl font-almirego font-normal' text='Youtube' icon={true} />
           </div>
           <div className='flex flex-wrap gap-4 justify-between'>
