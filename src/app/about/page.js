@@ -44,7 +44,7 @@ export default function Home() {
         <SectionTextDarkLarge />
       </div>
       <Team />
-      <Collab />
+      {/* <Collab /> */}
       <OurStory />
 
       <Footercurve />
