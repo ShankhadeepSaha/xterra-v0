@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 
-// Example image URLs - replace these with your actual image URLs
 const logos = [
     '/images/companylogo/Ansys.svg',
     '/images/companylogo/cadfem.svg',
@@ -31,36 +30,42 @@ const InfiniteSlide = ({ direction }) => {
     
     if (!container || !content) return;
 
-    const totalWidth = content.offsetWidth;
+    const totalWidth = content.offsetWidth / 2; // Divide by 2 because we duplicated the content
     const animationDuration = 30; // seconds
+    let startTime;
 
-    const animate = () => {
-      const currentTranslate = direction === 'left' ? 
-        -((Date.now() / 1000) % animationDuration) / animationDuration * totalWidth :
-        ((Date.now() / 1000) % animationDuration) / animationDuration * totalWidth;
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = (timestamp - startTime) / 1000;
+
+      const currentTranslate = direction === 'left' ?
+        -(elapsed % animationDuration) / animationDuration * totalWidth :
+        (elapsed % animationDuration) / animationDuration * totalWidth;
       
       content.style.transform = `translateX(${currentTranslate}px)`;
       requestAnimationFrame(animate);
     };
 
-    animate();
+    const animationId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationId);
   }, [direction]);
 
   return (
     <div ref={containerRef} className="relative overflow-hidden">
       <div 
         ref={contentRef} 
-        className="flex items-center whitespace-nowrap"
+        className="flex items-center"
         style={{ 
           willChange: 'transform',
         }}
       >
         {[...Array(2)].map((_, outerIndex) => (
-          <React.Fragment key={outerIndex}>
+          <div key={outerIndex} className="flex items-center">
             {logos.map((src, index) => (
               <LogoWrapper key={`${outerIndex}-${index}`} src={src} />
             ))}
-          </React.Fragment>
+          </div>
         ))}
       </div>
     </div>
@@ -74,9 +79,9 @@ const LogoWrapper = ({ src }) => {
         <Image
           src={src}
           alt="Company logo"
-          layout="fill"
-          objectFit="contain"
-          className="p-2"
+          fill
+          sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, (max-width: 1024px) 192px, 224px"
+          className="object-contain p-2"
         />
       </div>
     </div>
