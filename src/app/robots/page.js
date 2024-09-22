@@ -28,12 +28,12 @@ export default function Home() {
   return (
     <div className="mt-48">
       <Navbar />
-
       <Header />
+
       <HeroImage />
       <DoubleImage />
       <SectionImage />
-      <Comparison />
+      {/* <Comparison /> */}
       <Ctas />
       
       <Footercurve />
