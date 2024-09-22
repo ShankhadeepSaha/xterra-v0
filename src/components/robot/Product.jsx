@@ -4,7 +4,7 @@ function Product() {
   return (
     <div className='flex flex-col items-center'>
       <div className='h-60 w-60 object-cover'>
-        <img src="robot/drone1.png" alt="drone" />
+        <img src="robot/1.jpg" alt="drone" />
       </div>
       <div>
         Flagship
