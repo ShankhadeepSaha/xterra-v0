@@ -31,10 +31,10 @@ export default function Home() {
       <Header />
 
       <HeroImage />
-      <DoubleImage />
+      {/* <DoubleImage /> */}
       <SectionImage />
       {/* <Comparison /> */}
-      <Ctas />
+      {/* <Ctas /> */}
       
       <Footercurve />
       <Footer />

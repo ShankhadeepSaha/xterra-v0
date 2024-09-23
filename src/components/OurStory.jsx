@@ -1,15 +1,25 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import HomeTestimonials from "./miregoWebsite/HomeTestimonials";
+import Link from 'next/link';
+
 
 function OurStory() {
   const logos = [
-    { src: "/images/companylogo/Ansys.svg", alt: "Company 1" },
-    { src: "/images/companylogo/cadfem.svg", alt: "Company 1" },
-    { src: "/images/companylogo/eta.png", alt: "Company 1" },
-    { src: "/images/companylogo/google.png", alt: "Company 1" },
-    { src: "/images/companylogo/iitk.png", alt: "Company 1" },
-    { src: "/images/companylogo/nvidia.png", alt: "Company 1" },
+    { src: "/images/companylogo/Ansys.svg", alt: "Ansys logo" },
+    { src: "/images/companylogo/cadfem.svg", alt: "CADFEM logo" },
+    { src: "/images/companylogo/eta.png", alt: "ETA logo" },
+    { src: "/images/companylogo/google.png", alt: "Google logo" },
+    { src: "/images/companylogo/iitk.png", alt: "IITK logo" },
+    { src: "/images/companylogo/nvidia.png", alt: "Nvidia logo" },
+    { src: "/images/companylogo/mrl.png", alt: "MRL logo" },
+    { src: "/images/companylogo/GATES_APAC_Logo.jpeg", alt: "GATES APAC logo" },
+    { src: "/images/companylogo/IHFC_IITD.jpg", alt: "IHFC IITD logo" },
+    { src: "/images/companylogo/StartInUP.jpeg", alt: "StartInUP logo" },
+    {
+      src: "/images/companylogo/Meity_Startup_Hub.png",
+      alt: "Meity Startup Hub logo",
+    },
+    { src: "/images/companylogo/SIIC_Logo1.png", alt: "SIIC logo" },
   ];
 
   const [name, setName] = useState("");
@@ -21,23 +31,19 @@ function OurStory() {
       <div className="flex flex-col items-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-white">
         <div className="w-full max-w-6xl text-center px-4">
           <div className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-tight font-almirego text-[#050307] mb-8">
-            Our Industry Collaborations
+            Collaborations and Industry Support
           </div>
           <div className="w-full py-8 sm:py-12 md:py-16 lg:py-20">
             <div className="container mx-auto px-4">
-              <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-16">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 sm:gap-12">
                 {logos.map((logo, index) => (
-                  <div
-                    key={index}
-                    className="w-1/3 sm:w-1/6 flex justify-center items-center"
-                  >
+                  <div key={index} className="flex justify-center items-center">
                     <Image
                       src={logo.src}
                       alt={logo.alt}
                       width={120}
                       height={60}
-                      // objectFit="contain"
-                      className="max-w-full h-auto"
+                      className="max-w-full h-auto object-contain"
                     />
                   </div>
                 ))}
@@ -46,23 +52,28 @@ function OurStory() {
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col items-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-white">
-        <div className="w-full max-w-6xl text-center px-4">
-          <div className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-tight font-almirego text-[#050307] mb-8">
-          Building the Future of Robotics 
-          </div>
-          <div className="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-light font-almirego text-[#050307] mb-16">
-            At xTerra, we are not
-            just building robots; we are shaping the future. Our commitment to
-            AI-driven innovation and first principles thinking positions us at
-            the forefront of the robotics industry, driving progress and
-            advancing technology for a better tomorrow.
-          </div>
-        </div>
-      </div> */}
-      {/* <HomeTestimonials /> */}
-      <div className="-mt-20"></div>
-      <div className="flex flex-col py-12 sm:py-16 md:py-24 lg:py-32 xl:py-48 items-center px-4 sm:px-6 md:px-8">
+
+      <div className="container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32">
+      <div className="font-almirego text-3xl sm:text-4xl md:text-5xl">
+      Have You Discovered
+        <br className="hidden sm:inline" />
+        Our{' '}
+        <Link href="/robots" className="text-[#4E148C] hover:underline cursor-pointer">
+          Robots
+        </Link>
+        ,{' '}
+        <Link href="/actuators" className="text-[#4E148C] hover:underline cursor-pointer">
+          Actuators
+        </Link>
+        , and{' '}
+        <Link href="/solutions" className="text-[#4E148C] hover:underline cursor-pointer">
+          Solutions
+        </Link>
+        ?
+      </div>
+    </div>
+
+      <div className="flex flex-col py-12 sm:py-16 md:py-24 lg:py-30 xl:py-14 items-center px-4 sm:px-6 md:px-8">
         <div className="w-full sm:w-11/12 md:w-5/6 lg:w-3/4 flex flex-col">
           <div className="text-[#808080] text-base sm:text-lg md:text-xl lg:text-[20px] font-almirego pb-6 sm:pb-8 md:pb-10 lg:pb-12">
             Let's collaborate

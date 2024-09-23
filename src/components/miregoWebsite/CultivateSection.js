@@ -3,13 +3,13 @@ import Image from 'next/image'
 
 function CultivateSection() {
   const images = [
-    { src: "/images/homeImage.png", alt: "Image 1", className: "col-span-2 row-span-1" },
-    { src: "/images/homeImage.png", alt: "Image 2", className: "col-span-1 row-span-2" },
-    { src: "/images/homeImage.png", alt: "Image 3", className: "col-span-1 row-span-1" },
-    { src: "/images/homeImage.png", alt: "Image 4", className: "col-span-2 row-span-2" },
-    { src: "/images/homeImage.png", alt: "Image 5", className: "col-span-1 row-span-1" },
-    { src: "/images/homeImage.png", alt: "Image 6", className: "col-span-1 row-span-1" },
-    { src: "/images/homeImage.png", alt: "Image 7", className: "col-span-1 row-span-1" },
+    { src: "/images/team/OutInWild_xTerra.jpg", alt: "Image 1", className: "col-span-2 row-span-1" },
+    { src: "/images/team/svanM2_Lko_1.jpg", alt: "Image 2", className: "col-span-1 row-span-2" },
+    { src: "/images/team/dog_M2_2.JPG", alt: "Image 3", className: "col-span-1 row-span-1" },
+    { src: "/images/team/team.png", alt: "Image 4", className: "col-span-2 row-span-2" },
+    { src: "/images/team/Dhaya_Lab.jpg", alt: "Image 5", className: "col-span-1 row-span-1" },
+    { src: "/images/team/avinash_lab.jpg", alt: "Image 6", className: "col-span-1 row-span-1" },
+    { src: "/images/team/teamPhoto2.JPG", alt: "Image 7", className: "col-span-1 row-span-1" },
   ];
 
   return (

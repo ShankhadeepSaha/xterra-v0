@@ -2,7 +2,7 @@ import React from 'react'
 
 function ImageCard({ bgImage, title, subtitle, description }) {
   return (
-    <div className={`${bgImage} h-[400px] sm:h-[500px] md:h-[640px] w-full bg-cover bg-center`}>
+    <div className={`${bgImage} h-[500px] sm:h-[600px] md:h-[780px] w-full bg-cover bg-center`}>
       <div className='flex flex-col items-center justify-center h-full p-4 text-center'>
         <div className='text-[10px] sm:text-[12px] font-light font-almirego text-[#BE4E04] mb-2 sm:mb-4'>
           {title}
@@ -15,7 +15,7 @@ function ImageCard({ bgImage, title, subtitle, description }) {
         </div>
         <div className='flex gap-4 sm:gap-6'>
           <a href="#learn-more" className='font-light font-almirego text-[#1890FF] hover:underline'>Learn More &gt;</a>
-          <a href="#buy-now" className='font-light font-almirego text-[#1890FF] hover:underline'>Buy Now &gt;</a>
+          {/* <a href="#buy-now" className='font-light font-almirego text-[#1890FF] hover:underline'>Buy Now &gt;</a> */}
         </div>
       </div>
     </div>
@@ -24,18 +24,24 @@ function ImageCard({ bgImage, title, subtitle, description }) {
 
 function DoubleImage() {
   return (
-    <div className='flex flex-col md:flex-row py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 w-full gap-4 sm:gap-6 md:gap-8'>
+    <div className='flex flex-col gap-4 sm:gap-6 md:gap-8 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 w-full'>
       <ImageCard 
         bgImage="bg-[url('/robot/1.jpg')]"
-        title="Multiple Focal Length Triple-Lens Flagship Camera Drone"
-        subtitle="DJI MAVIC 3 PRO"
-        description="Inspiration In Focus"
+        title="SVAN M1 Series"
+        subtitle="SVAN M1"
+        description="Our first prototype quadruped robot"
       />
       <ImageCard 
-        bgImage="bg-[url('/robot/2.png')]"
-        title="Multiple Focal Length Triple-Lens Flagship Camera Drone"
-        subtitle="DJI MAVIC 3 PRO"
-        description="Inspiration In Focus"
+        bgImage="bg-[url('/robot/1.jpg')]"
+        title="SVAN M2 Series"
+        subtitle="SVAN M2"
+        description="India's first industrial quadruped robot"
+      />
+      <ImageCard 
+        bgImage="bg-[url('/robot/1.jpg')]"
+        title="Coming Soon"
+        subtitle="SVAN M3"
+        description="Next generation quadruped robot"
       />
     </div>
   )
