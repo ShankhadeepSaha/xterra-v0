@@ -75,6 +75,9 @@ module.exports = {
         },
       },
       animation: {
+        scroll: 'scroll 40s linear infinite',
+      },
+      animation: {
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
       },
