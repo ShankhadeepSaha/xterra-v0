@@ -21,7 +21,7 @@ const InfiniteSlide = ({ direction }) => {
     if (!container || !content) return;
 
     const totalWidth = content.offsetWidth;
-    const animationDuration = 2; // seconds
+    const animationDuration = 20; // seconds
 
     const animate = () => {
       const currentTranslate = direction === 'left' ? 
