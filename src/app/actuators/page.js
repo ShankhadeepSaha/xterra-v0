@@ -3,7 +3,7 @@
 import Footer from '@/components/footer/Footer'
 import Footercurve from '@/components/footer/Footercurve'
 import Navbar from '@/components/navbar/Navbar'
-import RobotProducts from '@/components/ActuatorsProducts'
+import ActuatorsProducts from '@/components/ActuatorsProducts'
 import Lenis from "lenis";
 import React, { useEffect, useRef, useState } from "react";
 import Link from 'next/link';
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </div>
 
-      <RobotProducts />
+      <ActuatorsProducts />
 
 
       <div className="container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32">
