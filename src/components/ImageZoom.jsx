@@ -17,13 +17,13 @@ export default function Index() {
     const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
     const pictures = [
-        { src: "/images/team/OutInWild_xTerra.jpg", scale: scale4, className: "w-1/4 h-1/4" },
-        { src: "/images/team/svanM2_Lko_1.jpg", scale: scale5, className: "-top-[30vh] left-[5vw] w-[35vw] h-[30vh]" },
-        { src: "/images/team/dog_M2_2.JPG", scale: scale6, className: "-top-[10vh] -left-1/4 w-1/5 h-[45vh]" },
-        { src: "/images/team/team.png", scale: scale5, className: "left-[27.5vw] w-1/4 h-1/4" },
-        { src: "/images/team/Dhaya_Lab.jpg", scale: scale6, className: "top-[27.5vh] left-[5vw] w-1/5 h-1/4" },
-        { src: "/images/team/avinash_lab.jpg", scale: scale8, className: "top-[27.5vh] -left-[22.5vw] w-[30vw] h-1/4" },
-        { src: "/images/team/teamPhoto2.JPG", scale: scale9, className: "top-[22.5vh] left-1/4 w-[15vw] h-[15vh]" }
+        { src: "/images/team/OutInWild_xTerra.webp", scale: scale4, className: "w-1/4 h-1/4" },
+        { src: "/images/team/svanM2_Lko_1.webp", scale: scale5, className: "-top-[30vh] left-[5vw] w-[35vw] h-[30vh]" },
+        { src: "/images/team/dog_M2_2.webp", scale: scale6, className: "-top-[10vh] -left-1/4 w-1/5 h-[45vh]" },
+        { src: "/images/team/team.webp", scale: scale5, className: "left-[27.5vw] w-1/4 h-1/4" },
+        { src: "/images/team/Dhaya_Lab.webp", scale: scale6, className: "top-[27.5vh] left-[5vw] w-1/5 h-1/4" },
+        { src: "/images/team/avinash_lab.webp", scale: scale8, className: "top-[27.5vh] -left-[22.5vw] w-[30vw] h-1/4" },
+        { src: "/images/team/teamPhoto2.webp", scale: scale9, className: "top-[22.5vh] left-1/4 w-[15vw] h-[15vh]" }
     ];
 
     return (

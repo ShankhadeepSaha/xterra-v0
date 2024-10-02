@@ -28,7 +28,7 @@ function Team() {
     {
       name: "Amritanshu Manu",
       title: "Co-Founder & Research Lead",
-      image: "/images/manu.svg",
+      image: "/images/manu.png",
       description: "IIT Kanpur Ph.D. Scholar and PMRF Fellow specializing in Planning & Control. Holder of a B.Tech-M.Tech Dual Degree from the 2021 batch at IIT Kanpur."
     },
     {
