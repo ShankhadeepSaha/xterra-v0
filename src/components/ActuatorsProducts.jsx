@@ -34,9 +34,9 @@ function ImageCard({ bgImage, title, subtitle, description, learnMoreLink, buyLi
           <a href={learnMoreLink} className='px-5 py-2 bg-[#4E148C] text-white rounded-full text-sm sm:text-base font-semibold hover:bg-gray-700 transition-colors'>
             Learn more
           </a>
-          <a href={buyLink} className='px-5 py-2 bg-white text-[#4E148C] rounded-full text-sm sm:text-base font-semibold hover:bg-gray-100 transition-colors'>
+          {/* <a href={buyLink} className='px-5 py-2 bg-white text-[#4E148C] rounded-full text-sm sm:text-base font-semibold hover:bg-gray-100 transition-colors'>
             Buy
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
