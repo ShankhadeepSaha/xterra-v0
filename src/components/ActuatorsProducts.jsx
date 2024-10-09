@@ -17,26 +17,40 @@ function VideoHero() {
   )
 }
 
-function ImageCard({ bgImage, title, subtitle, description, learnMoreLink, buyLink }) {
+function ImageCard({ 
+  bgImage, 
+  title, 
+  subtitle, 
+  description, 
+  learnMoreLink, 
+  buyLink,
+  titleStyle = {},
+  subtitleStyle = {},
+  descriptionStyle = {},
+  learnMoreStyle = {},
+  buyStyle = {}
+}) {
   return (
     <div className={`${bgImage} h-[400px] sm:h-[500px] md:h-[680px] w-full bg-cover bg-center`}>
       <div className='flex flex-col items-center h-full p-4 pt-16 sm:pt-24 md:pt-32 text-center'>
-        <div className='text-3xl sm:text-4xl md:text-5xl font-semibold font-sans text-black mb-2'>
+        <div className={`text-3xl sm:text-4xl md:text-5xl font-semibold font-sans mb-2`} style={titleStyle}>
           {title}
         </div>
-        <div className='text-sm sm:text-base md:text-lg font-light text-black mb-1'>
+        <div className={`text-sm sm:text-base md:text-lg font-light mb-1`} style={subtitleStyle}>
           {subtitle}
         </div>
-        <div className='text-2xl sm:text-3xl md:text-4xl font-light text-black mb-6 sm:mb-8'>
+        <div className={`text-2xl sm:text-3xl md:text-4xl font-light mb-6 sm:mb-8`} style={descriptionStyle}>
           {description}
         </div>
         <div className='flex gap-4 mt-auto mb-8'>
-          <a href={learnMoreLink} className='px-5 py-2 bg-[#4E148C] text-white rounded-full text-sm sm:text-base font-semibold hover:bg-gray-700 transition-colors'>
+          <a href={learnMoreLink} className='px-5 py-2 rounded-full text-sm sm:text-base font-semibold transition-colors' style={learnMoreStyle}>
             Learn more
           </a>
-          {/* <a href={buyLink} className='px-5 py-2 bg-white text-[#4E148C] rounded-full text-sm sm:text-base font-semibold hover:bg-gray-100 transition-colors'>
-            Buy
-          </a> */}
+          {/* {buyLink && (
+            <a href={buyLink} className='px-5 py-2 rounded-full text-sm sm:text-base font-semibold transition-colors' style={buyStyle}>
+              Buy
+            </a>
+          )} */}
         </div>
       </div>
     </div>
@@ -51,28 +65,41 @@ function ActuatorsProducts() {
       </div>
       <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 sm:px-3 md:px-4 w-full'>
         <ImageCard 
-          bgImage="bg-[url('/actuator/a.png')]"
-          title="SVAN M1"
+          bgImage="bg-[url('/actuator/a1.png')]"
+          title="QDD A1"
           subtitle="SERIES 1"
-          description="Our first prototype quadruped robot."
+          description="Our Quasi Direct Drive actuator."
           learnMoreLink="/svan-m1"
           buyLink="/buy-svan-m1"
+          titleStyle={{ color: 'black' }}
+          subtitleStyle={{ color: 'black' }}
+          descriptionStyle={{ color: 'black' }}
+          learnMoreStyle={{ backgroundColor: '#4E148C', color: 'white' }}
+          buyStyle={{ backgroundColor: 'white', color: '#4E148C' }}
         />
         <ImageCard 
-          bgImage="bg-[url('/actuator/a.png')]"
-          title="SVAN M2"
+          bgImage="bg-[url('/actuator/a2.png')]"
+          title="QDD A2"
           subtitle="SERIES 2"
-          description="India's first industrial quadruped robot."
+          description="Our next-generation of QDD actuators."
           learnMoreLink="/svan-m2"
           buyLink="/buy-svan-m2"
+          titleStyle={{ color: 'white' }}
+          subtitleStyle={{ color: 'white' }}
+          descriptionStyle={{ color: 'white' }}
+          learnMoreStyle={{ backgroundColor: '#4E148C', color: 'white' }}
+          buyStyle={{ backgroundColor: 'white', color: '#4E148C' }}
         />
         <ImageCard 
-          bgImage="bg-[url('/actuator/a.png')]"
-          title="SVAN M3"
-          subtitle="COMING SOON"
-          description="Next generation quadruped robot."
+          bgImage="bg-[url('/actuator/a3.png')]"
+          title="QDD A3"
+          subtitle="SERIES 3"
+          description="Optimized for maximum torque."
           learnMoreLink="/svan-m3"
-          buyLink="/pre-order-svan-m3"
+          titleStyle={{ color: 'black' }}
+          subtitleStyle={{ color: 'black' }}
+          descriptionStyle={{ color: 'black' }}
+          learnMoreStyle={{ backgroundColor: '#4E148C', color: 'white' }}
         />
       </div>
     </div>
