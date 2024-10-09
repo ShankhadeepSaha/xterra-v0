@@ -1,7 +1,7 @@
 "use client"
 import React, { useRef } from 'react'
 import Image from 'next/image';
-import Background from '/public/images/team/Img2_lab.webp';
+import Background from '/public/robot/m2.png';
 import { useScroll, useTransform, motion } from 'framer-motion';
 
 export default function Intro() {
