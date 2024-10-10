@@ -66,7 +66,7 @@ export default function ResponsiveTimeline() {
         </div>
       </div>
 
-      <div className="bg-blue-50 min-h-screen p-4 sm:p-8">
+      <div className="bg-white min-h-screen p-4 sm:p-8">
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Vertical line - hidden on mobile */}
