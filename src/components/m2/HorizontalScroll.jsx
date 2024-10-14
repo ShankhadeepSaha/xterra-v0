@@ -1,58 +1,72 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import React, { useState } from "react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import Image from "next/image"
 
-function ScrollSection() {
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
+const defaultProducts = [
+  {
+    id: 1,
+    name: "INDUSTRIAL INSPECTION",
+    description: "Industrial inspection and data collection for predictive maintenance, Security and surveillance of urban establishments",
+    imageUrl: "/robot/m2.1.png"
+  },
+  {
+    id: 2,
+    name: "UPTO 5.2 KG PAYLOAD",
+    description: "Move items effortlessly and carry payloads on slopes & stairs",
+    imageUrl: "/robot/m2.2.png"
+  },
+  {
+    id: 3,
+    name: "PRECISE MANIPULATION",
+    description: "Industrial inspection and data collection for predictive maintenance, Security and surveillance of urban establishments",
+    imageUrl: "/robot/m2.3.png"
+  }
+]
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: "-300vw",
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: "2000 top",
-          scrub: 0.6,
-          pin: true,
-        },
-      }
-    );
-    return () => {
-      {/* A return function for killing the animation on component unmount */}
-      pin.kill();
-    };
-  }, []);
+export default function ProductCarousel({ products = defaultProducts }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   return (
-    <section className="overflow-hidden">
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="h-screen w-[400vw] flex flex-row relative">
-          <div className="h-screen w-screen flex justify-center items-center bg-red-200">
-            <h3 className="tracking-[var(--headlineMedium)] uppercase">Section 1</h3>
-          </div>
-          <div className="h-screen w-screen flex justify-center items-center bg-blue-200">
-            <h3 className="tracking-[var(--headlineMedium)] uppercase">Section 2</h3>
-          </div>
-          <div className="h-screen w-screen flex justify-center items-center bg-green-200">
-            <h3 className="tracking-[var(--headlineMedium)]  uppercase">Section 3</h3>
-          </div>
-          <div className="h-screen w-screen flex justify-center items-center bg-yellow-200">
-            <h3 className="tracking-[var(--headlineMedium)] uppercase">Section 4</h3>
-          </div>
-        </div>
+    <Carousel
+      className="w-full max-w-5xl mx-auto"
+      onSelect={(index) => setCurrentIndex(index)}
+    >
+      <CarouselContent>
+        {products.map((product) => (
+          <CarouselItem key={product.id}>
+            <Card className="border-none shadow-none">
+              <CardContent className="flex flex-col items-center justify-center p-12">
+                <div className="relative w-[28rem] h-[28rem] mb-8">
+                  <Image
+                    src={product.imageUrl}
+                    alt={product.name}
+                    layout="fill"
+                    objectFit="contain"
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="text-center max-w-2xl">
+                  <h3 className="text-3xl font-semibold mb-4">{product.name}</h3>
+                  <p className="text-xl text-muted-foreground">{product.description}</p>
+                </div>
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="left-4 lg:-left-20" />
+      <CarouselNext className="right-4 lg:-right-20" />
+      <div className="flex justify-center mt-8">
+        {products.map((_, index) => (
+          <span
+            key={index}
+            className={`h-4 w-4 mx-2 rounded-full ${
+              index === currentIndex ? "bg-primary" : "bg-muted"
+            }`}
+          />
+        ))}
       </div>
-    </section>
-  );
+    </Carousel>
+  )
 }
-
-export default ScrollSection;
