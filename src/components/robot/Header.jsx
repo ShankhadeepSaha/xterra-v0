@@ -6,7 +6,7 @@ function Header() {
       <div className='container mx-auto px-4 flex flex-col items-center mb-16 sm:mb-24 lg:mb-32'>
         <div className='w-full text-center mb-8'>
           <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-9xl'>
-            Robots 
+            Our Robots 
           </h1>
         </div>
         <div className='w-full max-w-3xl'>

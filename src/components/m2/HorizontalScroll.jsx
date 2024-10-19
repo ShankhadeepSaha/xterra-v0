@@ -12,7 +12,7 @@ const defaultProducts = [
   },
   {
     id: 2,
-    name: "UPTO 5.2 KG PAYLOAD",
+    name: "VERSATILE LOGISTICS",
     description: "Move items effortlessly and carry payloads on slopes & stairs",
     imageUrl: "/robot/m2.2.png"
   },

@@ -1,18 +1,16 @@
 import React from 'react'
+import Image from 'next/image'
 
-function VideoHero() {
+function ImageHero() {
   return (
     <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] overflow-hidden">
-      <video 
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-      >
-        <source src="/videos/m2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <Image 
+        src="/robot/robotbanner.png"
+        alt="Hero image"
+        layout="fill"
+        objectFit="cover"
+        priority
+      />
     </div>
   )
 }
@@ -40,7 +38,7 @@ function ImageCard({
         <div className={`text-sm sm:text-base md:text-lg font-light mb-1`} style={subtitleStyle}>
           {subtitle}
         </div>
-        <div className={`text-2xl sm:text-3xl md:text-4xl font-light mb-6 sm:mb-8`} style={descriptionStyle}>
+        <div className={`text-2xl sm:text-3xl md:text-4xl font-light mb-6 sm:mb-8 backdrop-blur-sm`} style={descriptionStyle}>
           {description}
         </div>
         {(showLearnMore || buyLink) && (
@@ -66,14 +64,14 @@ function RobotProducts() {
   return (
     <div className='flex flex-col w-full'>
       <div className="sm:px-4">
-        <VideoHero />
+        <ImageHero />
       </div>
       <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 sm:px-3 md:px-4 w-full'>
         <ImageCard 
           bgImage="bg-[url('/robot/m1.png')]"
           title="SVAN M1"
           subtitle="SERIES 1"
-          description="Our first prototype quadruped robot."
+          description="Our first prototype quadruped robot"
           learnMoreLink="/svan-m1"
           buyLink="/buy-svan-m1"
           titleStyle={{ color: 'white' }}
@@ -86,7 +84,7 @@ function RobotProducts() {
           bgImage="bg-[url('/robot/m2.png')]"
           title="SVAN M2"
           subtitle="SERIES 2"
-          description="India's first industrial quadruped robot."
+          description="India's first commercial quadruped robot"
           learnMoreLink="/svan-m2"
           buyLink="/buy-svan-m2"
           titleStyle={{ color: 'black' }}
@@ -96,12 +94,12 @@ function RobotProducts() {
           buyStyle={{ backgroundColor: 'white', color: '#4E148C' }}
         />
         <ImageCard 
-          bgImage="bg-[url('/robot/m3.png')]"
+          bgImage="bg-[url('/robot/s1.png')]"
           title="SVAN S1"
           subtitle="COMING SOON"
-          description="Next generation quadruped robot."
+          description="Next generation industrial robot"
           titleStyle={{ color: 'black' }}
-          subtitleStyle={{ color: 'black' }}
+          subtitleStyle={{ color: 'black'}}
           descriptionStyle={{ color: 'black' }}
           showLearnMore={false}
         />

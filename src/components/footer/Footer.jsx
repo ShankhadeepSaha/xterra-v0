@@ -80,11 +80,18 @@ const CompanyInfo = () => (
 );
 
 const Address = () => (
+  <>
   <div className='w-full mb-4'>
-    <div className='text-lg sm:text-xl md:text-2xl font-almirego font-normal'>xTerra Robotics</div>
-    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>G-508/11, Avas Vikas No. 1,</div>
-    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>Kalyanpur, Kanpur-208017</div>
+    <div className='text-lg sm:text-xl md:text-2xl font-almirego font-normal'>xTerra Robotics Pvt Ltd</div>
+    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>G-508/11 Avas Vikas No. 1, Panki Road Kalyanpur,</div>
+    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>Avas Vikas Yojna No. 3, Kanpur Nagar,</div>
+    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>Kanpur, Uttar Pradesh, 208017</div>
   </div>
+    {/* <div className='w-full mb-4'>
+    <div className='text-sm sm:text-sm md:text-sm font-almirego font-normal'>Shipping Address:</div>
+    <div className='text-sm sm:text-sm md:text-sm font-almirego font-normal mt-2'> NL 212, Mobile Robotics Lab, Department of Mechanical Engineering, IIT Kanpur, Kanpur, 208016</div>
+  </div> */}
+  </>
 );
 
 const SocialLinks = () => (
