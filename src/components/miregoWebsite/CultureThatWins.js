@@ -25,17 +25,8 @@ const CultureThatWins = () => {
           <CultureCard extraClasses='lg:col-span-2 lg:row-span-3'>
             <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307]">Innovate using AI</p>
           </CultureCard>
-          <CultureCard extraClasses='sm:col-span-2 lg:col-span-3 lg:row-span-3 py-4 sm:py-6 lg:py-10'>
+          <CultureCard extraClasses='sm:col-span-2 lg:col-span-7 lg:row-span-3 py-4 sm:py-6 lg:py-10'>
             <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307]">Think by first principles</p>
-          </CultureCard>
-          <CultureCard extraClasses='lg:col-span-3 lg:row-span-3'>
-            <div>
-              <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307]">Robust & Dynamic</p>
-              {/* <span className="text-xl sm:text-2xl">✨</span> */}
-            </div>
-          </CultureCard>
-          <CultureCard extraClasses='lg:col-span-2 lg:row-span-3'>
-            <p className="font-normal font-almirego text-sm sm:text-base lg:text-lg text-[#050307] transform">Step Ahead Of Wheels</p>
           </CultureCard>
         </div>
       </div>

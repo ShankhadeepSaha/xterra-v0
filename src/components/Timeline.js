@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flag, DollarSign, Target, Users, Award, Rocket } from 'lucide-react';
+import { Flag, DollarSign, Target, Users, Award, Rocket, File, Handshake } from 'lucide-react';
 
 export default function ResponsiveTimeline() {
   const timelineItems = [
@@ -13,7 +13,7 @@ export default function ResponsiveTimeline() {
     },
     {
       year: '2022',
-      icon: DollarSign,
+      icon: Handshake,
       title: 'Building the Dream Team',
       content: [
         "Assembled a core team for Legged Robotics Research.",
@@ -38,7 +38,7 @@ export default function ResponsiveTimeline() {
     {
       year: 'October 2023',
       icon: Award,
-      title: 'India\'s First Industrial Quadruped Robot',
+      title: 'India\'s First Commercial Quadruped Robot',
       content: [
         "SVAN M2 takes its first step.",
       ]
