@@ -190,10 +190,10 @@ const Navbar = () => {
           
           <div className="hidden lg:flex pe-4 lg:pe-12 justify-end space-x-2">
             <MagneticButton 
-              href="/news" 
+              href="/blog" 
               className="text-[#050307] bg-white/30 backdrop-blur-md font-almirego px-4 lg:px-6 py-2 border rounded-full text-sm lg:text-base inline-block"
             >
-              News
+              Blog
             </MagneticButton>
             <MagneticButton 
               href="/contact" 
@@ -217,7 +217,7 @@ const Navbar = () => {
             <a href="/solutions" className="block py-2 text-center text-base font-almirego text-[#050307]">Solutions</a>
             <a href="/about" className="block py-2 text-center text-base font-almirego text-[#050307]">About</a>
             <a href="/careers" className="block py-2 text-center text-base font-almirego text-[#050307]">Careers</a>
-            <a href="/news" className="block py-2 text-center text-base font-almirego text-[#050307]">News</a>
+            <a href="/blog" className="block py-2 text-center text-base font-almirego text-[#050307]">Blog</a>
             <a href="/contact" className="block py-2 text-center text-base font-almirego text-[#050307]">Contact</a>
           </div>
         )}
