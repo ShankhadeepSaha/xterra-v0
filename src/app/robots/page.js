@@ -8,6 +8,7 @@ import RobotProducts from '@/components/robot/RobotProducts'
 import Lenis from "lenis";
 import React, { useEffect, useRef, useState } from "react";
 import Link from 'next/link';
+import BlogSection from '@/components/blog-section'
 
 
 export default function Home() {
@@ -31,6 +32,9 @@ export default function Home() {
       <Header />
 
       <RobotProducts />
+
+
+      {/* <BlogSection/> */}
       {/* <DoubleImage /> */}
       {/* <SectionImage /> */}
       {/* <Comparison /> */}
