@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flag, DollarSign, Target, Users, Award, Rocket, File, Handshake } from 'lucide-react';
+import { Flag, Target, Users, Award, Rocket, Handshake } from 'lucide-react';
 
 export default function ResponsiveTimeline() {
   const timelineItems = [
@@ -94,8 +94,7 @@ export default function ResponsiveTimeline() {
                     </div>
                   </div>
                   <div className={`flex-1 order-3 ${index % 2 === 0 ? 'sm:order-3 text-left sm:text-right' : 'sm:order-1 text-left'} mt-2 sm:mt-0`}>
-                    <div className="font-bold sm:hidden">{item.year}</div>
-                    <div className="hidden sm:block font-bold">{item.year}</div>
+                    <div className="text-lg sm:text-xl md:text-2xl font-bold">{item.year}</div>
                   </div>
                 </div>
               ))}

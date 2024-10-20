@@ -1,72 +1,77 @@
-import React, { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import Image from "next/image"
+'use client'
 
-const defaultProducts = [
+import { useState, useEffect } from 'react'
+
+const images = [
   {
-    id: 1,
-    name: "INDUSTRIAL INSPECTION",
-    description: "Industrial inspection and data collection for predictive maintenance, Security and surveillance of urban establishments",
-    imageUrl: "/robot/m2.1.png"
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201%20(3)-k3rSu9xLR8BrwSvnAevOUxgyF6NpzJ.png',
+    alt: 'xTerra Quadruped Robot',
+    heading: 'INDUSTRIAL INSPECTION',
+    description: 'Our robots efficiently handle inspections in hazardous areas, ensuring predictive maintenance and enhancing security across industrial and urban environments.'
   },
   {
-    id: 2,
-    name: "VERSATILE LOGISTICS",
-    description: "Move items effortlessly and carry payloads on slopes & stairs",
-    imageUrl: "/robot/m2.2.png"
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201%20(1)-36mkS5Im1CoxTw8WGaJpDCcGiNboAb.png',
+    alt: 'xTerra Robot with Payload',
+    heading: 'VERSATILE LOGISTICS',
+    description: 'Svan can move items effortlessly, even on slopes and stairs. They boost efficiency in logistics, handling tasks like warehouse operations, last-mile delivery, and military logistics in challenging terrains'
   },
   {
-    id: 3,
-    name: "PRECISE MANIPULATION",
-    description: "Industrial inspection and data collection for predictive maintenance, Security and surveillance of urban establishments",
-    imageUrl: "/robot/m2.3.png"
-  }
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201%20(2)-BoweMjRPnJP5oqjUn09wM6jmYxqTuH.png',
+    alt: 'xTerra Robot with Robotic Arm',
+    heading: 'PRECISE MANIPULATION',
+    description: 'Our robots with manipulators excel in tasks requiring precision, such as factory maintenance, precision farming, and sample collection for research, combining advanced mobility with dexterous control'
+  },
 ]
 
-export default function ProductCarousel({ products = defaultProducts }) {
+export default function Component() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 5000) // Change image every 5 seconds
+
+    return () => clearInterval(timer)
+  }, [])
+
   return (
-    <Carousel
-      className="w-full max-w-5xl mx-auto"
-      onSelect={(index) => setCurrentIndex(index)}
-    >
-      <CarouselContent>
-        {products.map((product) => (
-          <CarouselItem key={product.id}>
-            <Card className="border-none shadow-none">
-              <CardContent className="flex flex-col items-center justify-center p-12">
-                <div className="relative w-[28rem] h-[28rem] mb-8">
-                  <Image
-                    src={product.imageUrl}
-                    alt={product.name}
-                    layout="fill"
-                    objectFit="contain"
-                    className="rounded-lg"
-                  />
-                </div>
-                <div className="text-center max-w-2xl">
-                  <h3 className="text-3xl font-semibold mb-4">{product.name}</h3>
-                  <p className="text-xl text-muted-foreground">{product.description}</p>
-                </div>
-              </CardContent>
-            </Card>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="left-4 lg:-left-20" />
-      <CarouselNext className="right-4 lg:-right-20" />
-      <div className="flex justify-center mt-8">
-        {products.map((_, index) => (
-          <span
+    <div className="relative w-full h-screen bg-white overflow-hidden">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img
+              src={image.url}
+              alt={image.alt}
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div className="relative z-10 p-8 md:p-20 text-black w-full h-full flex flex-col justify-between">
+            <p className="w-full md:w-2/3 lg:w-1/2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl self-end text-right uppercase mb-8 sm:mb-0 p-4 rounded-lg  mt-8 mr-8">
+              {image.description}
+            </p>
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase mt-auto p-4 rounded-lg inline-block mb-8 ml-8">
+              {image.heading}
+            </p>
+          </div>
+        </div>
+      ))}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-4 z-20">
+        {images.map((_, index) => (
+          <button
             key={index}
-            className={`h-4 w-4 mx-2 rounded-full ${
-              index === currentIndex ? "bg-primary" : "bg-muted"
+            onClick={() => setCurrentIndex(index)}
+            className={`w-4 h-4 rounded-full ${
+              index === currentIndex ? 'bg-white' : 'bg-gray-400'
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
-    </Carousel>
+    </div>
   )
 }
