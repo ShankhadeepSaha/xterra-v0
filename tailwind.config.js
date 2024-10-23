@@ -22,7 +22,7 @@ module.exports = {
         almiregodl: ['Almiregodl', 'sans-serif'],
         almiregod: ['Almiregod', 'sans-serif'],
         almiregodb: ['Almiregodb', 'sans-serif'],
-        newsreader : ['Newsreader', 'sans-serif'],
+        newsreader: ['Newsreader', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -73,15 +73,6 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-      },
-      animation: {
-        scroll: 'scroll 40s linear infinite',
-      },
-      animation: {
-        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
-        slide: "slide var(--speed) ease-in-out infinite alternate",
-      },
-      keyframes: {
         "spin-around": {
           "0%": {
             transform: "translateZ(0) rotate(0)",
@@ -101,7 +92,18 @@ module.exports = {
             transform: "translate(calc(100cqw - 100%), 0)",
           },
         },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        }
       },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+        slide: "slide var(--speed) ease-in-out infinite alternate",
+        scroll: "scroll 40s linear infinite",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

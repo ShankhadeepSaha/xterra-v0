@@ -1,64 +1,74 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useScroll } from 'framer-motion';
+// components/InfiniteScrollText/index.jsx
+import React, { useState } from 'react';
 
-const Footercurve = () => {
-  const container = useRef();
-  const paths = useRef([]);
-  const [viewBox, setViewBox] = useState("0 0 250 90");
-  const [curvePath, setCurvePath] = useState("m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68");
-  const [textSize, setTextSize] = useState("6px");
-
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start end', 'end start']
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (width < 640) { // mobile
-        setViewBox("0 0 100 40");
-        setCurvePath("m0,38c24.55,0,24.6-28,50.6-28,23.2,0,20.4,28,49.2,28");
-        setTextSize("3px");
-      } else if (width < 1024) { // tablet
-        setViewBox("0 0 200 70");
-        setCurvePath("m0,68c49.1,0,49.2-52,101.2-52,46.4,0,40.8,52,98.4,52");
-        setTextSize("4px");
-      } else { // desktop
-        setViewBox("0 0 250 90");
-        setCurvePath("m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68");
-        setTextSize("6px");
-      }
-    };
-
-    handleResize(); // Call once to set initial size
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", e => {
-      paths.current.forEach((path, i) => {
-        path.setAttribute("startOffset", -40 + (i * 40) + (e * 40) + "%");
-      });
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress]);
+const InfiniteScrollText = ({
+  items,
+  className = "",
+  dotColor = "#3C5B6F",
+  duration = 40
+}) => {
+  const [isPaused, setIsPaused] = useState(false);
+  const repeatedContent = [...items, ...items, ...items];
 
   return (
-    <div ref={container} className="w-full overflow-hidden">
-      <svg className="w-full h-auto mb-8 sm:mb-12 md:mb-16" viewBox={viewBox}>
-        <path fill="none" id="curve" d={curvePath} />
-        <text className={`font-almirego uppercase`} style={{ fill: "black", fontSize: textSize }}>
-          {[...Array(3)].map((_, i) => (
-            <textPath key={i} ref={ref => paths.current[i] = ref} startOffset={i * 40 + "%"} href="#curve">
-              xterra world of robots
-            </textPath>
-          ))}
-        </text>
-      </svg>
+    <div 
+      className={`
+        relative w-full overflow-x-hidden whitespace-nowrap
+        pb-8 sm:pb-12 md:pb-16 lg:pb-20  // Added responsive bottom padding
+        before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[100px]
+        before:bg-gradient-to-r before:from-background before:to-transparent
+        after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[100px]
+        after:bg-gradient-to-l after:from-background after:to-transparent
+        ${className}
+      `}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+    >
+      <div
+        className={`
+          inline-block transform-gpu animate-scroll
+          ${isPaused ? 'pause' : ''}
+        `}
+        style={{
+          animationDuration: `${duration}s`
+        }}
+      >
+        {repeatedContent.map((item, idx) => (
+          <div 
+            key={`${item.text}-${idx}`}
+            className="inline-flex items-center"
+          >
+            <span className={`
+              inline-block
+              text-[5vw] md:text-[5vw] lg:text-[5vw] xl:text-[6vw]
+              font-almirego
+              transition-transform duration-300
+              ${isPaused ? 'hover:scale-105 cursor-pointer' : ''}
+            `}>
+              {item.text}
+            </span>
+            {item.showDot && (
+              <span
+                className={`
+                  inline-block rounded-full
+                  mx-[2vw]
+                  h-[25px] w-[25px]
+                  md:h-[40px] md:w-[40px]
+                  lg:h-[50px] lg:w-[50px]
+                  xl:h-[70px] xl:w-[70px]
+                  transition-transform duration-300
+                  ${isPaused ? 'hover:scale-110' : ''}
+                `}
+                style={{ backgroundColor: dotColor }}
+              />
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Footercurve;
+export default InfiniteScrollText;

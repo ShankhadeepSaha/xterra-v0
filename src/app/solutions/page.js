@@ -11,7 +11,11 @@ import Link from 'next/link';
 
 
 export default function Home() {
-
+  const scrollItems = [
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+  ];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -118,7 +122,10 @@ export default function Home() {
         </div>
       </div>
 
-      <Footercurve />
+      <Footercurve items={scrollItems}
+        duration={40}
+        dotColor="white"
+      />
       <Footer />
     </div>
   );

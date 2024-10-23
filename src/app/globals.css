@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'Almirego';
-  src: url('/fonts/AlmiregoRegular.woff2') format('woff2');;
+  src: url('/fonts/AlmiregoRegular.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -64,5 +64,11 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused !important;
   }
 }

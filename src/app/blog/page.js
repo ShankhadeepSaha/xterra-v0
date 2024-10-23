@@ -8,7 +8,11 @@ import Footercurve from "@/components/footer/Footercurve";
 
 
 export default function Home() {
-
+  const scrollItems = [
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+  ];
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -23,7 +27,10 @@ export default function Home() {
     <div className="mt-48">
       <Navbar />
     
-      <Footercurve />
+      <Footercurve items={scrollItems}
+        duration={40}
+        dotColor="white"
+      />
       <Footer />
     </div>
   );

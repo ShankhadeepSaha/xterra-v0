@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import BlinkingText from '@/components/animations/BlinkingText';
+import { FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const EMAIL = 'info@xterrarobotics.com';
 const NAVIGATION_LINKS = [
@@ -8,19 +9,37 @@ const NAVIGATION_LINKS = [
   { name: 'Actuators', path: '/actuators' },
   { name: 'Solutions', path: '/solutions' },
   { name: 'About', path: '/about' },
-  { name: 'Careers', path: '/careers' }
+  { name: 'Careers', path: '/careers' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'Contact', path: '/contact' }
 ];
 const SOCIAL_LINKS = [
-  { name: 'Linkedin', url: 'https://www.linkedin.com/company/xterra-robotics/' },
-  { name: 'Instagram', url: 'https://www.instagram.com/xterrarobotics/' },
-  { name: 'X', url: 'https://twitter.com/xterrarobotics' },
-  { name: 'Youtube', url: 'https://www.youtube.com/@xTerraRobotics' }
+  { 
+    name: 'Linkedin', 
+    url: 'https://www.linkedin.com/company/xterra-robotics/',
+    icon: FaLinkedin 
+  },
+  { 
+    name: 'Instagram', 
+    url: 'https://www.instagram.com/xterrarobotics/',
+    icon: FaInstagram 
+  },
+  { 
+    name: 'X', 
+    url: 'https://twitter.com/xterrarobotics',
+    icon: FaXTwitter 
+  },
+  { 
+    name: 'Youtube', 
+    url: 'https://www.youtube.com/@xTerraRobotics',
+    icon: FaYoutube 
+  }
 ];
 
 export default function Footer() {
   return (
     <footer className='w-full bg-white'>
-      <div className='container mx-auto p-4 pb-8 sm:pb-12 md:pb-16 lg:pb-20 flex flex-col justify-between space-y-8 md:space-y-12'>
+      <div className='container mx-auto p-4 pb-4 sm:pb-6 md:pb-8 lg:pb-10 flex flex-col justify-between space-y-8 md:space-y-12'>
         <EmailSection />
         <MainContent />
       </div>
@@ -40,7 +59,7 @@ const EmailSection = () => (
       rel="noopener noreferrer"
       aria-label={`Send email to ${EMAIL}`}
     >
-      <BlinkingText text={EMAIL} className='font-almirego font-light' />
+      <span className='font-almirego font-light'>{EMAIL}</span>
     </a>
   </div>
 );
@@ -62,10 +81,9 @@ const NavigationLinks = () => (
         key={index}
         className="hover:opacity-80 transition-opacity duration-300"
       >
-        <BlinkingText 
-          className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-almirego font-light cursor-pointer' 
-          text={name} 
-        />
+        <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-almirego font-light cursor-pointer'>
+          {name}
+        </span>
       </Link>
     ))}
   </div>
@@ -81,35 +99,31 @@ const CompanyInfo = () => (
 
 const Address = () => (
   <>
-  <div className='w-full mb-4'>
-    <div className='text-lg sm:text-xl md:text-2xl font-almirego font-normal'>xTerra Robotics Pvt Ltd</div>
-    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>G-508/11 Avas Vikas No. 1, Panki Road Kalyanpur,</div>
-    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>Avas Vikas Yojna No. 3, Kanpur Nagar,</div>
-    <div className='text-base sm:text-lg md:text-xl font-almirego font-light mt-2'>Kanpur, Uttar Pradesh, 208017</div>
-  </div>
-    {/* <div className='w-full mb-4'>
-    <div className='text-sm sm:text-sm md:text-sm font-almirego font-normal'>Shipping Address:</div>
-    <div className='text-sm sm:text-sm md:text-sm font-almirego font-normal mt-2'> NL 212, Mobile Robotics Lab, Department of Mechanical Engineering, IIT Kanpur, Kanpur, 208016</div>
-  </div> */}
+    <div className='w-full mb-4'>
+      <div className='text-lg sm:text-xl md:text-2xl font-almirego font-normal'>xTerra Robotics Pvt Ltd</div>
+      <div className='text-base sm:text-base md:text-base font-almirego font-light mt-2'>G-508/11 Avas Vikas No. 1, Panki Road Kalyanpur,</div>
+      <div className='text-base font-almirego font-light mt-2'>Avas Vikas Yojna No. 3, Kanpur Nagar,</div>
+      <div className='text-base font-almirego font-light mt-2'>Kanpur, Uttar Pradesh, 208017</div>
+      <div className='text-base font-sans font-light mt-2'>Shipping Address:</div>
+      <div className='text-base sm:text-base md:text-base font-almirego font-light mt-2'>NL 212, Mobile Robotics Lab,</div>
+      <div className='text-base font-almirego font-light mt-2'>Department of Mechanical Engineering,</div>
+      <div className='text-base font-almirego font-light mt-2'>IIT Kanpur, Kanpur, 208016</div>
+    </div>
   </>
 );
 
 const SocialLinks = () => (
-  <div className='flex flex-wrap gap-4'>
-    {SOCIAL_LINKS.map(({ name, url }, index) => (
+  <div className='flex flex-wrap gap-6'>
+    {SOCIAL_LINKS.map(({ name, url, icon: Icon }, index) => (
       <a
         key={index}
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline"
+        className="hover:opacity-70 transition-opacity duration-300"
         aria-label={`Visit our ${name} page`}
       >
-        <BlinkingText 
-          className='text-base sm:text-lg md:text-xl font-almirego font-normal'
-          text={name}
-          icon={true}
-        />
+        <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
       </a>
     ))}
   </div>
