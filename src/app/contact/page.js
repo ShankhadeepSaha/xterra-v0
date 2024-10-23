@@ -11,6 +11,11 @@ export default function Home() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const scrollItems = [
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+  ];
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -117,7 +122,10 @@ export default function Home() {
           </iframe>
         </div>
       </div>
-      <Footercurve />
+      <Footercurve items={scrollItems}
+        duration={40}
+        dotColor="white"
+      />
 
       <Footer />
     </div>

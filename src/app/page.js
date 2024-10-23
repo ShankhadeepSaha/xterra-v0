@@ -153,6 +153,12 @@ export default function Home() {
     }
   }, [imagesLoaded, images, setupScrollSequence]);
 
+  const scrollItems = [
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+  ];
+
   return (
     <div>
       <Navbar />
@@ -196,9 +202,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <BlogSection/>
+      <BlogSection />
       <ContactUs />
-      <Footercurve />
+      <Footercurve items={scrollItems}
+        duration={40}
+        dotColor="white"
+      />
       <Footer />
     </div>
   );

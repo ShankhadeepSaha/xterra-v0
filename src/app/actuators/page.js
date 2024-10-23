@@ -10,7 +10,11 @@ import Link from 'next/link';
 
 
 export default function Home() {
-
+  const scrollItems = [
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
+  ];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -48,19 +52,16 @@ export default function Home() {
       <ActuatorsProducts />
 
 
+
       <div className="container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32">
-        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl">
+        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Have You Discovered
           <br className="hidden sm:inline" />
           Our{' '}
           <Link href="/robots" className="text-[#4E148C] hover:underline cursor-pointer">
-          Robots
-        </Link>
-        {/* ,{' '}
-          <Link href="/actuators" className="text-[#4E148C] hover:underline cursor-pointer">
-            Actuators
-          </Link> */}
-          , and{' '}
+            Robots
+          </Link>
+          {' '}and{' '}
           <Link href="/solutions" className="text-[#4E148C] hover:underline cursor-pointer">
             Solutions
           </Link>
@@ -116,7 +117,10 @@ export default function Home() {
         </div>
       </div>
 
-      <Footercurve />
+      <Footercurve items={scrollItems}
+        duration={40}
+        dotColor="white"
+      />
       <Footer />
     </div>
   );
