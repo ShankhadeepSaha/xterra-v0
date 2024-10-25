@@ -15,6 +15,8 @@ import { useEffect, useRef, useState } from "react";
 import Footercurve from "@/components/footer/Footercurve";
 import ValueCard from "@/components/miregoWebsite/valueCardVariants/ValueCard";
 import Link from 'next/link';
+import BlogSection from "@/components/blog-section";
+import BlogPage from "@/components/blogpage";
 
 
 export default function Home() {
@@ -73,7 +75,11 @@ export default function Home() {
       <Team />
       <OurStory />
 
-      <div className="container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32">
+      {/* <BlogSection/> */}
+      <BlogPage/>
+
+
+      <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Have You Discovered
           <br className="hidden sm:inline" />

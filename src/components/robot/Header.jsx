@@ -10,7 +10,7 @@ function Header() {
           </h1>
         </div>
         <div className='w-full max-w-3xl'>
-          <p className='text-l sm:text-xl md:text-2xl lg:text-3xl font-almiregodl leading-tight text-center'>
+          <p className='text-l sm:text-xl md:text-2xl lg:text-3xl font-poppins font-light leading-tight text-center'>
             State-of-the-art, four-legged robotic system, meticulously engineered for exceptional mobility and agility, offering unparalleled terrain navigation capabilities in diverse environments.
           </p>
         </div>

@@ -42,7 +42,7 @@ export default function Home() {
             </h1>
           </div>
           <div className='w-full max-w-3xl'>
-            <p className='text-l sm:text-xl md:text-2xl lg:text-3xl font-almiregodl leading-tight text-center'>
+            <p className='text-l sm:text-xl md:text-2xl lg:text-3xl font-poppins font-light leading-tight text-center'>
             Precision-engineered actuators designed to deliver superior control and power, ensuring smooth, responsive movements with unmatched durability, optimized for high-performance applications in robotic systems.
             </p>
           </div>
