@@ -41,7 +41,7 @@ export default function Home() {
             </h1>
           </div>
           <div className='w-full max-w-3xl'>
-            <p className='text-l sm:text-xl md:text-2xl lg:text-3xl font-almiregodl leading-tight text-center'>
+            <p className='text-l sm:text-xl md:text-2xl lg:text-3xl font-poppins font-light leading-tight text-center'>
             Cutting-edge robotic solutions tailored for seamless integration, delivering efficiency, precision, and innovation across diverse industries.
             </p>
           </div>
@@ -53,23 +53,18 @@ export default function Home() {
       {/* <SectionImage /> */}
       {/* <Comparison /> */}
       {/* <Ctas /> */}
-
       <div className="container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32">
-        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl">
+        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Have You Discovered
           <br className="hidden sm:inline" />
           Our{' '}
           <Link href="/robots" className="text-[#4E148C] hover:underline cursor-pointer">
           Robots
-        </Link>
-        ,{' '}
-          <Link href="/actuators" className="text-[#4E148C] hover:underline cursor-pointer">
-            Actuators
           </Link>
-          {/* , and{' '}
-          <Link href="/solutions" className="text-[#4E148C] hover:underline cursor-pointer">
-            Solutions
-          </Link> */}
+          {' '}and{' '}
+          <Link href="/actuators" className="text-[#4E148C] hover:underline cursor-pointer">
+          Actuators
+          </Link>
           ?
         </div>
       </div>

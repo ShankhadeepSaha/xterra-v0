@@ -23,6 +23,7 @@ module.exports = {
         almiregod: ['Almiregod', 'sans-serif'],
         almiregodb: ['Almiregodb', 'sans-serif'],
         newsreader: ['Newsreader', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

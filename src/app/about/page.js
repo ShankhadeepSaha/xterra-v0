@@ -15,6 +15,7 @@ import { useEffect, useRef, useState } from "react";
 import Footercurve from "@/components/footer/Footercurve";
 import ValueCard from "@/components/miregoWebsite/valueCardVariants/ValueCard";
 import Link from 'next/link';
+import BlogSection from "@/components/blog-section";
 
 
 export default function Home() {
@@ -72,6 +73,9 @@ export default function Home() {
       <Timeline />
       <Team />
       <OurStory />
+
+      <BlogSection/>
+
 
       <div className="container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
