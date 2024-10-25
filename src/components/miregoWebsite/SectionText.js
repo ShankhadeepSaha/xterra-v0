@@ -27,16 +27,18 @@ function SectionText() {
   return (
     <div className="font-almirego">
       {/* Text Section */}
-      <div className='container mx-auto px-4 flex flex-col lg:flex-row mb-16 sm:mb-24 lg:mb-32'>
-        <div className='w-full lg:w-2/3 mb-8 lg:mb-0'>
-          <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-9xl'>
-          Redefining Robotics
-          </h1>
-        </div>
-        <div className='w-full lg:w-1/3 flex items-end'>
-          <p className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight'>
-          Pushing Boundaries to Unlock New Possibilities.
-          </p>
+      <div className="container mx-auto p-4">
+        <div className='flex flex-col lg:flex-row mb-16 sm:mb-24 lg:mb-32'>
+          <div className='w-full lg:w-2/3 mb-8 lg:mb-0'>
+            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
+              Redefining Robotics
+            </h1>
+          </div>
+          <div className='w-full lg:w-1/3 flex items-end'>
+            <p className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-tight'>
+              Pushing Boundaries to Unlock New Possibilities.
+            </p>
+          </div>
         </div>
       </div>
 

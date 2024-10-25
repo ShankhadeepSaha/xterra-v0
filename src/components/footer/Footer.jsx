@@ -10,7 +10,7 @@ const NAVIGATION_LINKS = [
   { name: 'Solutions', path: '/solutions' },
   { name: 'About', path: '/about' },
   { name: 'Careers', path: '/careers' },
-  { name: 'Blog', path: '/blog' },
+  { name: 'Media', path: '/media' },
   { name: 'Contact', path: '/contact' }
 ];
 const SOCIAL_LINKS = [

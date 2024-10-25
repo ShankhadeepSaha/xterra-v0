@@ -97,12 +97,12 @@ const Navbar = () => {
             
             <div className="hidden lg:flex pe-4 lg:pe-12 justify-end space-x-2">
               <a 
-                href="/blog" 
+                href="/media" 
                 className={`text-[#050307] font-almirego px-4 lg:px-6 py-2 border rounded-full text-sm lg:text-base hover:scale-105 transition-all duration-300 ease-in-out ${
                   hasScrolled ? 'border-gray-200 hover:border-gray-400' : 'bg-white/30 backdrop-blur-md'
                 }`}
               >
-                Blog
+                Media
               </a>
               <a 
                 href="/contact" 
@@ -141,7 +141,7 @@ const Navbar = () => {
               ['Solutions', '/solutions'],
               ['About', '/about'],
               ['Careers', '/careers'],
-              ['Blog', '/blog'],
+              ['Media', '/media'],
               ['Contact', '/contact']
             ].map(([title, url]) => (
               <a 

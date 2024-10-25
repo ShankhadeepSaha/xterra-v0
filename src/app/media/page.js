@@ -5,6 +5,13 @@ import Navbar from "@/components/navbar/Navbar";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 import Footercurve from "@/components/footer/Footercurve";
+import React from 'react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import Image from "next/image";
+import BlogPage from "@/components/blogpage";
+import News from "@/components/News";
+import MediaPageSlider from "@/components/MediaPageSlider";
 
 
 export default function Home() {
@@ -26,8 +33,10 @@ export default function Home() {
   return (
     <div className="mt-48">
       <Navbar />
-    
-      <Footercurve items={scrollItems}
+      <News />
+      <BlogPage />
+      <Footercurve
+        items={scrollItems}
         duration={40}
         dotColor="white"
       />
