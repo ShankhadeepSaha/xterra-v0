@@ -104,7 +104,7 @@ const Address = () => (
       <div className='text-base sm:text-base md:text-base font-almirego font-light mt-2'>G-508/11 Avas Vikas No. 1, Panki Road Kalyanpur,</div>
       <div className='text-base font-almirego font-light mt-2'>Avas Vikas Yojna No. 3, Kanpur Nagar,</div>
       <div className='text-base font-almirego font-light mt-2'>Kanpur, Uttar Pradesh, 208017</div>
-      <div className='text-base font-sans font-light mt-2'>Shipping Address:</div>
+      <div className='text-base font-sans font-light mt-2'>Alternate Address:</div>
       <div className='text-base sm:text-base md:text-base font-almirego font-light mt-2'>NL 212, Mobile Robotics Lab,</div>
       <div className='text-base font-almirego font-light mt-2'>Department of Mechanical Engineering,</div>
       <div className='text-base font-almirego font-light mt-2'>IIT Kanpur, Kanpur, 208016</div>
