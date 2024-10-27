@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import WordReveal from "./animations/WordReveal";
 
 function VideoHero() {
   return (
@@ -18,69 +17,56 @@ function VideoHero() {
         </video>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego">
-        <div className="mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-          <WordReveal
-            text="Are you passionate about robotics and eager to be part of a dynamic team shaping the future of technology?"
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-light text-[#050307] leading-tight"
-          />
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-light text-[#050307] leading-tight">
+            Discover how our solutions are shaping the future of industries.
+          </h2>
         </div>
       </div>
     </>
   );
 }
 
+// Rest of the code remains the same...
+
 function UseCases() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-almirego">
       <div className="space-y-16 sm:space-y-24 md:space-y-32">
         <UseCase
-          title="Lorem Ipsum"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-          imageSrc="/robot/4x6.png"
+          title="Thermal Power Plant Inspection"
+          description="Our Svan M2 robot enhances power plant safety and efficiency with high-definition cameras, thermal sensors, and AI analytics. It navigates complex areas, inspecting control panels, pipes, and machinery for wear, leaks, and overheating, enabling predictive maintenance and reducing downtime."
+          imageSrc="/images/Thermal.png"
           imageAlt="Construction site progress monitoring"
-          pdfUrl="/path-to-your-pdf/site-assessment.pdf"
           reverse={true}
         />
         <UseCase
-          title="Lorem Ipsum"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-          imageSrc="/robot/4x6.png"
+          title="Power Station Inspection"
+          description="The Svan M2 revolutionizes power station inspections with its high-definition cameras, thermal imaging, and AI algorithms. It efficiently examines panels, transformers, and hard-to-reach areas, identifying issues early to improve safety and minimize operational disruptions."
+          imageSrc="/images/Power.png"
           imageAlt="Construction site assessment"
-          pdfUrl="/path-to-your-pdf/site-assessment.pdf"
           reverse={false}
         />
         <UseCase
-          title="Lorem Ipsum"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-          imageSrc="/robot/4x6.png"
+          title="Construction Survey"
+          description="For construction, the Svan M2 provides precise site surveys with HD cameras, LIDAR, and AI. It navigates rugged terrain, performing 3D mapping and capturing accurate measurements, enhancing safety, efficiency, and cost savings in project planning."
+          imageSrc="/images/Construction.png"
           imageAlt="Construction site progress monitoring"
-          pdfUrl="/path-to-your-pdf/site-assessment.pdf"
           reverse={true}
         />
         <UseCase
-          title="Lorem Ipsum"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-          imageSrc="/robot/4x6.png"
+          title="Public Security"
+          description="Our Svan M2 robot redefines public security by patrolling public spaces, detecting threats, and analyzing behavior patterns with HD cameras, thermal sensors, and AI. It ensures reliable monitoring and swift response, enhancing safety in complex environments."
+          imageSrc="/images/Public.png"
           imageAlt="Construction site assessment"
-          pdfUrl="/path-to-your-pdf/site-assessment.pdf"
           reverse={false}
         />
-        
       </div>
     </div>
   );
 }
 
-function UseCase({ title, description, imageSrc, imageAlt, pdfUrl, reverse }) {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = `${title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
+function UseCase({ title, description, imageSrc, imageAlt, reverse }) {
   return (
     <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-16`}>
       <div className="md:w-1/2 space-y-4">
@@ -88,12 +74,6 @@ function UseCase({ title, description, imageSrc, imageAlt, pdfUrl, reverse }) {
         <p className="text-base sm:text-lg md:text-xl lg:text-[1.3rem] text-[#050307] leading-relaxed">
           {description}
         </p>
-        <button 
-          onClick={handleDownload}
-          className="mt-4 px-6 py-2 bg-[#4E148C] text-white rounded-full text-sm sm:text-base font-semibold hover:bg-[#3a0f69] transition-colors duration-300"
-        >
-          Know More
-        </button>
       </div>
       <div className="md:w-1/2">
         <Image
