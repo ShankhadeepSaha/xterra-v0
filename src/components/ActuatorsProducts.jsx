@@ -23,16 +23,18 @@ function Modal({ isOpen, onClose, children }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4">
-      <div className="bg-white p-6 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div className="bg-white p-6 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         <div className="flex justify-end mb-4">
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700 transition-colors">
             <X size={24} />
           </button>
         </div>
-        {children}
+        <div className="overflow-y-auto">
+          {children}
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 function ImageCard({ 
@@ -74,7 +76,7 @@ function ImageCard({
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div className="bg-white text-gray-800 p-6 rounded-lg">
+        <div className="bg-white text-gray-800">
           <h2 className="text-3xl font-bold mb-4 text-purple-900">{title}</h2>
           <p className="text-lg mb-6">{details.description}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -88,9 +90,8 @@ function ImageCard({
         </div>
       </Modal>
     </div>
-  )
+  );
 }
-
 
 function ActuatorsProducts() {
   return (

@@ -2,19 +2,11 @@ import React from "react";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const images = [
-  {
-    src: "/robot/m1.png",
-    alt: "Image 4",
-    className: "col-span-4 row-span-2",
-  },
-];
-
 const CategoryBadge = ({ category }) => {
   const styleVariants = {
-    Article: "bg-purple-50 text-purple-700 border border-purple-200",
-    Update: "bg-blue-50 text-blue-700 border border-blue-200",
-    Press: "bg-indigo-50 text-indigo-700 border border-indigo-200",
+    Article: "bg-emerald-50 text-emerald-700 border border-emerald-200",
+    Update: "bg-amber-50 text-amber-700 border border-amber-200",
+    Press: "bg-rose-50 text-rose-700 border border-rose-200",
   };
 
   return (
@@ -48,7 +40,7 @@ const NewsCard = ({ item }) => {
           </h3>
         </a>
 
-        <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+        <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
           {item.summary}
         </p>
 
@@ -105,64 +97,53 @@ const News = () => {
   ];
 
   return (
-    <div>
-      <main>
-        {/* Hero Section */}
-        <section className="container mx-auto px-4">
-          <div className="container mx-auto p-4">
-            <div className="flex flex-col items-center text-center mb-8 sm:mb-12 lg:mb-16">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2">
-                News & Media
-              </h1>
-              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-tight max-w-2xl">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-        </section>
+    <div className="flex flex-col w-full">
+      {/* Title Section - Now above the hero image */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col items-center text-center mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2">
+            News & Media
+          </h1>
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-tight max-w-2xl">
+            Keep informed on the newest robotics innovations and industry
+            developments.
+          </p>
+        </div>
+      </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[150px] sm:auto-rows-[200px]">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`relative overflow-hidden rounded-lg ${image.className}`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          ))}
+      {/* Hero Image Section */}
+      <div className="sm:px-4">
+        <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] overflow-hidden">
+          <Image
+            src="/images/media.jpg"
+            alt="Hero image"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Content Sections */}
+      <div className="container mx-auto px-4">
+        {/* Latest Insights Section */}
+        <div className="max-w-2xl mx-auto text-center mb-16 mt-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-almirego">
+            Latest Insights
+          </h2>
+          <p className="text-lg text-gray-600">
+            Discover our latest thoughts on robotics, automation, and
+            technological innovation.
+          </p>
         </div>
 
-        {/* Latest Insights Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center -mb-8">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4 font-almirego">
-                Latest Insights
-              </h2>
-              <p className="text-lg text-gray-600">
-                Discover our latest thoughts on robotics, automation, and technological innovation.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* News Grid Section */}
-        <section id="latest-news" className="bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsItems.map((item) => (
-                <NewsCard key={item.id} item={item} />
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
+        {/* News Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {newsItems.map((item) => (
+            <NewsCard key={item.id} item={item} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
