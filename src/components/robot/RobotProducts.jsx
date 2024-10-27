@@ -1,19 +1,62 @@
-import React from 'react'
-import Image from 'next/image'
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
-function ImageHero() {
+const ImageCarousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const images = [
+    '/images/img/svanM2IITK.jpeg',
+    '/images/img/OutInWild_xTerra.jpg',
+    '/images/img/Img2_lab.jpeg',
+    '/images/img/avinash_lab.jpg'
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] overflow-hidden">
-      <Image 
-        src="/robot/robotbanner.png"
-        alt="Hero image"
-        layout="fill"
-        objectFit="cover"
-        priority
-      />
+      {images.map((image, index) => (
+        <div
+          key={image}
+          className={`absolute w-full h-full transform transition-transform duration-500 ease-in-out ${
+            index === currentSlide ? 'translate-x-0' : 'translate-x-full'
+          }`}
+          style={{
+            transform: `translateX(${100 * (index - currentSlide)}%)`,
+          }}
+        >
+          <Image
+            src={image}
+            alt={`Slide ${index + 1}`}
+            layout="fill"
+            objectFit="cover"
+            priority={index === 0}
+          />
+        </div>
+      ))}
+      
+      {/* Navigation dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              currentSlide === index ? 'bg-white' : 'bg-white/50'
+            }`}
+            onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 function ImageCard({ 
   bgImage, 
@@ -64,7 +107,7 @@ function RobotProducts() {
   return (
     <div className='flex flex-col w-full'>
       <div className="sm:px-4">
-        <ImageHero />
+      <ImageCarousel />
       </div>
       <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 sm:px-3 md:px-4 w-full'>
         <ImageCard 
