@@ -102,11 +102,10 @@ export default function Component() {
   const [showMore, setShowMore] = useState(false);
 
   const handleDownload = () => {
-    // Replace this URL with the actual URL of your PDF brochure
-    const pdfUrl = '/path/to/your/brochure.pdf';
+    const pdfUrl = '/pdf/Svan_M2_Brochure.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'product_brochure.pdf';
+    link.download = 'Svan_M2_Brochure.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
