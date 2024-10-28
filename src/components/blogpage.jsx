@@ -59,11 +59,11 @@ const BlogPost = ({ post, index, visiblePosts }) => {
         <div className="pt-4 border-t border-gray-100">
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0">
-              <img
+              {/* <img
                 src={post.author.avatar}
                 alt={post.author.name}
                 className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
-              />
+              /> */}
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-gray-900">
@@ -86,44 +86,44 @@ const BlogPage = () => {
     {
       id: 1,
       category: "Article",
-      title: "How to boost conversion rates of your website",
+      title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nisi quis viverra quisque arcu id risus in. Quis adipiscing hendrerit sed cras amet, tempus non augue.",
-      image: "/api/placeholder/600/400",
+        "This robot dog has been prepared. It competed with a real dog in the trial.",
+      image: "/images/iitk.jpg",
       author: {
-        name: "Wade Warren",
+        name: "Sakshi",
         avatar: "/api/placeholder/40/40",
       },
-      date: "July 19, 2022",
-      link: "/blog/boost-conversion-rates",
+      date: "Feb 7, 2024",
+      link: "https://hindi.news18.com/news/uttar-pradesh/kanpur-indias-first-robot-dog-will-help-in-intelligence-for-army-and-police-8165162.html",
     },
     {
       id: 2,
-      category: "Case Study",
-      title: "How to use search engine optimisation to drive sales",
+      category: "Video",
+      title: "UP This Hour: This robot is acting like a dog. Svan M2 Robot || IIT Kanpur",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nisi quis viverra quisque arcu id risus in. Quis adipiscing hendrerit sed cras amet, tempus non augue.",
-      image: "/api/placeholder/600/400",
+        "Swan M-2: This robot is very useful. This robot runs on battery whose battery backup is about one hour. There is a camera installed in it for its monitoring and it is operated remotely. This robot can also jump when needed.",
+      image: "/images/Thermal.png",
       author: {
-        name: "Wade Warren",
+        name: "Baten UP Ki ",
         avatar: "/api/placeholder/40/40",
       },
-      date: "July 19, 2022",
-      link: "/blog/seo-drive-sales",
+      date: "May 28, 2024",
+      link: "https://www.youtube.com/watch?v=ZNp3axeLv3g",
     },
     {
       id: 3,
-      category: "Video",
-      title: "How to design customer experience",
+      category: "Article",
+      title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nisi quis viverra quisque arcu id risus in. Quis adipiscing hendrerit sed cras amet, tempus non augue.",
-      image: "/api/placeholder/600/400",
+        "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
+        image: "/images/Public.png",
       author: {
-        name: "Wade Warren",
+        name: "Bhaskar",
         avatar: "/api/placeholder/40/40",
       },
-      date: "July 19, 2022",
-      link: "/blog/design-customer-experience",
+      date: "March 20, 2024",
+      link: "https://www.bhaskar.com/local/uttar-pradesh/kanpur/news/iit-kanpur-made-dog-robot-132756408.html",
     },
     {
       id: 4,

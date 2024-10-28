@@ -66,34 +66,34 @@ const News = () => {
   const newsItems = [
     {
       id: 1,
-      category: "Article",
-      title: "Introducing our new AI-powered analytics platform",
+      category: "Press",
+      title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
       summary:
-        "We're excited to announce the launch of our latest innovation in data analytics, combining powerful AI capabilities with intuitive design.",
-      date: "Oct 25, 2024",
-      readTime: 5,
-      link: "/news/ai-analytics-platform",
+        "This robot dog has been prepared. It competed with a real dog in the trial.",
+      date: "Feb 7, 2024",
+      readTime: 3,
+      link: "https://hindi.news18.com/news/uttar-pradesh/kanpur-indias-first-robot-dog-will-help-in-intelligence-for-army-and-police-8165162.html",
     },
     {
       id: 2,
-      category: "Update",
-      title: "Q3 2024 Product Updates and Roadmap",
+      category: "Press",
+      title: "UP This Hour: This robot is acting like a dog. Svan M2 Robot || IIT Kanpur",
       summary:
-        "Discover what's new in our latest quarterly update and get a sneak peek at upcoming features and improvements.",
-      date: "Oct 20, 2024",
-      readTime: 3,
-      link: "/news/q3-updates",
+        "Swan M-2: This robot is very useful. This robot runs on battery whose battery backup is about one hour. There is a camera installed in it for its monitoring and it is operated remotely. This robot can also jump when needed.",
+      date: "May 28, 2024",
+      readTime: 4,
+      link: "https://www.youtube.com/watch?v=ZNp3axeLv3g",
     },
     {
       id: 3,
       category: "Press",
-      title: "Company named leader in Gartner Magic Quadrant",
+      title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       summary:
-        "We're proud to announce our positioning as a Leader in the 2024 Gartner Magic Quadrant for Analytics Platforms.",
-      date: "Oct 15, 2024",
-      readTime: 4,
-      link: "/news/gartner-recognition",
-    },
+        "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
+      date: "March 20, 2024",
+      readTime: 7,
+      link: "https://www.bhaskar.com/local/uttar-pradesh/kanpur/news/iit-kanpur-made-dog-robot-132756408.html",
+    }
   ];
 
   return (
@@ -129,10 +129,10 @@ const News = () => {
         {/* Latest Insights Section */}
         <div className="max-w-2xl mx-auto text-center mb-16 mt-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-almirego">
-            Latest Insights
+            Latest News & Updates
           </h2>
           <p className="text-lg text-gray-600">
-            Discover our latest thoughts on robotics, automation, and
+            Discover our latest break through on robotics, automation, and
             technological innovation.
           </p>
         </div>
