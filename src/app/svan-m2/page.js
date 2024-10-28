@@ -19,9 +19,6 @@ export default function Home() {
     { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
     { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
   ];
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const lenis = new Lenis()

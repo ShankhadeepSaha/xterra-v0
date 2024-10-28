@@ -1,5 +1,6 @@
 "use client";
 
+
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import FutureOrganizations from "@/components/miregoWebsite/FutureOrganisations";
@@ -14,6 +15,10 @@ import Footercurve from "@/components/footer/Footercurve";
 import OurStory from "@/components/OurStory";
 import WordReveal from '@/components/animations/WordReveal';
 import BlogSection from "@/components/blog-section";
+import Link from "next/link";
+import LeggedRobotics from "@/components/homerobot";
+import BlogPage from "@/components/blogpage";
+import HomeActuator from "@/components/HomeActuator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +26,7 @@ export default function Home() {
   const imageSequenceRef = useRef(null);
   const canvasRef = useRef(null);
   const textRef = useRef(null);
+  const scrollTextRef = useRef(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [images, setImages] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
@@ -96,6 +102,35 @@ export default function Home() {
       context.drawImage(img, x, y, img.width * scale, img.height * scale);
     };
 
+    // Set up scroll text animation
+    gsap.set(scrollTextRef.current, { 
+      opacity: 1,
+      y: 20
+    });
+
+    // Create bounce animation for scroll text
+    gsap.to(scrollTextRef.current, {
+      y: -20,
+      duration: 1,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+
+    const scrollTextTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: imageSequenceRef.current,
+        start: "top top",
+        end: "+=7%",
+        scrub: true
+      }
+    });
+
+    scrollTextTl.to(scrollTextRef.current, {
+      opacity: 0,
+      duration: 1
+    });
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: imageSequenceRef.current,
@@ -115,10 +150,8 @@ export default function Home() {
       },
     });
 
-    // Adjusting the second animation to start at frame 138 (when the first would have started)
     const startScrollOffset = "top+=" + (canvas.height * (138 / images.length));
 
-    // Add text animation (adjusted to start at frame 138)
     gsap.set(textRef.current, { opacity: 0, scale: 1, z: 0 });
     tl.to(textRef.current, {
       opacity: 1,
@@ -127,7 +160,7 @@ export default function Home() {
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: imageSequenceRef.current,
-        start: startScrollOffset, // Starting from frame 138 equivalent scroll position
+        start: startScrollOffset,
         end: "bottom bottom",
         scrub: true,
       },
@@ -175,6 +208,12 @@ export default function Home() {
               >
                 Striding into tomorrow
               </div>
+              <div
+                ref={scrollTextRef}
+                className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-xl font-light tracking-wider uppercase"
+              >
+                Scroll Down
+              </div>
             </>
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gray-200">
@@ -185,25 +224,31 @@ export default function Home() {
       </div>
       <OurStory />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego">
-        <div className='mb-8 sm:mb-12 md:mb-16 lg:mb-20'>
-          <WordReveal text="Building robots for the future" className='text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-light text-[#050307] leading-tight' />
+        <div className='mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center'>
+          <h2 className='font-medium text-4xl sm:text-4xl md:text-5xl lg:text-[5.5rem] text-[#050307] leading-tight'>
+          Revolutionizing Mobility with Advanced Robotics
+          </h2>
         </div>
-        <div className='flex flex-col lg:flex-row mb-8 sm:mb-12 lg:mb-16'>
-          <div className='w-full lg:w-1/2 mb-6 lg:mb-0'>
-            {/* This div is intentionally left empty as per the original component */}
-          </div>
-          <div className='w-full lg:w-1/2 text-base sm:text-lg md:text-xl lg:text-[1.3rem] text-[#050307] leading-relaxed'>
-            xTerra is an Indian Deep-Tech Robotics Startup, founded by a team of highly skilled and passionate engineers. Incubated at IIT Kanpur and spun off from the Mobile Robotics Laboratory at IIT Kanpur, we are committed to solving complex locomotion challenges with world-class solutions.
-          </div>
-        </div>
-        <div className='flex flex-col lg:flex-row'>
-          <div className='w-full lg:w-1/2 mb-6 lg:mb-0'>
-            {/* This div is intentionally left empty as per the original component */}
-          </div>
+        <div className='text-center max-w-4xl mx-auto mb-4 sm:mb-6 lg:mb-8'>
+          <p className='text-base sm:text-lg md:text-xl lg:text-[1.3rem] text-gray-600 leading-relaxed'>
+          At xTerra Robotics, we are committed to redefining the future of robotics through innovative legged solutions. Our mission is to enhance human capabilities and seamlessly integrate our technology into everyday life.
+          </p>
         </div>
       </div>
-      <BlogSection />
-      <ContactUs />
+      <LeggedRobotics/>
+      <HomeActuator />
+      <BlogPage/>
+      <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
+        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
+          Interested in learning more?
+          <br className="hidden sm:inline" />
+          Say{' '}
+          <Link href="/contact" className="text-[#4E148C] hover:underline cursor-pointer">
+            hi
+          </Link>
+          , and we'll be in touch soon!
+        </div>
+      </div>
       <Footercurve items={scrollItems}
         duration={40}
         dotColor="white"
