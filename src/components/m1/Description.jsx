@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpDown, Gamepad, Wifi, ChevronDown, ChevronUp } from "lucide-react"
+import { Move, Gamepad, Wifi, ChevronDown, ChevronUp, Download, Cpu } from "lucide-react"
 
 const CircleIcon = ({ className }) => (
   <svg
@@ -21,26 +21,21 @@ const CircleIcon = ({ className }) => (
 const StairsIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 512 512"
+    fill="currentColor"
     className={className}
   >
-    <path d="M3 21h18" />
-    <path d="M3 18h18" />
-    <path d="M3 15h12" />
-    <path d="M3 12h12" />
-    <path d="M3 9h6" />
-    <path d="M3 6h6" />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M354.38 53.422V168.726H226.378V284.03H98.38V399.334H0V458.578H157.62V343.274H285.622V227.97H413.625V112.666H512V53.422H354.38Z"
+    />
   </svg>
-)
+);
 
 const features = [
   {
-    icon: <ArrowUpDown className="w-6 h-6 sm:w-8 sm:h-8 text-purple-900" />,
+    icon: <Move className="w-6 h-6 sm:w-8 sm:h-8 text-purple-900" />,
     description: "Omnidirectional Movement"
   },
   {
@@ -52,7 +47,7 @@ const features = [
     description: "Remote controllable using joystick"
   },
   {
-    icon: <CircleIcon className="w-6 h-6 sm:w-8 sm:h-8 text-purple-900" />,
+    icon: <Cpu className="w-6 h-6 sm:w-8 sm:h-8 text-purple-900" />,
     description: "IMU and joint encoders for proprioception"
   },
   {
