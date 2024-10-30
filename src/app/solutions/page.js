@@ -1,9 +1,6 @@
 "use client"
-
 import Footer from '@/components/footer/Footer'
-import Footercurve from '@/components/footer/Footercurve'
 import Navbar from '@/components/navbar/Navbar'
-import Header from '@/components/robot/Header'
 import RobotProducts from '@/components/SolProducts'
 import Lenis from "lenis";
 import React, { useEffect, useRef, useState } from "react";
@@ -12,14 +9,6 @@ import BlogPage from '@/components/blogpage'
 
 
 export default function Home() {
-  const scrollItems = [
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-  ];
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -48,12 +37,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <RobotProducts />
-      {/* <DoubleImage /> */}
-      {/* <SectionImage /> */}
-      {/* <Comparison /> */}
-      {/* <Ctas /> */}
       <BlogPage />
       <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
@@ -66,11 +50,6 @@ export default function Home() {
           , and we'll be in touch soon!
         </div>
       </div>
-
-      <Footercurve items={scrollItems}
-        duration={40}
-        dotColor="white"
-      />
       <Footer />
     </div>
   );

@@ -1,4 +1,3 @@
-// components/InfiniteScrollText/index.jsx
 import React, { useState } from 'react';
 
 const InfiniteScrollText = ({

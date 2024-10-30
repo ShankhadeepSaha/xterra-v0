@@ -1,33 +1,21 @@
 "use client"
-
 import Footer from "@/components/footer/Footer";
-import HeadingSectionDark from "@/components/miregoWebsite/HeadingSectionDark";
+import HeadingSectionDark from "@/components/HeadingSectionDark";
 import Navbar from "@/components/navbar/Navbar";
-import SectionText from "@/components/miregoWebsite/SectionText";
-import SectionTextDark from "@/components/miregoWebsite/SectionTextDark";
-import SectionTextDarkLarge from "@/components/miregoWebsite/SectionTextDarkLarge";
+import SectionText from "@/components/SectionText";
+import SectionTextDark from "@/components/SectionTextDark";
+import SectionTextDarkLarge from "@/components/SectionTextDarkLarge";
 import Team from "@/components/Team";
 import TextCard from "@/components/TextCard";
 import OurStory from "@/components/OurStory";
 import Timeline from "@/components/Timeline";
 import Lenis from "lenis";
 import { useEffect, useRef, useState } from "react";
-import Footercurve from "@/components/footer/Footercurve";
-import ValueCard from "@/components/miregoWebsite/valueCardVariants/ValueCard";
+import ValueCard from "@/components/ValueCard";
 import Link from 'next/link';
-import BlogSection from "@/components/blog-section";
 import BlogPage from "@/components/blogpage";
 
-
 export default function Home() {
-  const scrollItems = [
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-  ];
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   const values = [
     { value: "Move fearlessly with focus", title: "We move fearlessly with the motivation to make an impact. We are focused in our endeavours and strive to achieve our goals with unwavering determination." },
@@ -48,10 +36,7 @@ export default function Home() {
   return (
     <div className="mt-48">
       <Navbar />
-
       <SectionText />
-
-
       <div className="bg-[#050307] text-[#F7EDDE]">
         <HeadingSectionDark />
         <SectionTextDark />
@@ -69,16 +54,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-
       </div>
       <Timeline />
       <Team />
       <OurStory />
-
-      {/* <BlogSection/> */}
       <BlogPage/>
-
-
       <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Have You Discovered
@@ -98,11 +78,6 @@ export default function Home() {
           ?
         </div>
       </div>
-      
-      <Footercurve items={scrollItems}
-        duration={40}
-        dotColor="white"
-      />
       <Footer />
     </div>
   );
