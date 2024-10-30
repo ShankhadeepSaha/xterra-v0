@@ -9,8 +9,8 @@ import Lenis from "lenis";
 import OurStory from "@/components/OurStory";
 import Link from "next/link";
 import LeggedRobotics from "@/components/homerobot";
-import BlogPage from "@/components/blogpage";
 import HomeActuator from "@/components/HomeActuator";
+import BlogSection from "@/components/blog-section";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,15 +95,15 @@ export default function Home() {
     };
 
     // Set up scroll text animation
-    gsap.set(scrollTextRef.current, { 
+    gsap.set(scrollTextRef.current, {
       opacity: 1,
-      y: 20
+      y: 0,
     });
 
     // Create bounce animation for scroll text
     gsap.to(scrollTextRef.current, {
       y: -20,
-      duration: 1,
+      duration: 1.5,
       repeat: -1,
       yoyo: true,
       ease: "power1.inOut"
@@ -188,17 +188,19 @@ export default function Home() {
           {imagesLoaded ? (
             <>
               <canvas ref={canvasRef} className="w-full h-full" />
-              <div
-                ref={textRef}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl sm:text-5xl md:text-7xl font-bold text-center"
-              >
-                Striding into tomorrow
-              </div>
-              <div
-                ref={scrollTextRef}
-                className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-xl font-light tracking-wider uppercase"
-              >
-                Scroll Down
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <div
+                  ref={textRef}
+                  className="text-white text-3xl sm:text-5xl md:text-7xl font-bold text-center mb-8"
+                >
+                  Striding into tomorrow
+                </div>
+                <div
+                  ref={scrollTextRef}
+                  className="text-white text-lg sm:text-xl font-light tracking-wider uppercase mt-8"
+                >
+                  Scroll Down
+                </div>
               </div>
             </>
           ) : (
@@ -209,21 +211,24 @@ export default function Home() {
         </div>
       </div>
       <OurStory />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego">
+      <div
+        id="expertise-section"
+        className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego"
+      >
         <div className='mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center'>
           <h2 className='font-medium text-4xl sm:text-4xl md:text-5xl lg:text-[5.5rem] text-[#050307] leading-tight'>
-          Revolutionizing Mobility with Advanced Robotics
+            Revolutionizing Mobility with Advanced Robotics
           </h2>
         </div>
         <div className='text-center max-w-4xl mx-auto mb-4 sm:mb-6 lg:mb-8'>
           <p className='text-base sm:text-lg md:text-xl lg:text-[1.3rem] text-gray-600 leading-relaxed'>
-          At xTerra Robotics, we are committed to redefining the future of robotics through innovative legged solutions. Our mission is to enhance human capabilities and seamlessly integrate our technology into everyday life.
+            At xTerra Robotics, we are committed to redefining the future of robotics through innovative legged solutions. Our mission is to enhance human capabilities and seamlessly integrate our technology into everyday life.
           </p>
         </div>
       </div>
-      <LeggedRobotics/>
+      <LeggedRobotics />
       <HomeActuator />
-      <BlogPage/>
+      <BlogSection />
       <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Interested in learning more?

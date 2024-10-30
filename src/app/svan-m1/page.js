@@ -25,7 +25,6 @@ export default function Home() {
       <Intro />
       <Description />
       <Section />
-      {/* <BlogPage /> */}
       <div className="container mx-auto p-4 my-8 sm:y-16 md:my-24 lg:my-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Interested in learning more?

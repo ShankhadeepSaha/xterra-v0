@@ -74,14 +74,14 @@ function ImageCard({
 }) {
   return (
     <div className={`${bgImage} h-[400px] sm:h-[500px] md:h-[680px] w-full bg-cover bg-center`}>
-      <div className='flex flex-col items-center h-full p-4 pt-16 sm:pt-24 md:pt-32 text-center'>
-        <div className={`text-3xl sm:text-4xl md:text-5xl font-semibold font-sans mb-2`} style={titleStyle}>
+      <div className='flex flex-col items-center h-full p-4 pt-5 sm:pt-24 md:pt-32 text-center'>
+        <div className={`text-3xl sm:text-4xl md:text-5xl font-semibold font-poppins mb-2`} style={titleStyle}>
           {title}
         </div>
         <div className={`text-sm sm:text-base md:text-lg font-light mb-1`} style={subtitleStyle}>
           {subtitle}
         </div>
-        <div className={`text-2xl sm:text-3xl md:text-4xl font-light mb-6 sm:mb-8 backdrop-blur-sm`} style={descriptionStyle}>
+        <div className={`text-2xl sm:text-3xl md:text-4xl font-light mb-6 sm:mb-8`} style={descriptionStyle}>
           {description}
         </div>
         {(showLearnMore || buyLink) && (

@@ -5,7 +5,7 @@ import RobotProducts from '@/components/SolProducts'
 import Lenis from "lenis";
 import React, { useEffect, useRef, useState } from "react";
 import Link from 'next/link';
-import BlogPage from '@/components/blogpage'
+import BlogSection from '@/components/blog-section';
 
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </div>
       <RobotProducts />
-      <BlogPage />
+      <BlogSection />
       <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Interested in learning more?

@@ -8,9 +8,9 @@ export default function HomeActuator() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Image Section */}
-        <div className="relative w-full aspect-square overflow-hidden rounded order-last lg:order-first">
+        <div className="relative w-full aspect-square overflow-hidden rounded order-last lg:order-first max-w-[500px] mx-auto lg:max-w-none">
           <Image
-            src="/actuator/a2.png" // Replace with your actual image path
+            src="/actuator/a2.png"
             alt="xTerra Legged Robot"
             fill
             className="object-cover"
@@ -19,13 +19,13 @@ export default function HomeActuator() {
         </div>
 
         {/* Right Content Section */}
-        <div className="space-y-8 order-first lg:order-last">
+        <div className="space-y-8 order-first lg:order-last text-center lg:text-left">
           <div>
             <h2 className="font-almirego text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#050307] leading-tight mb-6">
               Experience Unmatched Precision with Our Advanced Actuator
               Technology
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-[1.3rem] text-gray-600 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg md:text-xl lg:text-[1.3rem] text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Our precision actuators are designed to deliver exceptional
               control and power, significantly enhancing robotic movement. With
               seamless integration capabilities, they are essential for
@@ -33,7 +33,7 @@ export default function HomeActuator() {
             </p>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex justify-center lg:justify-start gap-4">
             <Link href="/actuators">
               <Button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-[#101820] hover:bg-[#2c3e50] transition-colors duration-300">
                 Learn More

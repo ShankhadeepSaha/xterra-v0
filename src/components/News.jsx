@@ -115,7 +115,7 @@ const News = () => {
       <div className="sm:px-4">
         <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] overflow-hidden">
           <Image
-            src="/images/media.jpg"
+            src="/images/stock.jpg"
             alt="Hero image"
             layout="fill"
             objectFit="cover"

@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar/Navbar";
 import ImageZoom from '@/components/ImageZoom';
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
-import BlogPage from "@/components/blogpage";
+import BlogSection from "@/components/blog-section";
 
 export default function Home() {
 
@@ -38,7 +38,7 @@ export default function Home() {
       </div>
       <CareerTable />
       <ImageZoom />
-      <BlogPage />
+      <BlogSection />
       <JobOpenings />
       <Footer />
     </div>
