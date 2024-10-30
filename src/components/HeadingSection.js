@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React, { useRef } from 'react'
-import WordReveal from '../animations/WordReveal';
+import WordReveal from './animations/WordReveal';
 
 function HeadingSection() {
 

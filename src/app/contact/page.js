@@ -1,13 +1,9 @@
-// pages/contact.js
 "use client"
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import Lenis from "lenis";
-import WordReveal from '@/components/animations/WordReveal';
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import Footercurve from "@/components/footer/Footercurve";
 
 const ContactInfoCard = ({ icon: Icon, title, details }) => {
   return (
@@ -37,11 +33,6 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
 
-  const scrollItems = [
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-  ];
 
   const contactInfo = [
     {
@@ -272,13 +263,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      <Footercurve 
-        items={scrollItems}
-        duration={40}
-        dotColor="white"
-      />
-      
       <Footer />
     </div>
   );

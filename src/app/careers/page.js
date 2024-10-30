@@ -1,24 +1,15 @@
 "use client"
-
-import CareerTable from "@/components/miregoWebsite/CareerTable";
-import CultivateSection from "@/components/miregoWebsite/CultivateSection";
-import CultureThatWins from "@/components/miregoWebsite/CultureThatWins";
+import CareerTable from "@/components/CareerTable";
+import CultivateSection from "@/components/CultivateSection";
 import Footer from "@/components/footer/Footer";
-import JobOpenings from "@/components/miregoWebsite/JobOpenings";
+import JobOpenings from "@/components/JobOpenings";
 import Navbar from "@/components/navbar/Navbar";
-import WordReveal from '@/components/animations/WordReveal';
 import ImageZoom from '@/components/ImageZoom';
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
-import Footercurve from "@/components/footer/Footercurve";
 import BlogPage from "@/components/blogpage";
 
 export default function Home() {
-  const scrollItems = [
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-  ];
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -32,9 +23,7 @@ export default function Home() {
   return (
     <div className="mt-48">
       <Navbar />
-
       <CultivateSection />
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego">
         <div className='mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center'>
           <h2 className='font-medium text-4xl sm:text-4xl md:text-5xl lg:text-[5.5rem] text-[#050307] leading-tight'>
@@ -47,25 +36,11 @@ export default function Home() {
           </p>
         </div>
       </div>
-
       <CareerTable />
-
-      {/* <CultureThatWins /> */}
-
-      <BlogPage />
-
       <ImageZoom />
-
+      <BlogPage />
       <JobOpenings />
-
-      <Footercurve items={scrollItems}
-        duration={40}
-        dotColor="white"
-      />
-
       <Footer />
-
-
     </div>
   );
 }

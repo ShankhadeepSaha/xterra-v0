@@ -1,20 +1,12 @@
 "use client";
-
-
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Navbar from "@/components/navbar/Navbar";
-import FutureOrganizations from "@/components/miregoWebsite/FutureOrganisations";
-import HomeTextCombo from "@/components/miregoWebsite/HomeTextCombo";
-import ContactUs from "@/components/miregoWebsite/ContactUs";
+import FutureOrganizations from "@/components/FutureOrganisations";
 import Footer from "@/components/footer/Footer";
-import LandingPostText from "@/components/miregoWebsite/LandingPostText";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import Footercurve from "@/components/footer/Footercurve";
 import OurStory from "@/components/OurStory";
-import WordReveal from '@/components/animations/WordReveal';
-import BlogSection from "@/components/blog-section";
 import Link from "next/link";
 import LeggedRobotics from "@/components/homerobot";
 import BlogPage from "@/components/blogpage";
@@ -186,12 +178,6 @@ export default function Home() {
     }
   }, [imagesLoaded, images, setupScrollSequence]);
 
-  const scrollItems = [
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-  ];
-
   return (
     <div>
       <Navbar />
@@ -249,10 +235,6 @@ export default function Home() {
           , and we'll be in touch soon!
         </div>
       </div>
-      <Footercurve items={scrollItems}
-        duration={40}
-        dotColor="white"
-      />
       <Footer />
     </div>
   );

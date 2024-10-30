@@ -1,7 +1,5 @@
 "use client"
-
 import Footer from '@/components/footer/Footer'
-import Footercurve from '@/components/footer/Footercurve'
 import Description from '@/components/m1/Description';
 import Intro from '@/components/m1/Intro';
 import Section from '@/components/m1/Section';
@@ -9,19 +7,8 @@ import Navbar from '@/components/navbar/Navbar'
 import Lenis from "lenis";
 import React, { useEffect, useRef, useState } from "react";
 import Link from 'next/link';
-import BlogPage from '@/components/blogpage';
-
-
 
 export default function Home() {
-  const scrollItems = [
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-  ];
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -50,11 +37,6 @@ export default function Home() {
           , and we'll be in touch soon!
         </div>
       </div>
-
-      <Footercurve items={scrollItems}
-        duration={40}
-        dotColor="white"
-      />
       <Footer />
     </div>
   );

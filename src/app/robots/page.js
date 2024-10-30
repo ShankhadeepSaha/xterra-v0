@@ -1,23 +1,14 @@
 "use client"
-
 import Footer from '@/components/footer/Footer'
-import Footercurve from '@/components/footer/Footercurve'
 import Navbar from '@/components/navbar/Navbar'
 import Header from '@/components/robot/Header'
 import RobotProducts from '@/components/robot/RobotProducts'
 import Lenis from "lenis";
 import React, { useEffect, useRef, useState } from "react";
 import Link from 'next/link';
-import BlogSection from '@/components/blog-section'
-import CTA from '@/components/cta'
-
 
 export default function Home() {
-  const scrollItems = [
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-    { text: "XTERRA WORLD OF ROBOTICS", showDot: true },
-  ];
+
   useEffect(() => {
     const lenis = new Lenis()
     function raf(time) {
@@ -31,16 +22,7 @@ export default function Home() {
     <div className="mt-48">
       <Navbar />
       <Header />
-
       <RobotProducts />
-
-
-      {/* <BlogSection/> */}
-      {/* <DoubleImage /> */}
-      {/* <SectionImage /> */}
-      {/* <Comparison /> */}
-      {/* <Ctas /> */}
-
       <div className="container mx-auto p-4 my-8 sm:my-16 md:my-24 lg:my-32">
         <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Have You Discovered
@@ -56,11 +38,6 @@ export default function Home() {
           ?
         </div>
       </div>
-      {/* <CTA/> */}
-      <Footercurve items={scrollItems}
-        duration={40}
-        dotColor="white"
-      />
       <Footer />
     </div>
   );
