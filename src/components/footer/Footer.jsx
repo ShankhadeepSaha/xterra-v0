@@ -58,7 +58,7 @@ export default function Footer() {
 }
 
 const EmailSection = () => (
-  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-almirego font-light">
+  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-poppins font-light">
     <a
       href={`mailto:${EMAIL}`}
       onClick={(e) => {
@@ -69,7 +69,7 @@ const EmailSection = () => (
       rel="noopener noreferrer"
       aria-label={`Send email to ${EMAIL}`}
     >
-      <span className="font-almirego font-light">{EMAIL}</span>
+      <span className="font-poppins font-light">{EMAIL}</span>
     </a>
   </div>
 );
@@ -91,7 +91,7 @@ const NavigationLinks = () => (
         key={index}
         className="hover:opacity-80 transition-opacity duration-300"
       >
-        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-almirego font-light cursor-pointer">
+        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-poppins font-light cursor-pointer">
           {name}
         </span>
       </Link>
@@ -110,28 +110,28 @@ const CompanyInfo = () => (
 const Address = () => (
   <>
     <div className="w-full mb-4">
-      <div className="text-lg sm:text-xl md:text-2xl font-almirego font-normal">
+      <div className="text-lg sm:text-xl md:text-2xl font-poppins font-normal">
         xTerra Robotics Pvt Ltd
       </div>
-      <div className="text-base sm:text-base md:text-base font-almirego font-light mt-2">
+      <div className="text-base sm:text-base md:text-base font-poppins font-light mt-2">
         G-508/11 Avas Vikas No. 1, Panki Road Kalyanpur,
       </div>
-      <div className="text-base font-almirego font-light mt-2">
+      <div className="text-base font-poppins font-light mt-2">
         Avas Vikas Yojna No. 3, Kanpur Nagar,
       </div>
-      <div className="text-base font-almirego font-light mt-2">
+      <div className="text-base font-poppins font-light mt-2">
         Kanpur, Uttar Pradesh, 208017
       </div>
       <div className="text-base font-sans font-light mt-2">
         Alternate Address:
       </div>
-      <div className="text-base sm:text-base md:text-base font-almirego font-light mt-2">
+      <div className="text-base sm:text-base md:text-base font-poppins font-light mt-2">
         NL 212, Mobile Robotics Lab,
       </div>
-      <div className="text-base font-almirego font-light mt-2">
+      <div className="text-base font-poppins font-light mt-2">
         Department of Mechanical Engineering,
       </div>
-      <div className="text-base font-almirego font-light mt-2">
+      <div className="text-base font-poppins font-light mt-2">
         IIT Kanpur, Kanpur, 208016
       </div>
     </div>
@@ -156,7 +156,7 @@ const SocialLinks = () => (
 );
 
 const Copyright = () => (
-  <div className="text-base sm:text-lg md:text-xl font-almirego font-normal">
+  <div className="text-base sm:text-lg md:text-xl font-poppins font-normal">
     © {new Date().getFullYear()} xTerra Robotics. All rights reserved.
   </div>
 );

@@ -128,7 +128,7 @@ const News = () => {
       <div className="container mx-auto px-4">
         {/* Latest Insights Section */}
         <div className="max-w-2xl mx-auto text-center mb-16 mt-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-almirego">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
             Latest News & Updates
           </h2>
           <p className="text-lg text-gray-600">

@@ -54,7 +54,7 @@ export default function ResponsiveTimeline() {
   ];
 
   return (
-    <div className="font-almirego">
+    <div className="font-poppins">
       <div className="flex flex-col items-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-white">
         <div className="w-full max-w-6xl text-center px-4">
           <div className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-tight text-[#050307] mb-8">

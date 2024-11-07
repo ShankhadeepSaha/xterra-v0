@@ -42,7 +42,7 @@ const InfiniteScrollText = ({
             <span className={`
               inline-block
               text-[5vw] md:text-[5vw] lg:text-[5vw] xl:text-[6vw]
-              font-almirego
+              font-poppins
               transition-transform duration-300
               ${isPaused ? 'hover:scale-105 cursor-pointer' : ''}
             `}>

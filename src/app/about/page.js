@@ -60,7 +60,7 @@ export default function Home() {
       <OurStory />
       <BlogSection/>
       <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
-        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
+        <div className="font-poppins text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Have You Discovered
           <br className="hidden sm:inline" />
           Our{' '}

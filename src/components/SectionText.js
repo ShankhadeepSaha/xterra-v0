@@ -25,7 +25,7 @@ function SectionText() {
   }, []);
 
   return (
-    <div className="font-almirego">
+    <div className="font-poppins">
       {/* Text Section */}
       <div className="container mx-auto p-4">
         <div className='flex flex-col lg:flex-row mb-16 sm:mb-24 lg:mb-32'>

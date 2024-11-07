@@ -23,7 +23,7 @@ export default function Home() {
     <div className="mt-48">
       <Navbar />
       {/* <Header /> */}
-      <div className="font-almirego">
+      <div className="font-poppins">
         <div className='container mx-auto px-4 flex flex-col items-center mb-16 sm:mb-24 lg:mb-32'>
           <div className='w-full text-center mb-8'>
             <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-9xl'>
@@ -40,7 +40,7 @@ export default function Home() {
       <RobotProducts />
       <BlogSection />
       <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
-        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
+        <div className="font-poppins text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
           Interested in learning more?
           <br className="hidden sm:inline" />
           Say{' '}

@@ -24,7 +24,7 @@ export default function Home() {
     <div className="mt-48">
       <Navbar />
       <CultivateSection />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-poppins">
         <div className='mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center'>
           <h2 className='font-medium text-4xl sm:text-4xl md:text-5xl lg:text-[5.5rem] text-[#050307] leading-tight'>
             Are you passionate about robotics and eager to be part of a dynamic team shaping the future of technology?

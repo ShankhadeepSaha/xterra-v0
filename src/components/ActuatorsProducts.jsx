@@ -97,13 +97,13 @@ function ActuatorsProducts() {
   return (
     <div className="flex flex-col w-full bg-white">
       <div className="sm:px-4">
-        <VideoHero />
+        {/* <VideoHero /> */}
       </div>
       <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 sm:px-3 md:px-4 w-full">
         <ImageCard
-          bgImage="bg-[url('/actuator/a1.png')]"
+          bgImage="bg-[url('/actuator/a1img.png')]"
           title="QDD A1"
-          subtitle="SERIES 1"
+          subtitle=""
           description="Our Quasi Direct Drive actuator."
           learnMoreLink="/svan-m1"
           buyLink="/buy-svan-m1"
@@ -134,9 +134,9 @@ function ActuatorsProducts() {
           }}
         />
         <ImageCard
-          bgImage="bg-[url('/actuator/a2.png')]"
+          bgImage="bg-[url('/actuator/a2img.png')]"
           title="QDD A2"
-          subtitle="SERIES 2"
+          subtitle=""
           description="Our next-generation of QDD actuators."
           learnMoreLink="/svan-m2"
           buyLink="/buy-svan-m2"
@@ -169,7 +169,7 @@ function ActuatorsProducts() {
         <ImageCard
           bgImage="bg-[url('/actuator/a3.png')]"
           title="QDD A3"
-          subtitle="SERIES 3"
+          subtitle=""
           description="Optimized for maximum torque."
           learnMoreLink="/svan-m3"
           titleStyle={{ color: "#4E148C" }}

@@ -7,7 +7,7 @@ function HeadingSection() {
 
   return (
     <div className='mt-80 px-24'>
-        <WordReveal text='✦ We build the future.' className='text-[5.5rem] font-light font-almirego text-[#050307]' />
+        <WordReveal text='✦ We build the future.' className='text-[5.5rem] font-light font-poppins text-[#050307]' />
     </div>
   )
 }

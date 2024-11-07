@@ -10,7 +10,7 @@ export default function HomeActuator() {
         {/* Left Image Section */}
         <div className="relative w-full aspect-square overflow-hidden rounded order-last lg:order-first max-w-[500px] mx-auto lg:max-w-none">
           <Image
-            src="/actuator/a2.png"
+            src="/actuator/a2img.png"
             alt="xTerra Legged Robot"
             fill
             className="object-cover"
@@ -21,7 +21,7 @@ export default function HomeActuator() {
         {/* Right Content Section */}
         <div className="space-y-8 order-first lg:order-last text-center lg:text-left">
           <div>
-            <h2 className="font-almirego text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#050307] leading-tight mb-6">
+            <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#050307] leading-tight mb-6">
               Experience Unmatched Precision with Our Advanced Actuator
               Technology
             </h2>

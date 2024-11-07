@@ -27,7 +27,7 @@ const BlogPost = ({ post, index, visiblePosts }) => {
     <div
       className={`
         group bg-white border border-gray-100 rounded-xl overflow-hidden transition-all duration-500 hover:shadow-xl
-        opacity-0 translate-y-8 font-almirego
+        opacity-0 translate-y-8 font-poppins
         ${index < visiblePosts ? "animate-fadeIn" : ""}
       `}
       style={{
@@ -127,10 +127,10 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-white font-almirego">
+    <section className="py-24 bg-white font-poppins">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-almirego">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
             Latest Insights
           </h2>
           <p className="text-lg text-gray-600">
