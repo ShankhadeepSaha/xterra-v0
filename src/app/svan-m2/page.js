@@ -8,6 +8,7 @@ import Navbar from '@/components/navbar/Navbar'
 import Lenis from "lenis";
 import React, { useEffect } from "react";
 import Link from 'next/link';
+import HomeActuator from '@/components/HomeActuator';
 
 export default function Home() {
 
@@ -38,6 +39,7 @@ export default function Home() {
           , and we'll be in touch soon!
         </div>
       </div>
+      <HomeActuator />
       <Footer />
     </div>
   );

@@ -27,7 +27,7 @@ export default function Component() {
 
   return (
     <div className="w-full min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -36,7 +36,7 @@ export default function Component() {
       >
         <source src="/videos/bg.webm" type="video/webm" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-12 sm:py-16 md:py-20 lg:py-24 text-center max-w-7xl mx-auto">
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-poppins font-bold mb-8 sm:mb-10 md:mb-12 leading-tight sm:leading-none text-black tracking-tight">
           Leading the Future<br className="hidden sm:inline" /> of Robotics

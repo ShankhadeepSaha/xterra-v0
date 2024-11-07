@@ -93,7 +93,7 @@ export default function Component() {
   return (
     <div 
       ref={carouselRef}
-      className="relative w-full h-screen overflow-hidden bg-white"
+      className="relative w-full h-screen overflow-hidden bg-white font-poppins"
       onKeyDown={handleKeyDown}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -112,22 +112,23 @@ export default function Component() {
           aria-hidden={index !== currentIndex}
         >
           <div className="container mx-auto h-full px-4">
-            {/* Main content wrapper with responsive layout */}
             <div className="flex flex-col md:flex-row h-full">
               {/* Text Content */}
               <div className="w-full md:w-1/2 md:pr-8 z-10 
                   flex flex-col justify-center
                   pt-20 pb-8 md:py-0 order-1 md:order-1">
                 <h2 className="font-poppins font-semibold 
-                    text-3xl sm:text-4xl md:text-5xl 
-                    tracking-wider text-primary mb-6
-                    text-center md:text-left">
+                    text-3xl p-4 sm:text-4xl md:text-5xl 
+                    tracking-wider text-primary mb-8
+                    text-center md:text-left
+                    leading-tight">
                   {image.heading}
                 </h2>
-                <p className="text-lg sm:text-xl md:text-2xl 
+                <p className="font-poppins text-lg sm:text-xl md:text-2xl 
                     text-primary-foreground bg-primary bg-opacity-80 
                     p-4 rounded-lg backdrop-blur-md
-                    text-center md:text-left">
+                    text-center md:text-left
+                    leading-relaxed">
                   {image.description}
                 </p>
               </div>
@@ -173,7 +174,7 @@ export default function Component() {
 
       {/* Navigation Buttons */}
       <Button
-        className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 z-20"
+        className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 z-20 font-poppins"
         onClick={goToPreviousSlide}
         aria-label="Previous slide"
         variant="ghost"
@@ -182,7 +183,7 @@ export default function Component() {
       </Button>
 
       <Button
-        className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 z-20"
+        className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 z-20 font-poppins"
         onClick={goToNextSlide}
         aria-label="Next slide"
         variant="ghost"
@@ -191,7 +192,7 @@ export default function Component() {
       </Button>
 
       <Button
-        className="absolute top-2 md:top-4 right-2 md:right-4 z-20"
+        className="absolute top-2 md:top-4 right-2 md:right-4 z-20 font-poppins"
         onClick={togglePlayPause}
         aria-label={isPlaying ? "Pause autoplay" : "Start autoplay"}
         variant="ghost"
