@@ -6,7 +6,7 @@ const ImageCarousel = () => {
 
   const images = [
     '/images/img/svanM2IITK.jpeg',
-    '/images/img/OutInWild_xTerra.jpg',
+    '/images/img/OutInWild_xTerra.jpeg',
     '/robot/r3.jpeg',
     '/robot/r4.jpeg'
   ];
@@ -111,7 +111,7 @@ function RobotProducts() {
       </div>
       <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 sm:px-3 md:px-4 w-full'>
         <ImageCard 
-          bgImage="bg-[url('/robot/m1.png')]"
+          bgImage="bg-[url('/robot/f9.png')]"
           title="SVAN M1"
           subtitle=""
           description="Our first prototype quadruped robot"
@@ -124,7 +124,7 @@ function RobotProducts() {
           buyStyle={{ backgroundColor: 'white', color: '#4E148C' }}
         />
         <ImageCard 
-          bgImage="bg-[url('/robot/f4.png')]"
+          bgImage="bg-[url('/robot/f7.png')]"
           title="SVAN M2"
           subtitle=""
           description="India's first commercial quadruped robot"

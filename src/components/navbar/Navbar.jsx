@@ -10,62 +10,46 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      // Update scroll state
       setHasScrolled(currentScrollY > 50);
-      
-      // Determine scroll direction and update visibility
       if (currentScrollY < lastScrollY.current || currentScrollY < 50) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
-      
       lastScrollY.current = currentScrollY;
     };
 
-    // Check initial scroll position
     handleScroll();
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleMenuToggle = () => {
     setIsMenuOpen((prev) => !prev);
+    document.body.style.overflow = isMenuOpen ? 'auto' : 'hidden';
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isMenuOpen && !event.target.closest('.mobile-menu') && !event.target.closest('.menu-button')) {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && isMenuOpen) {
         setIsMenuOpen(false);
+        document.body.style.overflow = 'auto';
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      const handleScroll = () => {
-        setIsMenuOpen(false);
-      };
-
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
   return (
-    <div className="relative">
+    <>
       <nav 
         className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
           hasScrolled ? 'top-0' : 'top-10'
-        } ${!isVisible ? '-translate-y-full' : 'translate-y-0'}`}
+        } ${!isVisible && !isMenuOpen ? '-translate-y-full' : 'translate-y-0'}`}
       >
         <div className={`w-full transition-all duration-500 ease-in-out ${
-          hasScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+          hasScrolled && !isMenuOpen ? 'bg-white shadow-md' : 'bg-transparent'
         }`}>
           <div className={`max-w-7xl mx-auto flex items-center justify-between px-4 transition-all duration-500 ease-in-out ${
             hasScrolled ? 'py-4' : 'py-2'
@@ -110,24 +94,24 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button 
               onClick={handleMenuToggle}
-              className="lg:hidden text-[#050307] hover:opacity-70 transition-opacity duration-300 menu-button"
+              className="lg:hidden text-[#050307] hover:opacity-70 transition-opacity duration-300 menu-button z-50 relative"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
+      </nav>
 
-        {/* Mobile Menu */}
-        <div 
-          className={`lg:hidden fixed left-0 right-0 bg-white shadow-lg transition-all duration-500 ease-in-out mobile-menu ${
-            isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
-          }`}
-          style={{
-            top: hasScrolled ? '72px' : '96px',
-            pointerEvents: isMenuOpen ? 'auto' : 'none',
-          }}
-        >
-          <div className="max-w-7xl mx-auto py-4 px-4">
+      {/* Mobile Menu - Full Screen Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white z-40 lg:hidden">
+          <div className="flex flex-col items-center justify-center h-full">
+            {/* <a href="/" className="mb-8 flex items-center" onClick={handleMenuToggle}>
+              <img src="/images/logo.svg" alt="xterra" className="w-12" />
+              <span className="text-xl font-bold font-poppins text-[#4E148C] ml-2">
+                XTERRA
+              </span>
+            </a> */}
             {[
               ['Robots', '/robots'],
               ['Actuators', '/actuators'],
@@ -140,16 +124,16 @@ const Navbar = () => {
               <a 
                 key={url}
                 href={url}
-                className="block py-2 text-center text-base font-poppins text-[#050307] hover:opacity-70 transition-opacity duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-2xl font-poppins text-[#050307] hover:text-[#4E148C] transition-colors duration-300 my-4"
+                onClick={handleMenuToggle}
               >
                 {title}
               </a>
             ))}
           </div>
         </div>
-      </nav>
-    </div>
+      )}
+    </>
   );
 };
 
