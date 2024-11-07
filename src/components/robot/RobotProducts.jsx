@@ -6,7 +6,7 @@ const ImageCarousel = () => {
 
   const images = [
     '/images/img/svanM2IITK.jpeg',
-    '/images/img/OutInWild_xTerra.jpg',
+    '/images/img/OutInWild_xTerra.jpeg',
     '/robot/r3.jpeg',
     '/robot/r4.jpeg'
   ];
