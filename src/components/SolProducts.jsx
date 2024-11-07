@@ -16,7 +16,7 @@ function VideoHero() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-poppins">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-light text-[#050307] leading-tight">
             Discover how our solutions are shaping the future of industries.
@@ -31,7 +31,7 @@ function VideoHero() {
 
 function UseCases() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-almirego">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
       <div className="space-y-16 sm:space-y-24 md:space-y-32">
         <UseCase
           title="Thermal Power Plant Inspection"

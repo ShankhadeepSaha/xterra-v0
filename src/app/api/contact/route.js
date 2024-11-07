@@ -19,7 +19,7 @@ export async function POST(request) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'pranshhu005@gmail.com', // Replace with your email
+      to: 'info@xterrarobotics.com', // Replace with your email
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px;">

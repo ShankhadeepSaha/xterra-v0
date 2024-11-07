@@ -105,7 +105,7 @@ function CareerCards() {
   };
 
   return (
-    <section className="px-4 bg-white font-almirego">
+    <section className="px-4 bg-white font-poppins">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">

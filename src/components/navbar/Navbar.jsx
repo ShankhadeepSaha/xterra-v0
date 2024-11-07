@@ -1,17 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-
-// Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const navbarRef = useRef(null);
-  const lastScrollY = useRef(0);
+  const lastScrollY = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +60,6 @@ const Navbar = () => {
   return (
     <div className="relative">
       <nav 
-        ref={navbarRef} 
         className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
           hasScrolled ? 'top-0' : 'top-10'
         } ${!isVisible ? '-translate-y-full' : 'translate-y-0'}`}
@@ -79,7 +72,7 @@ const Navbar = () => {
           }`}>
             <a href="/" className="ps-4 lg:ps-12 flex items-center">
               <img src="/images/logo.svg" alt="xterra" className="w-8 lg:w-12" />
-              <span className="text-lg lg:text-xl font-bold font-almiregodb text-[#4E148C]">
+              <span className="text-lg lg:text-xl font-bold font-poppins text-[#4E148C]">
                 XTERRA
               </span>
             </a>
@@ -88,17 +81,17 @@ const Navbar = () => {
             <div className={`hidden lg:flex py-2 rounded-xl w-1/2 items-center justify-center space-x-4 transition-all duration-500 ease-in-out ${
               hasScrolled ? '' : 'bg-white/30 backdrop-blur-md'
             }`}>
-              <a href="/robots" className="w-1/5 text-center text-base font-almirego text-[#050307] hover:opacity-70 transition-opacity duration-300">Robots</a>
-              <a href="/actuators" className="w-1/5 text-center text-base font-almirego text-[#050307] hover:opacity-70 transition-opacity duration-300">Actuators</a>
-              <a href="/solutions" className="w-1/5 text-center text-base font-almirego text-[#050307] hover:opacity-70 transition-opacity duration-300">Solutions</a>
-              <a href="/about" className="w-1/5 text-center text-base font-almirego text-[#050307] hover:opacity-70 transition-opacity duration-300">About</a>
-              <a href="/careers" className="w-1/5 text-center text-base font-almirego text-[#050307] hover:opacity-70 transition-opacity duration-300">Careers</a>
+              <a href="/robots" className="w-1/5 text-center text-base font-poppins text-[#050307] hover:opacity-70 transition-opacity duration-300">Robots</a>
+              <a href="/actuators" className="w-1/5 text-center text-base font-poppins text-[#050307] hover:opacity-70 transition-opacity duration-300">Actuators</a>
+              <a href="/solutions" className="w-1/5 text-center text-base font-poppins text-[#050307] hover:opacity-70 transition-opacity duration-300">Solutions</a>
+              <a href="/about" className="w-1/5 text-center text-base font-poppins text-[#050307] hover:opacity-70 transition-opacity duration-300">About</a>
+              <a href="/careers" className="w-1/5 text-center text-base font-poppins text-[#050307] hover:opacity-70 transition-opacity duration-300">Careers</a>
             </div>
             
             <div className="hidden lg:flex pe-4 lg:pe-12 justify-end space-x-2">
               <a 
                 href="/media" 
-                className={`text-[#050307] font-almirego px-4 lg:px-6 py-2 border rounded-full text-sm lg:text-base hover:scale-105 transition-all duration-300 ease-in-out ${
+                className={`text-[#050307] font-poppins px-4 lg:px-6 py-2 border rounded-full text-sm lg:text-base hover:scale-105 transition-all duration-300 ease-in-out ${
                   hasScrolled ? 'border-gray-200 hover:border-gray-400' : 'bg-white/30 backdrop-blur-md'
                 }`}
               >
@@ -106,7 +99,7 @@ const Navbar = () => {
               </a>
               <a 
                 href="/contact" 
-                className={`text-[#050307] font-almirego px-4 lg:px-6 py-2 border rounded-full text-sm lg:text-base hover:scale-105 transition-all duration-300 ease-in-out ${
+                className={`text-[#050307] font-poppins px-4 lg:px-6 py-2 border rounded-full text-sm lg:text-base hover:scale-105 transition-all duration-300 ease-in-out ${
                   hasScrolled ? 'border-gray-200 hover:border-gray-400' : 'bg-white/30 backdrop-blur-md'
                 }`}
               >
@@ -147,7 +140,7 @@ const Navbar = () => {
               <a 
                 key={url}
                 href={url}
-                className="block py-2 text-center text-base font-almirego text-[#050307] hover:opacity-70 transition-opacity duration-300"
+                className="block py-2 text-center text-base font-poppins text-[#050307] hover:opacity-70 transition-opacity duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {title}

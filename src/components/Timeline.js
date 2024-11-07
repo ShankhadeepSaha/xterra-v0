@@ -54,7 +54,7 @@ export default function ResponsiveTimeline() {
   ];
 
   return (
-    <div className="font-almirego">
+    <div className="font-poppins">
       <div className="flex flex-col items-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-white">
         <div className="w-full max-w-6xl text-center px-4">
           <div className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-tight text-[#050307] mb-8">
@@ -76,12 +76,12 @@ export default function ResponsiveTimeline() {
             <div className="space-y-12">
               {timelineItems.map((item, index) => (
                 <div key={item.year} className="flex flex-col sm:flex-row items-center">
-                  <div className={`flex-1 order-2 sm:order-${index % 2 === 0 ? '1' : '3'}`}>
-                    <div className={`bg-white p-6 rounded-lg shadow-md ${index % 2 === 0 ? 'ml-8 sm:ml-0 sm:mr-8' : 'mr-8 sm:mr-0 sm:ml-8'}`}>
+                  <div className={`flex-1 order-2 sm:order-${index % 2 === 0 ? '1' : '3'} w-full sm:w-auto`}>
+                    <div className={`bg-white p-6 rounded-lg shadow-md mx-auto sm:mx-0 ${index % 2 === 0 ? 'sm:mr-8' : 'sm:ml-8'} text-center sm:text-left`}>
                       <h2 className="text-xl font-bold mb-4">{item.title}</h2>
-                      <ul className="list-disc pl-5 space-y-2">
+                      <ul className="list-none sm:list-disc pl-0 sm:pl-5 space-y-2">
                         {item.content.map((point, i) => (
-                          <li key={i}>{point}</li>
+                          <li key={i} className="text-center sm:text-left">{point}</li>
                         ))}
                       </ul>
                     </div>
@@ -93,7 +93,7 @@ export default function ResponsiveTimeline() {
                       <div className="absolute w-0.5 bg-[#050307] h-8 top-full left-1/2 transform -translate-x-1/2 sm:hidden"></div>
                     </div>
                   </div>
-                  <div className={`flex-1 order-3 ${index % 2 === 0 ? 'sm:order-3 text-left sm:text-right' : 'sm:order-1 text-left'} mt-2 sm:mt-0`}>
+                  <div className={`flex-1 order-3 text-center sm:text-left ${index % 2 === 0 ? 'sm:order-3 sm:text-right' : 'sm:order-1'} mt-2 sm:mt-0`}>
                     <div className="text-lg sm:text-xl md:text-2xl font-bold">{item.year}</div>
                   </div>
                 </div>

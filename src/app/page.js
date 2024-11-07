@@ -9,8 +9,8 @@ import Lenis from "lenis";
 import OurStory from "@/components/OurStory";
 import Link from "next/link";
 import LeggedRobotics from "@/components/homerobot";
-import BlogPage from "@/components/blogpage";
 import HomeActuator from "@/components/HomeActuator";
+import BlogSection from "@/components/blog-section";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +19,8 @@ export default function Home() {
   const canvasRef = useRef(null);
   const textRef = useRef(null);
   const scrollTextRef = useRef(null);
+  const firstTextRef = useRef(null);
+  const secondTextRef = useRef(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [images, setImages] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
@@ -50,10 +52,10 @@ export default function Home() {
   };
 
   const preloadImages = useCallback(async () => {
-    const frameCount = isMobile ? 120 : 240;
+    const frameCount = isMobile ? 85 : 170;
     const step = isMobile ? 2 : 1;
     const imageSources = Array.from({ length: frameCount }, (_, i) =>
-      `/m2/frame_${((i * step) + 1).toString().padStart(4, "0")}.webp`
+      `/m2/frame_${((i * step) + 1).toString().padStart(4, "0")}.jpeg`
     );
 
     try {
@@ -94,35 +96,104 @@ export default function Home() {
       context.drawImage(img, x, y, img.width * scale, img.height * scale);
     };
 
-    // Set up scroll text animation
-    gsap.set(scrollTextRef.current, { 
+    // Initial scroll text animation
+    gsap.set(scrollTextRef.current, {
       opacity: 1,
-      y: 20
+      y: 0,
     });
 
-    // Create bounce animation for scroll text
+    // Bounce animation for scroll text
     gsap.to(scrollTextRef.current, {
       y: -20,
-      duration: 1,
+      duration: 1.5,
       repeat: -1,
       yoyo: true,
       ease: "power1.inOut"
     });
 
+    // First text sequence - Fade out scroll text and show first text
     const scrollTextTl = gsap.timeline({
       scrollTrigger: {
         trigger: imageSequenceRef.current,
         start: "top top",
-        end: "+=7%",
+        end: "+=10%",
         scrub: true
       }
     });
 
-    scrollTextTl.to(scrollTextRef.current, {
-      opacity: 0,
-      duration: 1
+    scrollTextTl
+      .to(scrollTextRef.current, {
+        opacity: 0,
+        duration: 1
+      })
+      .from(firstTextRef.current, {
+        opacity: 0,
+        y: 50,
+        duration: 1
+      }, "-=0.5")
+      .to(firstTextRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 1
+      });
+
+    // Second text sequence
+    const secondTextTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: imageSequenceRef.current,
+        start: "+=15%",
+        end: "+=25%",
+        scrub: true
+      }
     });
 
+    secondTextTl
+      .to(firstTextRef.current, {
+        opacity: 0,
+        y: -50,
+        duration: 1
+      })
+      .from(secondTextRef.current, {
+        opacity: 0,
+        y: 50,
+        duration: 1
+      }, "-=0.5")
+      .to(secondTextRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 1
+      });
+
+    // Final "Striding into tomorrow" text
+    const finalTextTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: imageSequenceRef.current,
+        start: "+=30%",
+        end: "bottom bottom",
+        scrub: true
+      }
+    });
+
+    finalTextTl
+      .to(secondTextRef.current, {
+        opacity: 0,
+        y: -50,
+        duration: 1
+      })
+      .from(textRef.current, {
+        opacity: 0,
+        scale: 0.5,
+        duration: 1
+      })
+      .to(textRef.current, {
+        opacity: 1,
+        scale: 2,
+        z: 350,
+        ease: "power1.inOut",
+        duration: 2
+      });
+
+    // Image sequence animation
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: imageSequenceRef.current,
@@ -139,22 +210,6 @@ export default function Home() {
       onUpdate: () => {
         const frameIndex = Math.round(sequence.frame);
         renderImage(frameIndex);
-      },
-    });
-
-    const startScrollOffset = "top+=" + (canvas.height * (138 / images.length));
-
-    gsap.set(textRef.current, { opacity: 0, scale: 1, z: 0 });
-    tl.to(textRef.current, {
-      opacity: 1,
-      scale: 2,
-      z: 350,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: imageSequenceRef.current,
-        start: startScrollOffset,
-        end: "bottom bottom",
-        scrub: true,
       },
     });
 
@@ -188,17 +243,33 @@ export default function Home() {
           {imagesLoaded ? (
             <>
               <canvas ref={canvasRef} className="w-full h-full" />
-              <div
-                ref={textRef}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl sm:text-5xl md:text-7xl font-bold text-center"
-              >
-                Striding into tomorrow
-              </div>
-              <div
-                ref={scrollTextRef}
-                className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-xl font-light tracking-wider uppercase"
-              >
-                Scroll Down
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+                <div
+                  ref={textRef}
+                  className="text-white text-center max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] opacity-0"
+                >
+                  <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight lg:leading-tight whitespace-pre-line">
+                    {isMobile ? "Striding\ninto\ntomorrow" : "Striding into\ntomorrow"}
+                  </h1>
+                </div>
+                <div
+                  ref={scrollTextRef}
+                  className="absolute text-center text-white text-base sm:text-lg font-light tracking-wider uppercase"
+                >
+                  Scroll Down
+                </div>
+                <div
+                  ref={firstTextRef}
+                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
+                >
+                  Exploring the Future of Robotics
+                </div>
+                <div
+                  ref={secondTextRef}
+                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
+                >
+                  Innovation in Motion
+                </div>
               </div>
             </>
           ) : (
@@ -208,24 +279,28 @@ export default function Home() {
           )}
         </div>
       </div>
+
       <OurStory />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-almirego">
+      <div
+        id="expertise-section"
+        className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-poppins"
+      >
         <div className='mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center'>
           <h2 className='font-medium text-4xl sm:text-4xl md:text-5xl lg:text-[5.5rem] text-[#050307] leading-tight'>
-          Revolutionizing Mobility with Advanced Robotics
+            Revolutionizing Mobility with Advanced Robotics
           </h2>
         </div>
         <div className='text-center max-w-4xl mx-auto mb-4 sm:mb-6 lg:mb-8'>
           <p className='text-base sm:text-lg md:text-xl lg:text-[1.3rem] text-gray-600 leading-relaxed'>
-          At xTerra Robotics, we are committed to redefining the future of robotics through innovative legged solutions. Our mission is to enhance human capabilities and seamlessly integrate our technology into everyday life.
+            At xTerra Robotics, we are committed to redefining the future of robotics through innovative legged solutions. Our mission is to enhance human capabilities and seamlessly integrate our technology into everyday life.
           </p>
         </div>
       </div>
-      <LeggedRobotics/>
+      <LeggedRobotics />
       <HomeActuator />
-      <BlogPage/>
+      <BlogSection />
       <div className="container mx-auto p-4 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
-        <div className="font-almirego text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto"> {/* Added text-center and max-width with margin auto */}
+        <div className="font-poppins text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto">
           Interested in learning more?
           <br className="hidden sm:inline" />
           Say{' '}

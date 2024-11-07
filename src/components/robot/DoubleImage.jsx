@@ -4,18 +4,18 @@ function ImageCard({ bgImage, title, subtitle, description }) {
   return (
     <div className={`${bgImage} h-[500px] sm:h-[600px] md:h-[780px] w-full bg-cover bg-center`}>
       <div className='flex flex-col items-center justify-center h-full p-4 text-center'>
-        <div className='text-[10px] sm:text-[12px] font-light font-almirego text-[#BE4E04] mb-2 sm:mb-4'>
+        <div className='text-[10px] sm:text-[12px] font-light font-poppins text-[#BE4E04] mb-2 sm:mb-4'>
           {title}
         </div>
-        <div className='text-2xl sm:text-3xl md:text-4xl font-light font-almirego text-black mb-2'>
+        <div className='text-2xl sm:text-3xl md:text-4xl font-light font-poppins text-black mb-2'>
           {subtitle}
         </div>
-        <div className='font-light font-almirego text-black mb-4 sm:mb-6'>
+        <div className='font-light font-poppins text-black mb-4 sm:mb-6'>
           {description}
         </div>
         <div className='flex gap-4 sm:gap-6'>
-          <a href="#learn-more" className='font-light font-almirego text-[#1890FF] hover:underline'>Learn More &gt;</a>
-          {/* <a href="#buy-now" className='font-light font-almirego text-[#1890FF] hover:underline'>Buy Now &gt;</a> */}
+          <a href="#learn-more" className='font-light font-poppins text-[#1890FF] hover:underline'>Learn More &gt;</a>
+          {/* <a href="#buy-now" className='font-light font-poppins text-[#1890FF] hover:underline'>Buy Now &gt;</a> */}
         </div>
       </div>
     </div>

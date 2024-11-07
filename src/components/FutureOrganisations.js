@@ -1,8 +1,32 @@
-import React from 'react';
+"use client";
 
-const FutureOrganizations = () => {
+import React, { useState, useEffect } from 'react';
+import { ArrowDownRight } from 'lucide-react';
+
+export default function Component() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const scrollToSection = () => {
+    const targetSection = document.getElementById('expertise-section');
+    targetSection?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
   return (
-    <div className="w-screen min-h-screen relative flex items-center justify-center overflow-hidden">
+    <div className="w-full min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
       <video
         autoPlay
         loop
@@ -10,23 +34,31 @@ const FutureOrganizations = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-50"
       >
-        <source src="/videos/bg.webm" type="video/webm" /> {/* Replace with your actual video path */}
+        <source src="/videos/bg.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 bg-white-200 bg-opacity-50" /> {/* Additional overlay for better text readability */}
-      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-8 sm:py-12 md:py-16 lg:py-20 text-center max-w-7xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-128 font-almirego mb-6 sm:mb-8 leading-none text-black">
-          Leading the Future<br />of Robotics
+      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-12 sm:py-16 md:py-20 lg:py-24 text-center max-w-7xl mx-auto">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-poppins font-bold mb-8 sm:mb-10 md:mb-12 leading-tight sm:leading-none text-black tracking-tight">
+          Leading the Future<br className="hidden sm:inline" /> of Robotics
         </h1>
-        <p className="font-light text-l sm:text-xl md:text-2xl mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed text-black-200">
-          Revolutionizing Robotics: India's Premier Deep-Tech Startup Solving Locomotion Challenges with World-Class Engineering
-        </p>
-        <button className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-medium transition-colors duration-300 hover:bg-grey">
-          Learn more about our expertise
-        </button>
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-6 max-w-4xl mx-auto">
+          <p className="font-light font-poppins text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 leading-relaxed mb-6 sm:mb-0 sm:flex-1">
+            Revolutionizing Robotics: India's Premier Deep-Tech Startup Solving Locomotion Challenges with World-Class Engineering
+          </p>
+
+          <button
+            onClick={scrollToSection}
+            className="bg-black text-white p-3 sm:p-4 md:p-5 rounded-full transition-all duration-300 hover:bg-gray-800 hover:scale-110 flex-shrink-0 shadow-lg hover:shadow-xl"
+            aria-label="Scroll to expertise section"
+          >
+            <ArrowDownRight
+              size={isMobile ? 20 : 24}
+              strokeWidth={2}
+              className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
-};
-
-export default FutureOrganizations;
+}

@@ -27,7 +27,7 @@ const BlogPost = ({ post, index, visiblePosts }) => {
     <div
       className={`
         group bg-white border border-gray-100 rounded-xl overflow-hidden transition-all duration-500 hover:shadow-xl
-        opacity-0 translate-y-8 font-almirego
+        opacity-0 translate-y-8 font-poppins
         ${index < visiblePosts ? "animate-fadeIn" : ""}
       `}
       style={{
@@ -127,45 +127,45 @@ const BlogPage = () => {
     },
     {
       id: 4,
-      category: "Video",
-      title: "How to improve user engagement",
+      category: "Article",
+      title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nisi quis viverra quisque arcu id risus in. Quis adipiscing hendrerit sed cras amet, tempus non augue.",
-      image: "/api/placeholder/600/400",
+        "This robot dog has been prepared. It competed with a real dog in the trial.",
+      image: "/images/img/svanM2IITK.jpeg",
       author: {
-        name: "Wade Warren",
+        name: "Sakshi",
         avatar: "/api/placeholder/40/40",
       },
-      date: "July 19, 2022",
-      link: "/blog/improve-user-engagement",
+      date: "Feb 7, 2024",
+      link: "https://hindi.news18.com/news/uttar-pradesh/kanpur-indias-first-robot-dog-will-help-in-intelligence-for-army-and-police-8165162.html",
     },
     {
       id: 5,
-      category: "Article",
-      title: "The future of AI in business",
+      category: "Video",
+      title: "UP This Hour: This robot is acting like a dog. Svan M2 Robot || IIT Kanpur",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nisi quis viverra quisque arcu id risus in. Quis adipiscing hendrerit sed cras amet, tempus non augue.",
-      image: "/api/placeholder/600/400",
+        "Swan M-2: This robot is very useful. This robot runs on battery whose battery backup is about one hour. There is a camera installed in it for its monitoring and it is operated remotely. This robot can also jump when needed.",
+      image: "/images/media.jpg",
       author: {
-        name: "Wade Warren",
+        name: "Baten UP Ki ",
         avatar: "/api/placeholder/40/40",
       },
-      date: "July 19, 2022",
-      link: "/blog/ai-in-business",
+      date: "May 28, 2024",
+      link: "https://www.youtube.com/watch?v=ZNp3axeLv3g",
     },
     {
       id: 6,
-      category: "Case Study",
-      title: "Building scalable systems",
+      category: "Article",
+      title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nisi quis viverra quisque arcu id risus in. Quis adipiscing hendrerit sed cras amet, tempus non augue.",
-      image: "/api/placeholder/600/400",
+        "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
+        image: "/images/img/Img1_lab.jpeg",
       author: {
-        name: "Wade Warren",
+        name: "Bhaskar",
         avatar: "/api/placeholder/40/40",
       },
-      date: "July 19, 2022",
-      link: "/blog/scalable-systems",
+      date: "March 20, 2024",
+      link: "https://www.bhaskar.com/local/uttar-pradesh/kanpur/news/iit-kanpur-made-dog-robot-132756408.html",
     },
   ];
 
@@ -183,10 +183,10 @@ const BlogPage = () => {
   };
 
   return (
-    <section className="py-24 bg-white font-almirego">
+    <section className="py-24 bg-white font-poppins">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-almirego">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
             Latest Insights
           </h2>
           <p className="text-lg text-gray-600">

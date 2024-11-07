@@ -1,25 +1,29 @@
-'use client'
+"use client";
 
-import { useState, useEffect, useCallback, useRef } from 'react'
-import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import { useState, useEffect, useCallback, useRef } from "react";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import industrialInspection from "../../../public/robot/m2.1.png";
+import versatileLogistics from "../../../public/robot/m2.2.png";
+import preciseManipulation from "../../../public/robot/m2.3.png";
 
 const images = [
   {
-    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201%20(3)-k3rSu9xLR8BrwSvnAevOUxgyF6NpzJ.png',
+    url: industrialInspection,
     alt: 'xTerra Quadruped Robot',
     heading: 'INDUSTRIAL INSPECTION',
     description: 'Our robots efficiently handle inspections in hazardous areas, ensuring predictive maintenance and enhancing security across industrial and urban environments.'
   },
   {
-    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201%20(1)-36mkS5Im1CoxTw8WGaJpDCcGiNboAb.png',
+    url: versatileLogistics,
     alt: 'xTerra Robot with Payload',
     heading: 'VERSATILE LOGISTICS',
     description: 'Svan can move items effortlessly, even on slopes and stairs. They boost efficiency in logistics, handling tasks like warehouse operations, last-mile delivery, and military logistics in challenging terrains'
   },
   {
-    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201%20(2)-BoweMjRPnJP5oqjUn09wM6jmYxqTuH.png',
+    url: preciseManipulation,
     alt: 'xTerra Robot with Robotic Arm',
     heading: 'PRECISE MANIPULATION',
     description: 'Our robots with manipulators excel in tasks requiring precision, such as factory maintenance, precision farming, and sample collection for research, combining advanced mobility with dexterous control'
@@ -57,15 +61,7 @@ export default function Component() {
     return () => clearInterval(timer)
   }, [isPlaying, goToNextSlide])
 
-  useEffect(() => {
-    const preloadImages = () => {
-      images.forEach((image) => {
-        const img = new Image()
-        img.src = image.url
-      })
-    }
-    preloadImages()
-  }, [])
+  // Remove the preloadImages effect since Next.js Image handles this automatically
 
   const handleKeyDown = useCallback((event) => {
     if (event.key === 'ArrowLeft') {
@@ -115,23 +111,52 @@ export default function Component() {
           )}
           aria-hidden={index !== currentIndex}
         >
-          <img
-            src={image.url}
-            alt={image.alt}
-            className="w-full h-full object-contain"
-            loading={index === 0 ? "eager" : "lazy"}
-          />
-          <div className="container mx-auto p-4 mt-12 sm:mt-16 md:mt-12 lg:mt-12 absolute inset-0 flex flex-col items-center justify-between">
-            <h2 className="font-almirego font-semibold text-3xl sm:text-4xl md:text-5xl text-center max-w-5xl mx-auto tracking-wider text-primary backdrop-blur-lg">
-              {image.heading}
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-center max-w-5xl mx-auto text-primary-foreground bg-primary bg-opacity-80 p-4 rounded-lg backdrop-blur-md">
-              {image.description}
-            </p>
+          <div className="container mx-auto h-full px-4">
+            {/* Main content wrapper with responsive layout */}
+            <div className="flex flex-col md:flex-row h-full">
+              {/* Text Content */}
+              <div className="w-full md:w-1/2 md:pr-8 z-10 
+                  flex flex-col justify-center
+                  pt-20 pb-8 md:py-0 order-1 md:order-1">
+                <h2 className="font-poppins font-semibold 
+                    text-3xl sm:text-4xl md:text-5xl 
+                    tracking-wider text-primary mb-6
+                    text-center md:text-left">
+                  {image.heading}
+                </h2>
+                <p className="text-lg sm:text-xl md:text-2xl 
+                    text-primary-foreground bg-primary bg-opacity-80 
+                    p-4 rounded-lg backdrop-blur-md
+                    text-center md:text-left">
+                  {image.description}
+                </p>
+              </div>
+              
+              {/* Image Container */}
+              <div className="w-full md:w-1/2 relative 
+                  h-[50vh] md:h-full 
+                  order-2 md:order-1">
+                <div className="absolute inset-0 flex items-center justify-center md:justify-end">
+                  <div className="relative w-[90%] h-[90%]">
+                    <Image
+                      src={image.url}
+                      alt={image.alt}
+                      fill
+                      priority={index === 0}
+                      quality={100}
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       ))}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-20">
+
+      {/* Navigation Dots */}
+      <div className="absolute bottom-4 md:bottom-8 left-0 right-0 flex justify-center space-x-2 z-20">
         {images.map((_, index) => (
           <Button
             key={index}
@@ -145,30 +170,34 @@ export default function Component() {
           />
         ))}
       </div>
+
+      {/* Navigation Buttons */}
       <Button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-20"
+        className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 z-20"
         onClick={goToPreviousSlide}
         aria-label="Previous slide"
         variant="ghost"
       >
-        <ChevronLeft className="h-8 w-8" />
+        <ChevronLeft className="h-6 w-6 md:h-8 md:w-8" />
       </Button>
+
       <Button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20"
+        className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 z-20"
         onClick={goToNextSlide}
         aria-label="Next slide"
         variant="ghost"
       >
-        <ChevronRight className="h-8 w-8" />
+        <ChevronRight className="h-6 w-6 md:h-8 md:w-8" />
       </Button>
+
       <Button
-        className="absolute top-4 right-4 z-20"
+        className="absolute top-2 md:top-4 right-2 md:right-4 z-20"
         onClick={togglePlayPause}
         aria-label={isPlaying ? "Pause autoplay" : "Start autoplay"}
         variant="ghost"
       >
-        {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
+        {isPlaying ? <Pause className="h-5 w-5 md:h-6 md:w-6" /> : <Play className="h-5 w-5 md:h-6 md:w-6" />}
       </Button>
     </div>
-  )
+  );
 }

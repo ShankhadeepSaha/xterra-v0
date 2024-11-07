@@ -112,7 +112,7 @@ export default function Contact() {
       {/* Title Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center text-center mb-8">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 font-almirego">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 font-poppins">
             Contact Us
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-tight max-w-2xl">
@@ -133,7 +133,7 @@ export default function Contact() {
       {/* Contact Form Section */}
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-almirego">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
             Send Us a Message
           </h2>
           <p className="text-lg text-gray-600">
@@ -247,7 +247,7 @@ export default function Contact() {
       {/* Map Section */}
       <div className="w-full py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-almirego font-normal text-[#101820] mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-normal text-[#101820] mb-6">
             Our Location
           </h2>
           <div className="w-full h-[400px] sm:h-[500px] md:h-[600px]">

@@ -8,7 +8,7 @@ function ValueCard({value, title }) {
           <div className="flex space-x-2 text-xs sm:text-sm">
             <div className="rounded-full border border-white px-2 sm:px-4 py-1 bg-white text-black font-bold">{value}</div>
           </div>
-          <div className="font-almirego font-normal leading-tight text-lg sm:text-xl md:text-2xl lg:text-3xl">
+          <div className="font-poppins font-normal leading-tight text-lg sm:text-xl md:text-2xl lg:text-3xl">
             {title}
           </div>
         </div>
