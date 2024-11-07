@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Footercurve from "@/components/footer/Footercurve";
+import MRLIcon from "../../../public/images/companylogo/mrl.png"
 
 const EMAIL = "info@xterrarobotics.com";
 const NAVIGATION_LINKS = [
@@ -14,26 +16,37 @@ const NAVIGATION_LINKS = [
   { name: "Media", path: "/media" },
   { name: "Contact", path: "/contact" },
 ];
+
 const SOCIAL_LINKS = [
   {
     name: "Linkedin",
     url: "https://www.linkedin.com/company/xterra-robotics/",
     icon: FaLinkedin,
+    isLocal: false
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/xterrarobotics/",
     icon: FaInstagram,
+    isLocal: false
   },
   {
     name: "X",
     url: "https://twitter.com/xterrarobotics",
     icon: FaXTwitter,
+    isLocal: false
   },
   {
     name: "Youtube",
     url: "https://www.youtube.com/@xTerraRobotics",
     icon: FaYoutube,
+    isLocal: false
+  },
+  {
+    name: "MRL",
+    url: "https://mrl-iitk.github.io/",
+    icon: MRLIcon,
+    isLocal: true
   },
 ];
 
@@ -140,7 +153,7 @@ const Address = () => (
 
 const SocialLinks = () => (
   <div className="flex flex-wrap gap-6">
-    {SOCIAL_LINKS.map(({ name, url, icon: Icon }, index) => (
+    {SOCIAL_LINKS.map(({ name, url, icon: Icon, isLocal }, index) => (
       <a
         key={index}
         href={url}
@@ -149,7 +162,17 @@ const SocialLinks = () => (
         className="hover:opacity-70 transition-opacity duration-300"
         aria-label={`Visit our ${name} page`}
       >
-        <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+        {isLocal ? (
+          <Image
+            src={Icon}
+            alt={`${name} Icon`}
+            width={32}
+            height={32}
+            className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain"
+          />
+        ) : (
+          <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+        )}
       </a>
     ))}
   </div>

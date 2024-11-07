@@ -131,7 +131,7 @@ const BlogPage = () => {
       title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
       description:
         "This robot dog has been prepared. It competed with a real dog in the trial.",
-      image: "/images/careers/team.webp",
+      image: "/images/img/svanM2IITK.jpeg",
       author: {
         name: "Sakshi",
         avatar: "/api/placeholder/40/40",
@@ -159,7 +159,7 @@ const BlogPage = () => {
       title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       description:
         "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
-        image: "/images/careers/team2.webp",
+        image: "/images/img/Img1_lab.jpeg",
       author: {
         name: "Bhaskar",
         avatar: "/api/placeholder/40/40",

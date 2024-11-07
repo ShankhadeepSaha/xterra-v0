@@ -254,19 +254,19 @@ export default function Home() {
                 </div>
                 <div
                   ref={scrollTextRef}
-                  className="absolute top-16 text-white text-base sm:text-lg font-light tracking-wider uppercase"
+                  className="absolute text-center text-white text-base sm:text-lg font-light tracking-wider uppercase"
                 >
                   Scroll Down
                 </div>
                 <div
                   ref={firstTextRef}
-                  className="absolute top-16 text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
+                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
                 >
                   Exploring the Future of Robotics
                 </div>
                 <div
                   ref={secondTextRef}
-                  className="absolute top-16 text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
+                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
                 >
                   Innovation in Motion
                 </div>
