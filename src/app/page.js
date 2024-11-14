@@ -52,8 +52,8 @@ export default function Home() {
   };
 
   const preloadImages = useCallback(async () => {
-    const frameCount = isMobile ? 85 : 170;
-    const step = isMobile ? 2 : 1;
+    const frameCount = isMobile ? 107 : 107;
+    const step = isMobile ? 1 : 1;
     const imageSources = Array.from({ length: frameCount }, (_, i) =>
       `/m2/frame_${((i * step) + 1).toString().padStart(4, "0")}.jpeg`
     );
