@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ArrowDownRight } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 export default function Component() {
   const [isMobile, setIsMobile] = useState(false);
@@ -27,9 +27,8 @@ export default function Component() {
 
   return (
     <div className="w-full min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
-      {/* Replace video with image */}
       <img
-        src="/images/img/OutInWild_xTerra.jpeg" // Replace with your image path
+        src="/images/img/OutInWild_xTerra.jpeg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover opacity-50"
       />
@@ -38,17 +37,19 @@ export default function Component() {
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-poppins font-bold mb-8 sm:mb-10 md:mb-12 leading-tight sm:leading-none text-black tracking-tight">
           Leading the Future<br className="hidden sm:inline" /> of Robotics
         </h1>
-        <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-6 max-w-4xl mx-auto">
-          <p className="font-light font-poppins text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 leading-relaxed mb-6 sm:mb-0 sm:flex-1">
+        
+        {/* Modified this section to stack vertically */}
+        <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
+          <p className="font-light font-poppins text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 leading-relaxed mb-8">
             Revolutionizing Robotics: India's Premier Deep-Tech Startup Solving Locomotion Challenges with World-Class Engineering
           </p>
 
           <button
             onClick={scrollToSection}
-            className="bg-black text-white p-3 sm:p-4 md:p-5 rounded-full transition-all duration-300 hover:bg-gray-800 hover:scale-110 flex-shrink-0 shadow-lg hover:shadow-xl"
+            className="bg-black text-white p-3 sm:p-4 md:p-5 rounded-full transition-all duration-300 hover:bg-gray-800 hover:scale-110 shadow-lg hover:shadow-xl"
             aria-label="Scroll to expertise section"
           >
-            <ArrowDownRight
+            <ArrowDown
               size={isMobile ? 20 : 24}
               strokeWidth={2}
               className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"
