@@ -27,11 +27,11 @@ export default function Component() {
 
   return (
     <div className="w-full min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
-      <img
-        src="/images/img/OutInWild_xTerra.jpeg"
+      {/* <img
+        src="/images/bg.png"
         alt="Background"
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
-      />
+        className="absolute inset-0 w-full h-full object-cover opacity-100"
+      /> */}
       
       <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-12 sm:py-16 md:py-20 lg:py-24 text-center max-w-7xl mx-auto">
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-poppins font-bold mb-8 sm:mb-10 md:mb-12 leading-tight sm:leading-none text-black tracking-tight">
