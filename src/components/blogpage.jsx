@@ -85,39 +85,42 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
-      category: "Article",
-      title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
+      category: "Video",
+      title:
+        "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
       description:
         "This robot dog has been prepared. It competed with a real dog in the trial.",
       image: "/images/iitk.jpg",
       author: {
-        name: "Sakshi",
+        name: "Times of India",
         avatar: "/api/placeholder/40/40",
       },
-      date: "Feb 7, 2024",
-      link: "https://hindi.news18.com/news/uttar-pradesh/kanpur-indias-first-robot-dog-will-help-in-intelligence-for-army-and-police-8165162.html",
+      date: "Nov 13, 2024",
+      link: "https://timesofindia.indiatimes.com/city/kanpur/innovative-startups-from-iit-kanpurs-siic-transforming-defence-robotics-and-semiconductor-industries/articleshow/115189662.cms",
     },
     {
       id: 2,
-      category: "Video",
-      title: "UP This Hour: This robot is acting like a dog. Svan M2 Robot || IIT Kanpur",
+      category: "Article",
+      title:
+        "IIT Kanpur students then showed awesome, crafted robotic dog, learn specialty",
       description:
-        "Swan M-2: This robot is very useful. This robot runs on battery whose battery backup is about one hour. There is a camera installed in it for its monitoring and it is operated remotely. This robot can also jump when needed.",
-      image: "/images/Thermal.png",
+        "IIT Kanpur students have designed a robot dog equipped with technical facilities that is capable of going to every dangerous place. This dog can carry five forts.",
+      image: "/images/team/1.png",
       author: {
-        name: "Baten UP Ki ",
+        name: "ABP Live ",
         avatar: "/api/placeholder/40/40",
       },
-      date: "May 28, 2024",
-      link: "https://www.youtube.com/watch?v=ZNp3axeLv3g",
+      date: "Nov 12, 2024",
+      link: "https://www.abplive.com/states/up-uk/iit-kanpur-students-prepared-robotic-dog-will-protect-the-house-ann-2821509",
     },
     {
       id: 3,
       category: "Article",
-      title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
+      title:
+        "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       description:
         "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
-        image: "/images/Public.png",
+      image: "/images/Public.png",
       author: {
         name: "Bhaskar",
         avatar: "/api/placeholder/40/40",
@@ -128,44 +131,46 @@ const BlogPage = () => {
     {
       id: 4,
       category: "Article",
-      title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
+      title: "IIT Kanpur innovates to add to defense infra of India",
       description:
-        "This robot dog has been prepared. It competed with a real dog in the trial.",
+        "The Start-up Incubation and Innovation Centre (SIIC) at IIT Kanpur, one of India’s oldest and most distinguished technology business incubators founded in 2000, today showcased three pioneering start-ups, VU Dynamics, xTerra Robotics, and Ananant Systems .",
       image: "/images/img/svanM2IITK.jpeg",
       author: {
-        name: "Sakshi",
+        name: "The Lucknow Tribune",
         avatar: "/api/placeholder/40/40",
       },
-      date: "Feb 7, 2024",
-      link: "https://hindi.news18.com/news/uttar-pradesh/kanpur-indias-first-robot-dog-will-help-in-intelligence-for-army-and-police-8165162.html",
+      date: "Nov 12, 2024",
+      link: "https://thelucknowtribune.org/iit-kanpur-innovates-to-add-to-defense-infra-of-india/",
     },
     {
       id: 5,
-      category: "Video",
-      title: "UP This Hour: This robot is acting like a dog. Svan M2 Robot || IIT Kanpur",
+      category: "Article",
+      title:
+        "IIT Kanpur’s Startup Incubation and Innovation Centre Showcases Groundbreaking Startups in Defense, Robotics, and Semiconductor Technologies",
       description:
-        "Swan M-2: This robot is very useful. This robot runs on battery whose battery backup is about one hour. There is a camera installed in it for its monitoring and it is operated remotely. This robot can also jump when needed.",
-      image: "/images/media.jpg",
+        "The Startup Incubation and Innovation Centre, IIT Kanpur (incubatoriitk), one of India’s oldest and most distinguished technology business incubators founded in 2000, showcased three pioneering startups, VU Dynamics, xTerra Robotics, and Ananant Systems, engaged in developing breakthrough technologies in defense, robotics, and semiconductor infrastructure. ",
+      image: "/images/iitk.jpg",
       author: {
-        name: "Baten UP Ki ",
+        name: "IIT Kanpur",
         avatar: "/api/placeholder/40/40",
       },
-      date: "May 28, 2024",
-      link: "https://www.youtube.com/watch?v=ZNp3axeLv3g",
+      date: "Nov 13, 2024",
+      link: "https://www.linkedin.com/posts/indian-institute-of-technology-kanpur_startupindia-startups-innovation-activity-7262076583060938753-N3_j/?utm_source=share&utm_medium=member_android",
     },
     {
       id: 6,
-      category: "Article",
-      title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
+      category: "Video",
+      title:
+        "IIT Kanpur News: What did the IIT Kanpur students make jokingly?",
       description:
-        "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
-        image: "/images/img/Img1_lab.jpeg",
+        "IIT Kanpur students have developed a robot dog that can easily reach dangerous places. This robot has been named M-2, and it looks like a dog, with movements similar to that of a dog. The robot can rotate 360 degrees and can carry up to 5 kg of weight to any location.",
+      image: "/images/img/Img1_lab.jpeg",
       author: {
-        name: "Bhaskar",
+        name: "UP Tak",
         avatar: "/api/placeholder/40/40",
       },
-      date: "March 20, 2024",
-      link: "https://www.bhaskar.com/local/uttar-pradesh/kanpur/news/iit-kanpur-made-dog-robot-132756408.html",
+      date: "Nov 12, 2024",
+      link: "https://www.youtube.com/watch?v=bs-yE2_rxrQ",
     },
   ];
 

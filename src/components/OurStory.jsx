@@ -3,19 +3,68 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 
 function OurStory() {
+  // Updated logos array with custom dimensions for each logo
   const logos = [
-    { src: "/images/companylogo/Ansys.svg", alt: "Ansys logo" },
-    { src: "/images/companylogo/cadfem.svg", alt: "CADFEM logo" },
-    { src: "/images/companylogo/eta.png", alt: "ETA logo" },
-    { src: "/images/companylogo/google.png", alt: "Google logo" },
-    { src: "/images/companylogo/iitk.png", alt: "IITK logo" },
-    { src: "/images/companylogo/nvidia.png", alt: "Nvidia logo" },
-    { src: "/images/companylogo/mrl.png", alt: "MRL logo" },
-    { src: "/images/companylogo/GATES_APAC_Logo.jpeg", alt: "GATES APAC logo" },
-    { src: "/images/companylogo/IHFC_IITD.jpg", alt: "IHFC IITD logo" },
-    { src: "/images/companylogo/StartInUP.jpeg", alt: "StartInUP logo" },
-    { src: "/images/companylogo/Meity_Startup_Hub.png", alt: "Meity Startup Hub logo" },
-    { src: "/images/companylogo/SIIC_Logo.png", alt: "SIIC logo"},
+    { 
+      src: "/images/companylogo/ca.png", 
+      alt: "Ansys logo",
+      width: 120,
+      height: 120
+    },
+    { 
+      src: "/images/companylogo/CloudforStartups.png", 
+      alt: "Google logo",
+      width: 200,
+      height: 140
+    },
+    { 
+      src: "/images/companylogo/iitk copy.png", 
+      alt: "IITK logo",
+      width: 120,
+      height: 100
+    },
+    { 
+      src: "/images/companylogo/NVIDIA.png", 
+      alt: "Nvidia logo",
+      width: 180,
+      height: 120
+    },
+    { 
+      src: "/images/companylogo/MRL_LOGO.png", 
+      alt: "MRL logo",
+      width: 150,
+      height: 120
+    },
+    { 
+      src: "/images/companylogo/GATES.png", 
+      alt: "GATES APAC logo",
+      width: 160,
+      height: 100
+    },
+    { 
+      src: "/images/companylogo/IHFC IITD.png", 
+      alt: "IHFC IITD logo",
+      width: 140,
+      height: 120
+    },
+    { 
+      src: "/images/companylogo/START IN UP.png", 
+      alt: "StartInUP logo",
+      width: 170,
+      height: 120
+    },
+    { 
+      src: "/images/companylogo/Meity_Startup_Hub.png", 
+      alt: "Meity Startup Hub logo",
+      width: 190,
+      height: 95
+    },
+    { 
+      src: "/images/companylogo/SIIC_Logo.png", 
+      alt: "SIIC logo",
+      width: 220,
+      height: 120
+    },
   ];
 
   const scrollRef = useRef(null);
@@ -41,20 +90,26 @@ function OurStory() {
             ref={scrollRef}
             className="flex animate-scroll"
             style={{
-              width: 'calc(250px * 24)',
+              width: 'calc(250px * 20)', // Adjusted for 10 logos × 2
             }}
           >
             {[...logos, ...logos].map((logo, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 w-[250px] px-4 flex items-center justify-center h-[100px]"
+                className="flex-shrink-0 w-[250px] px-4 flex items-center justify-center"
               >
-                <div className="relative w-[120px] h-[120px]">
+                <div 
+                  className="relative"
+                  style={{
+                    width: `${logo.width}px`,
+                    height: `${logo.height}px`
+                  }}
+                >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
                     fill
-                    sizes="120px"
+                    sizes={`${Math.max(logo.width, logo.height)}px`}
                     className="object-contain"
                     style={{ maxWidth: '100%', height: '100%' }}
                   />

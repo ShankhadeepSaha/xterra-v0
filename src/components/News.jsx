@@ -67,22 +67,22 @@ const News = () => {
     {
       id: 1,
       category: "Press",
-      title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
+      title: "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
       summary:
-        "This robot dog has been prepared. It competed with a real dog in the trial.",
-      date: "Feb 7, 2024",
+        "XTerra Robotics, established in 2023 at the start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, is an innovative Indian start-up focused on robotics and artificial intelligence. The company specializes in developing autonomous-legged robots, aiming to enhance efficiency, safety, and speed in various tasks.",
+      date: "Nov 13, 2024",
       readTime: 3,
-      link: "https://hindi.news18.com/news/uttar-pradesh/kanpur-indias-first-robot-dog-will-help-in-intelligence-for-army-and-police-8165162.html",
+      link: "https://timesofindia.indiatimes.com/city/kanpur/innovative-startups-from-iit-kanpurs-siic-transforming-defence-robotics-and-semiconductor-industries/articleshow/115189662.cms",
     },
     {
       id: 2,
       category: "Press",
-      title: "UP This Hour: This robot is acting like a dog. Svan M2 Robot || IIT Kanpur",
+      title: "Robot Dog: Even terrorists hiding in mountain caves will not be able to escape, IIT Kanpur has created a smart robot dog",
       summary:
-        "Swan M-2: This robot is very useful. This robot runs on battery whose battery backup is about one hour. There is a camera installed in it for its monitoring and it is operated remotely. This robot can also jump when needed.",
-      date: "May 28, 2024",
+        "IIT Kanpur has created the country's first dog robot. Which will work for the army, police and investigation agencies. This is India's first static robot, which will monitor the movement of enemies on the border as well as capture their movements. Let's know what are the special features of this robot dog.",
+      date: "Nov 12, 2024",
       readTime: 4,
-      link: "https://www.youtube.com/watch?v=ZNp3axeLv3g",
+      link: "https://zeenews.india.com/hindi/india/up-uttarakhand/kanpur/photo-gallery-iit-kanpur-students-created-smart-robot-dog-special-work-will-do-for-indian-army/2510978/-2510988",
     },
     {
       id: 3,
@@ -90,9 +90,9 @@ const News = () => {
       title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       summary:
         "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
-      date: "March 20, 2024",
+      date: "Nov 12, 2024",
       readTime: 7,
-      link: "https://www.bhaskar.com/local/uttar-pradesh/kanpur/news/iit-kanpur-made-dog-robot-132756408.html",
+      link: "https://www.abplive.com/states/up-uk/iit-kanpur-students-prepared-robotic-dog-will-protect-the-house-ann-2821509",
     }
   ];
 
