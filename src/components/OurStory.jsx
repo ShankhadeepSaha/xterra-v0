@@ -12,7 +12,7 @@ function OurStory() {
       height: 120
     },
     { 
-      src: "/images/companylogo/CloudforStartups.png", 
+      src: "/images/companylogo/google.svg", 
       alt: "Google logo",
       width: 200,
       height: 140
@@ -26,8 +26,8 @@ function OurStory() {
     { 
       src: "/images/companylogo/NVIDIA.png", 
       alt: "Nvidia logo",
-      width: 180,
-      height: 120
+      width: 220,
+      height: 140
     },
     { 
       src: "/images/companylogo/MRL_LOGO.png", 
@@ -62,8 +62,8 @@ function OurStory() {
     { 
       src: "/images/companylogo/SIIC_Logo.png", 
       alt: "SIIC logo",
-      width: 220,
-      height: 120
+      width: 280,
+      height: 140
     },
   ];
 
