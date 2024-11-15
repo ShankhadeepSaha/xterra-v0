@@ -28,7 +28,7 @@ export default function Component() {
   return (
     <div className="w-full h-screen relative flex flex-col items-center justify-between overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
       <img
-        src="/images/3.jpg"
+        src="/images/out.png"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover opacity-100"
       />
