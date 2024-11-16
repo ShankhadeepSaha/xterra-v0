@@ -6,10 +6,10 @@ function OurStory() {
   // Updated logos array with custom dimensions for each logo
   const logos = [
     { 
-      src: "/images/companylogo/ca.png", 
+      src: "/images/companylogo/ca2.png", 
       alt: "Ansys logo",
       width: 120,
-      height: 120
+      height: 90
     },
     { 
       src: "/images/companylogo/google.svg", 
@@ -24,7 +24,7 @@ function OurStory() {
       height: 100
     },
     { 
-      src: "/images/companylogo/NVIDIA.png", 
+      src: "/images/companylogo/nvidia.png", 
       alt: "Nvidia logo",
       width: 220,
       height: 140
@@ -36,19 +36,19 @@ function OurStory() {
       height: 110
     },
     { 
-      src: "/images/companylogo/GATES.png", 
+      src: "/images/companylogo/GATES_APAC_Logo.jpeg", 
       alt: "GATES APAC logo",
       width: 160,
       height: 100
     },
     { 
-      src: "/images/companylogo/IHFC IITD.png", 
+      src: "/images/companylogo/IHFC_IITD.jpg", 
       alt: "IHFC IITD logo",
       width: 140,
       height: 120
     },
     { 
-      src: "/images/companylogo/START IN UP.png", 
+      src: "/images/companylogo/StartInUP.jpeg", 
       alt: "StartInUP logo",
       width: 170,
       height: 120
