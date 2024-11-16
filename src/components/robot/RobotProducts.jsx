@@ -20,7 +20,7 @@ const ImageCarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] overflow-hidden">
+    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] lg:h-[720px] xl:h-[780px] 2xl:h-[820px] overflow-hidden">
       {images.map((image, index) => (
         <div
           key={image}
@@ -73,7 +73,7 @@ function ImageCard({
   showLearnMore = true
 }) {
   return (
-    <div className={`${bgImage} h-[400px] sm:h-[500px] md:h-[680px] w-full bg-cover bg-center`}>
+    <div className={`${bgImage} h-[400px] sm:h-[500px] md:h-[680px] lg:h-[720px] xl:h-[780px] 2xl:h-[820px] w-full bg-cover bg-center`}>
       <div className='flex flex-col items-center h-full p-4 pt-8 sm:pt-24 md:pt-32 text-center'>
         <div className={`text-3xl sm:text-4xl md:text-5xl font-semibold font-poppins mb-2`} style={titleStyle}>
           {title}

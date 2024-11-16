@@ -46,7 +46,7 @@ function SectionText() {
       <div className="w-screen overflow-hidden">
         <video 
           ref={videoRef}
-          className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] object-cover"
+          className="w-full h-[400px] sm:h-[500px] md:h-[680px] lg:h-[780px] xl:h-[800px] 2xl:h-[850px] object-cover"
           loop 
           muted 
           playsInline

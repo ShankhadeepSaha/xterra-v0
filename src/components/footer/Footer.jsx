@@ -59,7 +59,7 @@ const scrollItems = [
 export default function Footer() {
   return (
     <>
-      <Footercurve items={scrollItems} duration={40} dotColor="white" />
+      {/* <Footercurve items={scrollItems} duration={40} dotColor="white" /> */}
       <footer className="w-full bg-white">
         <div className="container mx-auto p-4 pb-4 sm:pb-6 md:pb-8 lg:pb-10 flex flex-col justify-between space-y-8 md:space-y-12">
           <EmailSection />

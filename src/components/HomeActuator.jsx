@@ -10,7 +10,7 @@ export default function HomeActuator() {
         {/* Left Image Section */}
         <div className="relative w-full aspect-square overflow-hidden rounded order-last lg:order-first max-w-[500px] mx-auto lg:max-w-none">
           <Image
-            src="/actuator/a2img.png"
+            src="/actuator/f.png"
             alt="xTerra Legged Robot"
             fill
             className="object-cover"

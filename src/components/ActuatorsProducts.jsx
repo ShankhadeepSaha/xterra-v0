@@ -54,7 +54,7 @@ function ImageCard({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className={`${bgImage} h-[400px] sm:h-[500px] md:h-[680px] w-full bg-cover bg-center`}>
+    <div className={`${bgImage} h-[400px] sm:h-[500px] md:h-[680px] lg:h-[720px] xl:h-[780px] 2xl:h-[820px] w-full bg-cover bg-center`}>
       <div className='flex flex-col items-center h-full p-4 pt-16 sm:pt-24 md:pt-32 text-center'>
         <div className={`text-3xl sm:text-4xl md:text-5xl font-semibold font-sans mb-2`} style={titleStyle}>
           {title}
