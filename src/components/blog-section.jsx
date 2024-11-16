@@ -84,36 +84,39 @@ const BlogSection = () => {
   const blogPosts = [
     {
       id: 1,
-      category: "Article",
-      title: "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
+      category: "Video",
+      title:
+        "Start-up Ideas: Robot for Patrolling and Surveillance by IIT Kanpur Students",
       description:
         "This robot dog has been prepared. It competed with a real dog in the trial.",
       image: "/images/iitk.jpg",
       author: {
-        name: "Sakshi",
+        name: "Times of India",
         avatar: "/api/placeholder/40/40",
       },
-      date: "Feb 7, 2024",
-      link: "https://hindi.news18.com/news/uttar-pradesh/kanpur-indias-first-robot-dog-will-help-in-intelligence-for-army-and-police-8165162.html",
+      date: "Nov 13, 2024",
+      link: "https://timesofindia.indiatimes.com/city/kanpur/innovative-startups-from-iit-kanpurs-siic-transforming-defence-robotics-and-semiconductor-industries/articleshow/115189662.cms",
     },
     {
       id: 2,
-      category: "Video",
-      title: "UP This Hour: This robot is acting like a dog. Svan M2 Robot || IIT Kanpur",
+      category: "Article",
+      title:
+        "IIT Kanpur students then showed awesome, crafted robotic dog, learn specialty",
       description:
-        "Swan M-2: This robot is very useful. This robot runs on battery whose battery backup is about one hour. There is a camera installed in it for its monitoring and it is operated remotely. This robot can also jump when needed.",
-      image: "/images/Thermal.png",
+        "IIT Kanpur students have designed a robot dog equipped with technical facilities that is capable of going to every dangerous place. This dog can carry five forts.",
+      image: "/images/team/1.png",
       author: {
-        name: "Baten UP Ki ",
+        name: "ABP Live ",
         avatar: "/api/placeholder/40/40",
       },
-      date: "May 28, 2024",
-      link: "https://www.youtube.com/watch?v=ZNp3axeLv3g",
+      date: "Nov 12, 2024",
+      link: "https://www.abplive.com/states/up-uk/iit-kanpur-students-prepared-robotic-dog-will-protect-the-house-ann-2821509",
     },
     {
       id: 3,
       category: "Article",
-      title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
+      title:
+        "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       description:
         "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
       image: "/images/Public.png",
