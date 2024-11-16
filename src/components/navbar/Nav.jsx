@@ -96,9 +96,18 @@ const Nav = () => {
             {/* Mobile Menu Button */}
             <button 
               onClick={handleMenuToggle}
-              className="lg:hidden text-[#050307] hover:opacity-70 transition-opacity duration-300 menu-button z-50 relative"
+              className="lg:hidden hover:opacity-70 transition-all duration-300 menu-button z-50 relative"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? (
+                <X size={24} className="text-[#050307]" /> 
+              ) : (
+                <Menu 
+                  size={24} 
+                  className={`transition-colors duration-300 ${
+                    hasScrolled ? 'text-[#050307]' : 'text-white'
+                  }`}
+                />
+              )}
             </button>
           </div>
         </div>

@@ -34,13 +34,13 @@ export default function Component() {
       />
 
       {/* Top section with heading and paragraph */}
-      <div className="relative z-10 w-full pt-[15vh] sm:pt-[17vh] md:pt-[20vh]">
+      <div className="relative z-10 w-full pt-[15vh] sm:pt-[17vh] md:pt-[18vh]">
         <div className="w-[90vw] md:w-[85vw] mx-auto flex flex-col items-center">
-          <h1 className="text-[clamp(24px,5vw,80px)] font-poppins font-medium tracking-[-0.02em] leading-[1.1] text-white text-center whitespace-nowrap mb-2">
+          <h1 className="text-[clamp(24px,5vw,80px)] font-poppins font-medium tracking-[-0.02em] leading-[1.1] text-white text-center whitespace-nowrap">
             Leading the Future of Robotics
           </h1>
           <p className="font-poppins text-base sm:text-lg md:text-lg lg:text-2xl 2xl:text-3xl text-white leading-relaxed tracking-[-0.01em] font-light max-w-3xl 2xl:max-w-4xl mt-2 sm:mt-4 text-center">
-            Revolutionizing Robotics: India's Premier Deep-Tech Startup Solving
+            Revolutionizing Robotics: India's Premier Deep-Tech Startup Solving{' '}
             <br className="hidden sm:inline" /> 
             Locomotion Challenges with World-Class Engineering
           </p>
