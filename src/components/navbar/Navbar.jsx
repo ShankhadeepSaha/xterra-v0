@@ -104,7 +104,7 @@ const Navbar = () => {
 
       {/* Mobile Menu - Full Screen Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-40 lg:hidden">
+        <div className="fixed inset-0 bg-gray-50 z-40 lg:hidden">
           <div className="flex flex-col items-center justify-center h-full">
             {/* <a href="/" className="mb-8 flex items-center" onClick={handleMenuToggle}>
               <img src="/images/logo.svg" alt="xterra" className="w-12" />

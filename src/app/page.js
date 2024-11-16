@@ -11,6 +11,7 @@ import Link from "next/link";
 import LeggedRobotics from "@/components/homerobot";
 import HomeActuator from "@/components/HomeActuator";
 import BlogSection from "@/components/blog-section";
+import Nav from "@/components/navbar/Nav";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -235,10 +236,10 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar />
+      <Nav />
       <FutureOrganizations />
 
-      <div ref={imageSequenceRef} className="h-[350vh] relative">
+      <div id="expertise-section" ref={imageSequenceRef} className="h-[350vh] relative">
         <div className="sticky top-0 w-full h-screen">
           {imagesLoaded ? (
             <>
@@ -248,25 +249,25 @@ export default function Home() {
                   ref={textRef}
                   className="text-white text-center max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] opacity-0"
                 >
-                  <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight lg:leading-tight whitespace-pre-line">
+                  <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight lg:leading-tight whitespace-pre-line uppercase">
                     {isMobile ? "Striding\ninto\ntomorrow" : "Striding into\ntomorrow"}
                   </h1>
                 </div>
                 <div
                   ref={scrollTextRef}
-                  className="absolute text-center text-white text-base sm:text-lg font-light tracking-wider uppercase"
+                  className="absolute text-center text-white text-xl sm:text-lg font-light tracking-wider uppercase"
                 >
                   Scroll Down
                 </div>
                 <div
                   ref={firstTextRef}
-                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
+                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium uppercase opacity-0"
                 >
                   Exploring the Future of Robotics
                 </div>
                 <div
                   ref={secondTextRef}
-                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium opacity-0"
+                  className="absolute text-center text-white text-xl sm:text-2xl md:text-3xl font-medium uppercase opacity-0"
                 >
                   Innovation in Motion
                 </div>
@@ -282,7 +283,6 @@ export default function Home() {
 
       <OurStory />
       <div
-        id="expertise-section"
         className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 font-poppins"
       >
         <div className='mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center'>
