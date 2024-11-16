@@ -18,7 +18,7 @@ function OurStory() {
       height: 140
     },
     { 
-      src: "/images/companylogo/iitk copy.png", 
+      src: "/images/companylogo/iitk.png", 
       alt: "IITK logo",
       width: 120,
       height: 100
@@ -30,10 +30,10 @@ function OurStory() {
       height: 140
     },
     { 
-      src: "/images/companylogo/MRL_LOGO.png", 
+      src: "/images/companylogo/mrl.png", 
       alt: "MRL logo",
       width: 150,
-      height: 120
+      height: 110
     },
     { 
       src: "/images/companylogo/GATES.png", 
