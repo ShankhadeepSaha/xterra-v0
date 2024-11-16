@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Footercurve from "@/components/footer/Footercurve";
-import MRLIcon from "../../../public/images/companylogo/mrl.png"
+import MRLIcon from "../../../public/images/companylogo/mrl.png";
 
 const EMAIL = "info@xterrarobotics.com";
 const NAVIGATION_LINKS = [
@@ -22,31 +22,31 @@ const SOCIAL_LINKS = [
     name: "Linkedin",
     url: "https://www.linkedin.com/company/xterra-robotics/",
     icon: FaLinkedin,
-    isLocal: false
+    isLocal: false,
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/xterrarobotics/",
     icon: FaInstagram,
-    isLocal: false
+    isLocal: false,
   },
   {
     name: "X",
     url: "https://twitter.com/xterrarobotics",
     icon: FaXTwitter,
-    isLocal: false
+    isLocal: false,
   },
   {
     name: "Youtube",
     url: "https://www.youtube.com/@xTerraRobotics",
     icon: FaYoutube,
-    isLocal: false
+    isLocal: false,
   },
   {
     name: "MRL",
     url: "https://mrl-iitk.github.io/",
     icon: MRLIcon,
-    isLocal: true
+    isLocal: true,
   },
 ];
 
@@ -121,34 +121,34 @@ const CompanyInfo = () => (
 );
 
 const Address = () => (
-  <>
-    <div className="w-full mb-4">
-      <div className="text-lg sm:text-xl md:text-2xl font-poppins font-normal">
-        xTerra Robotics Pvt Ltd
-      </div>
-      <div className="text-base sm:text-base md:text-base font-poppins font-light mt-2">
-        G-508/11 Avas Vikas No. 1, Panki Road Kalyanpur,
-      </div>
-      <div className="text-base font-poppins font-light mt-2">
-        Avas Vikas Yojna No. 3, Kanpur Nagar,
-      </div>
-      <div className="text-base font-poppins font-light mt-2">
-        Kanpur, Uttar Pradesh, 208017
-      </div>
-      <div className="text-base font-sans font-light mt-2">
-        Alternate Address:
-      </div>
-      <div className="text-base sm:text-base md:text-base font-poppins font-light mt-2">
-        NL 212, Mobile Robotics Lab,
-      </div>
-      <div className="text-base font-poppins font-light mt-2">
-        Department of Mechanical Engineering,
-      </div>
-      <div className="text-base font-poppins font-light mt-2">
-        IIT Kanpur, Kanpur, 208016
-      </div>
+  <div className="w-full mb-4">
+    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-poppins font-medium mb-4">
+      xTerra Robotics Pvt Ltd
+    </h3>
+
+    <div className="space-y-1">
+      <p className="text-sm sm:text-base md:text-lg font-poppins font-light">
+        G-508/11 Avas Vikas No. 1, Panki Road,
+        <br />
+        Kalyanpur, Avas Vikas Yojna No. 3,
+        <br />
+        Kanpur Nagar, Kanpur, Uttar Pradesh, 208017
+      </p>
     </div>
-  </>
+
+    <div className="mt-6">
+      <h4 className="text-sm sm:text-base md:text-lg font-poppins font-medium mb-2">
+        Alternate Address
+      </h4>
+      <p className="text-sm sm:text-base md:text-lg font-poppins font-light">
+        NL 212, Mobile Robotics Lab,
+        <br />
+        Department of Mechanical Engineering,
+        <br />
+        IIT Kanpur, Kanpur, 208016
+      </p>
+    </div>
+  </div>
 );
 
 const SocialLinks = () => (
