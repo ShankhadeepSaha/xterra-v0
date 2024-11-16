@@ -28,25 +28,27 @@ export default function Component() {
   return (
     <div className="w-full h-screen relative flex flex-col items-center justify-between overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
       <img
-        src="/images/out2.png"
+        src="/images/out1.png"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover opacity-100"
       />
 
-      {/* Top section with heading */}
+      {/* Top section with heading and paragraph */}
       <div className="relative z-10 w-full pt-[15vh] sm:pt-[17vh] md:pt-[20vh]">
-        <div className="w-[90vw] md:w-[85vw] mx-auto">
-          <h1 className="text-[clamp(24px,5vw,80px)] font-poppins font-medium tracking-[-0.02em] leading-[1.1] text-white mx-auto text-center whitespace-nowrap">
+        <div className="w-[90vw] md:w-[85vw] mx-auto flex flex-col items-center">
+          <h1 className="text-[clamp(24px,5vw,80px)] font-poppins font-medium tracking-[-0.02em] leading-[1.1] text-white text-center whitespace-nowrap mb-2">
             Leading the Future of Robotics
           </h1>
+          <p className="font-poppins text-base sm:text-lg md:text-lg lg:text-2xl 2xl:text-3xl text-white leading-relaxed tracking-[-0.01em] font-light max-w-3xl 2xl:max-w-4xl mt-2 sm:mt-4 text-center">
+            Revolutionizing Robotics: India's Premier Deep-Tech Startup Solving
+            <br className="hidden sm:inline" /> 
+            Locomotion Challenges with World-Class Engineering
+          </p>
         </div>
       </div>
 
-      {/* Bottom section with paragraph and button */}
+      {/* Bottom section with button */}
       <div className="relative z-10 w-full flex flex-col items-center justify-end pb-16 sm:pb-20">
-        <p className="font-poppins text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl text-white leading-[1.1] tracking-[-0.02em] font-medium max-w-3xl 2xl:max-w-4xl mb-12 px-6 text-center">
-          Revolutionizing Robotics: India's Premier Deep-Tech Startup Solving Locomotion Challenges with World-Class Engineering
-        </p>
         <button
           onClick={scrollToSection}
           className="bg-gray-50 text-black p-3 sm:p-4 md:p-5 rounded-full transition-all duration-300 hover:bg-gray-200 hover:scale-110 shadow-lg hover:shadow-xl"
