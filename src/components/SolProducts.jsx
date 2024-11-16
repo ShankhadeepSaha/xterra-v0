@@ -4,7 +4,7 @@ import Image from "next/image";
 function VideoHero() {
   return (
     <>
-      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] overflow-hidden">
+      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[680px] lg:h-[720px] xl:h-[780px] 2xl:h-[820px] overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay

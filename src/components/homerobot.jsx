@@ -56,7 +56,7 @@ export default function LeggedRobotics() {
         <div className="aspect-square w-full h-full max-w-[500px] mx-auto lg:max-w-none">
           <div className="relative w-full aspect-square overflow-hidden rounded">
             <Image
-              src="/robot/f7.png"
+              src="/robot/homerobot.png"
               alt="xTerra Legged Robot"
               fill
               className="object-cover"
