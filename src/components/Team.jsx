@@ -15,19 +15,19 @@ function Team() {
   const founders = [
     {
       name: "Nimesh Khandelwal",
-      title: "Co-Founder & Software Lead",
+      title: "Co-Founder & Vice President",
       image: "/images/nimesh.svg",
       description: "IIT Kanpur Ph.D. Scholar and PMRF Fellow, specializing in Learning-Based Control. Graduated with a B.Tech in 2020 from MNIT Jaipur."
     },
     {
       name: "Avinash Bhashkar",
-      title: "Co-Founder & Hardware Lead",
+      title: "Co-Founder & Vice President",
       image: "/images/avinash.svg",
       description: "IIT Kanpur Ph.D. Scholar specializing in Hardware Design & Analysis. Gold Medalist from the M.Tech. Batch of 2021 at CAS Lucknow, with further academic experience at IISc Bangalore."
     },
     {
       name: "Amritanshu Manu",
-      title: "Co-Founder & Research Lead",
+      title: "Co-Founder & Vice President",
       image: "/images/manu.png",
       description: "IIT Kanpur Ph.D. Scholar and PMRF Fellow specializing in Planning & Control. Holder of a B.Tech-M.Tech Dual Degree from the 2021 batch at IIT Kanpur."
     },
