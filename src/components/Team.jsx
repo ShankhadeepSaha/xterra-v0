@@ -15,25 +15,25 @@ function Team() {
   const founders = [
     {
       name: "Nimesh Khandelwal",
-      title: "Co-Founder & Vice President",
+      title: "Co-Founder & Vice President Software",
       image: "/images/nimesh.jpeg",
       description: "IIT Kanpur Ph.D. Scholar and PMRF Fellow, specializing in Learning-Based Control. Graduated with a B.Tech in 2020 from MNIT Jaipur."
     },
     {
       name: "Avinash Bhashkar",
-      title: "Co-Founder & Vice President",
+      title: "Co-Founder & Vice President Software",
       image: "/images/avinash.jpeg",
       description: "IIT Kanpur Ph.D. Scholar specializing in Hardware Design & Analysis. Gold Medalist from the M.Tech. Batch of 2021 at CAS Lucknow, with further academic experience at IISc Bangalore."
     },
     {
       name: "Amritanshu Manu",
-      title: "Co-Founder & Vice President",
+      title: "Co-Founder & Vice President Research",
       image: "/images/manu.jpeg",
       description: "IIT Kanpur Ph.D. Scholar and PMRF Fellow specializing in Planning & Control. Holder of a B.Tech-M.Tech Dual Degree from the 2021 batch at IIT Kanpur."
     },
     {
       name: "Aditya Rajawat",
-      title: "Co-Founder and CEO",
+      title: "Co-Founder & CEO",
       image: "/images/apsr.jpeg",
       description: "ADAS Engineer at Jaguar Land Rover, India (2020-23), specializing in Planning & Control. Holds a B.Tech-M.Tech Dual Degree from the 2020 batch of IIT Kanpur."
     },
