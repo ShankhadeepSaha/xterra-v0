@@ -16,37 +16,37 @@ function Team() {
     {
       name: "Nimesh Khandelwal",
       title: "Co-Founder & Vice President",
-      image: "/images/nimesh.svg",
+      image: "/images/nimesh.jpeg",
       description: "IIT Kanpur Ph.D. Scholar and PMRF Fellow, specializing in Learning-Based Control. Graduated with a B.Tech in 2020 from MNIT Jaipur."
     },
     {
       name: "Avinash Bhashkar",
       title: "Co-Founder & Vice President",
-      image: "/images/avinash.svg",
+      image: "/images/avinash.jpeg",
       description: "IIT Kanpur Ph.D. Scholar specializing in Hardware Design & Analysis. Gold Medalist from the M.Tech. Batch of 2021 at CAS Lucknow, with further academic experience at IISc Bangalore."
     },
     {
       name: "Amritanshu Manu",
       title: "Co-Founder & Vice President",
-      image: "/images/manu.png",
+      image: "/images/manu.jpeg",
       description: "IIT Kanpur Ph.D. Scholar and PMRF Fellow specializing in Planning & Control. Holder of a B.Tech-M.Tech Dual Degree from the 2021 batch at IIT Kanpur."
     },
     {
       name: "Aditya Rajawat",
       title: "Co-Founder and CEO",
-      image: "/images/apsr.svg",
+      image: "/images/apsr.jpeg",
       description: "ADAS Engineer at Jaguar Land Rover, India (2020-23), specializing in Planning & Control. Holds a B.Tech-M.Tech Dual Degree from the 2020 batch of IIT Kanpur."
     },
     {
       name: "Mangal Kothari",
       title: "Advisor",
-      image: "/images/mangal.svg",
+      image: "/images/mangal.jpeg",
       description: "Professor in the Department of Aerospace Engineering at IIT Kanpur. Co-Founder of EndureAir Systems Pvt. Ltd. and Founder of Dronavyuh Systems Pvt. Ltd., specializing in end-to-end product development."
     },
     {
       name: "Shakti S. Gupta",
       title: "Director Hardware & Simulation",
-      image: "/images/ssg.svg",
+      image: "/images/ssg.jpeg",
       description: "Professor in the Department of Mechanical Engineering at IIT Kanpur with three decades of teaching and project experience in DRDO and academia. Expert in end-to-end product development."
     }
   ];
