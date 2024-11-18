@@ -6,7 +6,7 @@ function OurStory() {
   // Updated logos array with custom dimensions for each logo
   const logos = [
     { 
-      src: "/images/companylogo/ca2.png", 
+      src: "/images/companylogo/ca2.jpeg", 
       alt: "Ansys logo",
       width: 120,
       height: 90

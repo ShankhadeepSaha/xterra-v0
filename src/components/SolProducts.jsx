@@ -43,21 +43,21 @@ function UseCases() {
         <UseCase
           title="Power Station Inspection"
           description="The Svan M2 revolutionizes power station inspections with its high-definition cameras, thermal imaging, and AI algorithms. It efficiently examines panels, transformers, and hard-to-reach areas, identifying issues early to improve safety and minimize operational disruptions."
-          imageSrc="/images/Power.png"
+          imageSrc="/images/Power.jpeg"
           imageAlt="Construction site assessment"
           reverse={false}
         />
         <UseCase
           title="Construction Survey"
           description="For construction, the Svan M2 provides precise site surveys with HD cameras, LIDAR, and AI. It navigates rugged terrain, performing 3D mapping and capturing accurate measurements, enhancing safety, efficiency, and cost savings in project planning."
-          imageSrc="/images/Construction.png"
+          imageSrc="/images/Construction.jpeg"
           imageAlt="Construction site progress monitoring"
           reverse={true}
         />
         <UseCase
           title="Public Security"
           description="Our Svan M2 robot redefines public security by patrolling public spaces, detecting threats, and analyzing behavior patterns with HD cameras, thermal sensors, and AI. It ensures reliable monitoring and swift response, enhancing safety in complex environments."
-          imageSrc="/images/Public.png"
+          imageSrc="/images/Public.jpeg"
           imageAlt="Construction site assessment"
           reverse={false}
         />

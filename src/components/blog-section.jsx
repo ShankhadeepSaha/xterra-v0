@@ -104,7 +104,7 @@ const BlogSection = () => {
         "IIT Kanpur students then showed awesome, crafted robotic dog, learn specialty",
       description:
         "IIT Kanpur students have designed a robot dog equipped with technical facilities that is capable of going to every dangerous place. This dog can carry five forts.",
-      image: "/images/team/1.png",
+      image: "/images/team/1.jpeg",
       author: {
         name: "ABP Live ",
         avatar: "/api/placeholder/40/40",
@@ -119,7 +119,7 @@ const BlogSection = () => {
         "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       description:
         "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
-      image: "/images/Public.png",
+      image: "/images/Public.jpeg",
       author: {
         name: "Bhaskar",
         avatar: "/api/placeholder/40/40",
