@@ -1,7 +1,5 @@
 "use client";
 import React, { useRef, useEffect } from "react";
-import Image from "next/image";
-import Background from "/public/robot/m2.png";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function Section() {
