@@ -5,9 +5,9 @@ import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import industrialInspection from "../../../public/robot/m2.1.png";
-import versatileLogistics from "../../../public/robot/m2.2.png";
-import preciseManipulation from "../../../public/robot/m2.3.png";
+import industrialInspection from "../../../public/robot/m2.1.jpeg";
+import versatileLogistics from "../../../public/robot/m2.2.jpeg";
+import preciseManipulation from "../../../public/robot/m2.3.jpeg";
 
 const images = [
   {

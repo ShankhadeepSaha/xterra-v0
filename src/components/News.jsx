@@ -67,7 +67,8 @@ const News = () => {
     {
       id: 1,
       category: "Press",
-      title: "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
+      title:
+        "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
       summary:
         "XTerra Robotics, established in 2023 at the start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, is an innovative Indian start-up focused on robotics and artificial intelligence. The company specializes in developing autonomous-legged robots, aiming to enhance efficiency, safety, and speed in various tasks.",
       date: "Nov 13, 2024",
@@ -77,7 +78,8 @@ const News = () => {
     {
       id: 2,
       category: "Press",
-      title: "Robot Dog: Even terrorists hiding in mountain caves will not be able to escape, IIT Kanpur has created a smart robot dog",
+      title:
+        "Robot Dog: Even terrorists hiding in mountain caves will not be able to escape, IIT Kanpur has created a smart robot dog",
       summary:
         "IIT Kanpur has created the country's first dog robot. Which will work for the army, police and investigation agencies. This is India's first static robot, which will monitor the movement of enemies on the border as well as capture their movements. Let's know what are the special features of this robot dog.",
       date: "Nov 12, 2024",
@@ -87,13 +89,14 @@ const News = () => {
     {
       id: 3,
       category: "Press",
-      title: "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
+      title:
+        "India's first robot dog: Will help in intelligence gathering for army and police, IIT Kanpur prepared",
       summary:
         "Dog is said to be the most loyal animal. That is why people keep dogs in their homes so that they can keep an eye on their house and also alert them if any outsider enters the house. Dogs are used by the police in a similar manner.",
       date: "Nov 12, 2024",
       readTime: 7,
       link: "https://www.abplive.com/states/up-uk/iit-kanpur-students-prepared-robotic-dog-will-protect-the-house-ann-2821509",
-    }
+    },
   ];
 
   return (
@@ -117,8 +120,8 @@ const News = () => {
           <Image
             src="/images/stock.jpg"
             alt="Hero image"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             priority
           />
         </div>
