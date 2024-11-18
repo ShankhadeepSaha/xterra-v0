@@ -21,7 +21,7 @@ function Team() {
     },
     {
       name: "Avinash Bhashkar",
-      title: "Co-Founder & Vice President Software",
+      title: "Co-Founder & Vice President Hardware",
       image: "/images/avinash.jpeg",
       description: "IIT Kanpur Ph.D. Scholar specializing in Hardware Design & Analysis. Gold Medalist from the M.Tech. Batch of 2021 at CAS Lucknow, with further academic experience at IISc Bangalore."
     },

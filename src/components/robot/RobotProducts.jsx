@@ -120,50 +120,50 @@ function ImageCard({
 
 function RobotProducts() {
   return (
-    <div className="flex flex-col w-full">
+    <div className='flex flex-col w-full'>
       <div className="sm:px-4">
-        <ImageCarousel />
+      <ImageCarousel />
       </div>
-      <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 sm:px-3 md:px-4 w-full">
-        <ImageCard
-          bgImage="bg-[url('/robot/f10.png')]"
+      <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 sm:px-3 md:px-4 w-full'>
+        <ImageCard 
+          bgImage="bg-[url('/robot/f9.png')]"
           title="SVAN M1"
           subtitle=""
           description="Our first prototype quadruped robot"
           learnMoreLink="/svan-m1"
           buyLink="/buy-svan-m1"
-          titleStyle={{ color: "white" }}
-          subtitleStyle={{ color: "white" }}
-          descriptionStyle={{ color: "white" }}
-          learnMoreStyle={{ backgroundColor: "#4E148C", color: "white" }}
-          buyStyle={{ backgroundColor: "white", color: "#4E148C" }}
+          titleStyle={{ color: 'white' }}
+          subtitleStyle={{ color: 'white' }}
+          descriptionStyle={{ color: 'white' }}
+          learnMoreStyle={{ backgroundColor: '#4E148C', color: 'white' }}
+          buyStyle={{ backgroundColor: 'white', color: '#4E148C' }}
         />
-        <ImageCard
-          bgImage="bg-[url('/robot/f11.png')]"
+        <ImageCard 
+          bgImage="bg-[url('/robot/f7.png')]"
           title="SVAN M2"
           subtitle=""
           description="India's first commercial quadruped robot"
           learnMoreLink="/svan-m2"
           buyLink="/buy-svan-m2"
-          titleStyle={{ color: "black" }}
-          subtitleStyle={{ color: "black" }}
-          descriptionStyle={{ color: "black" }}
-          learnMoreStyle={{ backgroundColor: "#4E148C", color: "white" }}
-          buyStyle={{ backgroundColor: "white", color: "#4E148C" }}
+          titleStyle={{ color: 'black' }}
+          subtitleStyle={{ color: 'black' }}
+          descriptionStyle={{ color: 'black' }}
+          learnMoreStyle={{ backgroundColor: '#4E148C', color: 'white' }}
+          buyStyle={{ backgroundColor: 'white', color: '#4E148C' }}
         />
-        <ImageCard
-          bgImage="bg-[url('/robot/f12.png')]"
+        <ImageCard 
+          bgImage="bg-[url('/robot/s1.png')]"
           title="SVAN S1"
           subtitle="COMING SOON"
           description="Next generation industrial robot"
-          titleStyle={{ color: "black" }}
-          subtitleStyle={{ color: "black" }}
-          descriptionStyle={{ color: "black" }}
+          titleStyle={{ color: 'black' }}
+          subtitleStyle={{ color: 'black'}}
+          descriptionStyle={{ color: 'black' }}
           showLearnMore={false}
         />
       </div>
     </div>
-  );
+  )
 }
 
 export default RobotProducts;
