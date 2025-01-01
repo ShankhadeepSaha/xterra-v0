@@ -161,6 +161,19 @@ function RobotProducts() {
           descriptionStyle={{ color: 'black' }}
           showLearnMore={false}
         />
+        <ImageCard 
+          bgImage="bg-[url('/robot/f7.png')]"
+          title="COBOT C1"
+          subtitle=""
+          description="Revolutionize Automation with Precision and Efficiency"
+          learnMoreLink="/cobot-c1"
+          buyLink="/buy-svan-m2"
+          titleStyle={{ color: 'black' }}
+          subtitleStyle={{ color: 'black' }}
+          descriptionStyle={{ color: 'black' }}
+          learnMoreStyle={{ backgroundColor: '#4E148C', color: 'white' }}
+          buyStyle={{ backgroundColor: 'white', color: '#4E148C' }}
+        />
       </div>
     </div>
   )

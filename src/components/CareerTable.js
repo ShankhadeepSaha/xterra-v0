@@ -59,7 +59,7 @@ const JobCard = ({ job, onApply }) => {
 
       {/* Apply Button */}
       <button
-        onClick={() => onApply(job.title)}
+        onClick={() => onApply(job)} // Pass the entire job object
         className="inline-flex items-center justify-center gap-2 bg-[#101820] text-white px-5 py-2 
           rounded-full text-sm font-medium hover:bg-[#2c3e50] transition-colors duration-300"
       >
@@ -84,7 +84,8 @@ function CareerCards() {
         'Experience with CAD software (preferably SolidWorks)',
         'Strong analytical and problem-solving skills',
         'Knowledge of manufacturing processes'
-      ]
+      ],
+      link: 'https://form.jotform.com/231685424919465' // Unique link for this job
     },
     {
       title: 'Robotics Software Developer',
@@ -96,35 +97,39 @@ function CareerCards() {
         'Experience with ROS (Robot Operating System)',
         'Knowledge of control systems and robotics',
         'Good understanding of software architecture'
-      ]
+      ],
+      link: 'https://form.jotform.com/231685424919465' // Unique link for this job
     },
     {
       title: 'Founder Office (Product Strategy Analyst)',
-      type: 'Internship',
+      type: 'Full-time',
       location: 'In-office',
-      description: 'Conceiving, meticulously designing, and validating innovative mechanical systems to optimise the functionality and performance of our cutting-edge legged robotic solutions.',
+      description: 'Collaborate closely with the CEO and product teams to shape and execute xTerra\’s product strategy, ensuring alignment with the company\'s vision and driving adoption, scaling, and monetization of our cutting-edge robotics solutions.',
       requirements: [
-        'Bachelor\'s degree in Mechanical Engineering or related field',
-        'Experience with CAD software (preferably SolidWorks)',
-        'Strong analytical and problem-solving skills',
-        'Knowledge of manufacturing processes'
-      ]
-    },    {
-      title: 'Design Engineer',
-      type: 'Internship',
+        'Bachelor\'s or Master\'s degree in Robotics, Engineering, or a related field',
+        '2+ years of experience in tech-driven roles such as product management, business strategy, or problem-solving',
+        'Hands-on experience in the robotics industry and customer research',
+        'Excellent written and verbal communication skills for effective cross-functional collaboration and stakeholder engagement'
+      ],
+      link: 'https://www.linkedin.com/posts/xterra-robotics_productstrategy-robotics-ai-activity-7278089755639078914-m0V8?utm_source=share&utm_medium=member_desktop' // Unique link for this job
+    },
+    {
+      title: 'Lead Research Scientist - Embodied AI',
+      type: 'Full-time',
       location: 'In-office',
-      description: 'Conceiving, meticulously designing, and validating innovative mechanical systems to optimise the functionality and performance of our cutting-edge legged robotic solutions.',
+      description: 'Drive cutting-edge advancements in AI and robotics to enable scalable, reliable, and generalizable solutions for legged robotic systems, transforming how robots interact, adapt, and collaborate with humans in complex environments.',
       requirements: [
-        'Bachelor\'s degree in Mechanical Engineering or related field',
-        'Experience with CAD software (preferably SolidWorks)',
-        'Strong analytical and problem-solving skills',
-        'Knowledge of manufacturing processes'
-      ]
+        'Advanced degree (Master’s or PhD) in Computer Science, Robotics, or a related field with a focus on AI/ML or robotics',
+        'Proven experience in developing and deploying Embodied AI systems (2+ years preferred)',
+        'Strong publication record in top AI and robotics conferences',
+        'Exceptional skills in Python and C++, with experience in hardware-software co-design'
+      ],
+      link: 'https://www.linkedin.com/jobs/search/?currentJobId=4109969512&f_C=101393480&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4109969512' // Unique link for this job
     }
   ];
 
-  const handleApply = (jobTitle) => {
-    router.push('https://form.jotform.com/231685424919465');
+  const handleApply = (job) => {
+    router.push(job.link); // Redirect to the job-specific link
   };
 
   return (
