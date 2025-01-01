@@ -68,23 +68,23 @@ const News = () => {
       id: 1,
       category: "Press",
       title:
-        "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
+        "Xterra Robotics Showcases Its Robo Dog For Industrial Security",
       summary:
-        "XTerra Robotics, established in 2023 at the start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, is an innovative Indian start-up focused on robotics and artificial intelligence. The company specializes in developing autonomous-legged robots, aiming to enhance efficiency, safety, and speed in various tasks.",
-      date: "Nov 13, 2024",
+        "XTerra Robotics, a start-up incubated at the Incubation and Innovation Centre (SIIC) of IIT Kanpur, has developed a robotic dog that can be used for industrial security. The robot dog is equipped with a camera and sensors that can detect any unusual activity in the premises.",
+      date: "Nov 18, 2024",
       readTime: 3,
-      link: "https://timesofindia.indiatimes.com/city/kanpur/innovative-startups-from-iit-kanpurs-siic-transforming-defence-robotics-and-semiconductor-industries/articleshow/115189662.cms",
+      link: "https://idrw.org/xterra-robotics-showcases-its-robo-dog-for-industrial-security/",
     },
     {
       id: 2,
       category: "Press",
       title:
-        "Robot Dog: Even terrorists hiding in mountain caves will not be able to escape, IIT Kanpur has created a smart robot dog",
+        "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
       summary:
-        "IIT Kanpur has created the country's first dog robot. Which will work for the army, police and investigation agencies. This is India's first static robot, which will monitor the movement of enemies on the border as well as capture their movements. Let's know what are the special features of this robot dog.",
-      date: "Nov 12, 2024",
-      readTime: 4,
-      link: "https://zeenews.india.com/hindi/india/up-uttarakhand/kanpur/photo-gallery-iit-kanpur-students-created-smart-robot-dog-special-work-will-do-for-indian-army/2510978/-2510988",
+        "xTerra Robotics is at the forefront of developing autonomous legged robots for specialized use. The company, established in 2023 at the Start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, aims to enhance efficiency, safety, and speed in various tasks.",
+      date: "Nov 13, 2024",
+      readTime: 3,
+      link: "https://timesofindia.indiatimes.com/city/kanpur/innovative-startups-from-iit-kanpurs-siic-transforming-defence-robotics-and-semiconductor-industries/articleshow/115189662.cms",
     },
     {
       id: 3,
@@ -96,6 +96,39 @@ const News = () => {
       date: "Nov 12, 2024",
       readTime: 7,
       link: "https://www.abplive.com/states/up-uk/iit-kanpur-students-prepared-robotic-dog-will-protect-the-house-ann-2821509",
+    },
+    {
+      id: 4,
+      category: "Press",
+      title:
+        "IIT Kanpur Innovates To Add To Defense Infra Of India",
+      summary:
+        "The Start-up Incubation and Innovation Centre (SIIC) at IIT Kanpur, one of India’s oldest and most distinguished technology business incubators founded in 2000, today showcased three pioneering start-ups, VU Dynamics, xTerra Robotics, and Ananant Systems.",
+      date: "Nov 12, 2024",
+      readTime: 3,
+      link: "https://thelucknowtribune.org/iit-kanpur-innovates-to-add-to-defense-infra-of-india/",
+    },
+    {
+      id: 5,
+      category: "Press",
+      title:
+        "Robot Dog: Even terrorists hiding in mountain caves will not be able to escape, IIT Kanpur has created a smart robot dog",
+      summary:
+        "IIT Kanpur has created the country's first dog robot. Which will work for the army, police and investigation agencies. This is India's first static robot, which will monitor the movement of enemies on the border as well as capture their movements. Let's know what are the special features of this robot dog.",
+      date: "Nov 12, 2024",
+      readTime: 4,
+      link: "https://zeenews.india.com/hindi/india/up-uttarakhand/kanpur/photo-gallery-iit-kanpur-students-created-smart-robot-dog-special-work-will-do-for-indian-army/2510978/-2510988",
+    },
+    {
+      id: 6,
+      category: "Press",
+      title:
+        "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
+      summary:
+        "XTerra Robotics, established in 2023 at the start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, is an innovative Indian start-up focused on robotics and artificial intelligence. The company specializes in developing autonomous-legged robots, aiming to enhance efficiency, safety, and speed in various tasks.",
+      date: "Nov 12, 2024",
+      readTime: 7,
+      link: "https://www.indiandefensenews.in/2024/11/start-up-xterra-robotics-develops.html",
     },
   ];
 

@@ -4,6 +4,9 @@ import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import Lenis from "lenis";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { useForm, ValidationError } from "@formspree/react";
+import PhoneInput from "react-phone-number-input"; // Import the phone input component
+import "react-phone-number-input/style.css"; // Import the styles
 
 const ContactInfoCard = ({ icon: Icon, title, details }) => {
   return (
@@ -26,13 +29,8 @@ const ContactInfoCard = ({ icon: Icon, title, details }) => {
 };
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState({ type: '', message: '' });
-
+  const [state, handleSubmit] = useForm("xbllzqwv");
+  const [phone, setPhone] = useState(""); // State for phone number
 
   const contactInfo = [
     {
@@ -60,50 +58,6 @@ export default function Contact() {
     }
     requestAnimationFrame(raf)
   }, [])
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus({ type: '', message: '' });
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          company,
-          message,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        setStatus({
-          type: 'success',
-          message: 'Thank you for your message. We will get back to you soon!'
-        });
-        // Reset form
-        setName('');
-        setEmail('');
-        setCompany('');
-        setMessage('');
-      } else {
-        throw new Error(data.message || 'Something went wrong');
-      }
-    } catch (error) {
-      setStatus({
-        type: 'error',
-        message: 'There was an error sending your message. Please try again.'
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <div className="mt-48 flex flex-col w-full">
@@ -152,12 +106,12 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  name="name"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-gray-900"
                   placeholder="Enter your name"
                 />
+                <ValidationError prefix="Name" field="name" errors={state.errors} />
               </div>
 
               {/* Email Field */}
@@ -168,12 +122,31 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-gray-900"
                   placeholder="Enter your email"
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
+              </div>
+
+              {/* Phone Number Field */}
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number *
+                </label>
+                <PhoneInput
+                  id="phone"
+                  name="phone"
+                  international
+                  defaultCountry="IN" // Default country (India)
+                  value={phone}
+                  onChange={setPhone}
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-gray-900"
+                  placeholder="Enter your phone number"
+                />
+                <ValidationError prefix="Phone" field="phone" errors={state.errors} />
               </div>
 
               {/* Company Field (Optional) */}
@@ -184,8 +157,7 @@ export default function Contact() {
                 <input
                   type="text"
                   id="company"
-                  value={company}
-                  onChange={(e) => setCompany(e.target.value)}
+                  name="company"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-gray-900"
                   placeholder="Enter your company name"
                 />
@@ -198,24 +170,20 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  name="message"
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-gray-900 resize-none"
                   placeholder="How can we help you?"
                 />
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
             </div>
 
             {/* Status Message */}
-            {status.message && (
-              <div className={`p-4 rounded-lg ${
-                status.type === 'success' 
-                  ? 'bg-green-50 text-green-800' 
-                  : 'bg-red-50 text-red-800'
-              }`}>
-                {status.message}
+            {state.succeeded && (
+              <div className="p-4 rounded-lg bg-green-50 text-green-800">
+                Thank you for your message. We will get back to you soon!
               </div>
             )}
 
@@ -223,14 +191,14 @@ export default function Contact() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                disabled={loading}
+                disabled={state.submitting}
                 className={`px-8 py-3 bg-[#101820] text-white font-medium rounded-lg 
                   hover:bg-[#2c3e50] transition-colors duration-300 
                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
                   disabled:opacity-50 disabled:cursor-not-allowed
                   flex items-center gap-2`}
               >
-                {loading ? (
+                {state.submitting ? (
                   <>
                     <span className="w-5 h-5 border-t-2 border-white rounded-full animate-spin"></span>
                     Sending...

@@ -97,6 +97,29 @@ function CareerCards() {
         'Knowledge of control systems and robotics',
         'Good understanding of software architecture'
       ]
+    },
+    {
+      title: 'Founder Office (Product Strategy Analyst)',
+      type: 'Internship',
+      location: 'In-office',
+      description: 'Conceiving, meticulously designing, and validating innovative mechanical systems to optimise the functionality and performance of our cutting-edge legged robotic solutions.',
+      requirements: [
+        'Bachelor\'s degree in Mechanical Engineering or related field',
+        'Experience with CAD software (preferably SolidWorks)',
+        'Strong analytical and problem-solving skills',
+        'Knowledge of manufacturing processes'
+      ]
+    },    {
+      title: 'Design Engineer',
+      type: 'Internship',
+      location: 'In-office',
+      description: 'Conceiving, meticulously designing, and validating innovative mechanical systems to optimise the functionality and performance of our cutting-edge legged robotic solutions.',
+      requirements: [
+        'Bachelor\'s degree in Mechanical Engineering or related field',
+        'Experience with CAD software (preferably SolidWorks)',
+        'Strong analytical and problem-solving skills',
+        'Knowledge of manufacturing processes'
+      ]
     }
   ];
 
