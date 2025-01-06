@@ -4,7 +4,7 @@ const images = [
   {
     src: "/images/iitk.jpg", // Replace with your image path
     alt: "Cobot C1 Image 1",
-    className: "col-span-2 row-span-2", // Large section
+    className: "col-span-2 row-span-2",
   },
   {
     src: "/images/iitk.jpg", // Replace with your image path
