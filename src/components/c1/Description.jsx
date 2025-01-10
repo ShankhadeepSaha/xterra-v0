@@ -55,22 +55,6 @@ const specifications = {
 };
 
 const additionalDetails = [
-  // {
-  //   title: "Technical Specifications",
-  //   details: [
-  //     "Number of Axes: 5 + Gripper",
-  //     "Link 1 Length: 11 cm",
-  //     "Link 2 Length: 29 cm",
-  //     "Link 3 Length: 31 cm",
-  //     "Link 4 Length: 20 cm",
-  //     "Link 5 Length: 0 cm",
-  //     "Joint 1 Range: -180° to 180°",
-  //     "Joint 2 Range: -180° to 180°",
-  //     "Joint 3 Range: -135° to 165°",
-  //     "Joint 4 Range: -165° to 170°",
-  //     "Joint 5 Range: -180° to 180°"
-  //   ]
-  // },
   {
     title: "Applications",
     details: [
@@ -79,15 +63,6 @@ const additionalDetails = [
       "Educational and Research Purposes",
       "Light Industrial Tasks"
     ]
-  },
-  {
-    title: "Maintenance",
-    details: [
-      "Clean the robotic arm with a dry cloth regularly.",
-      "Lubricate joints and moving parts every 6 months.",
-      "Check for firmware updates and install them.",
-      "Inspect for wear and tear on gripping surfaces."
-    ]
   }
 ];
 
@@ -95,10 +70,10 @@ export default function Component() {
   const [showMore, setShowMore] = useState(false);
 
   const handleDownload = () => {
-    const pdfUrl = '/pdf/Cobot_C1_User_Manual.pdf';
+    const pdfUrl = '/pdf/Cobot_C1_Product_Brochure.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'Cobot_C1_User_Manual.pdf';
+    link.download = 'Cobot_C1_Product_Brochure.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -157,7 +132,7 @@ export default function Component() {
           onClick={handleDownload}
           className="bg-purple-900 text-white px-4 py-2 rounded-full flex items-center justify-center hover:bg-purple-800 transition-colors"
         >
-          Download Manual
+          Download Brochure
           <Download className="ml-2" />
         </button>
       </div>

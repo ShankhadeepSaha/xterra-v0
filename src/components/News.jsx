@@ -68,9 +68,9 @@ const News = () => {
       id: 1,
       category: "Press",
       title:
-        "Xterra Robotics Showcases Its Robo Dog For Industrial Security",
+        "xTerra Robotics Showcases Its Robo Dog For Industrial Security",
       summary:
-        "XTerra Robotics, a start-up incubated at the Incubation and Innovation Centre (SIIC) of IIT Kanpur, has developed a robotic dog that can be used for industrial security. The robot dog is equipped with a camera and sensors that can detect any unusual activity in the premises.",
+        "xTerra Robotics, a start-up incubated at the Incubation and Innovation Centre (SIIC) of IIT Kanpur, has developed a robotic dog that can be used for industrial security. The robot dog is equipped with a camera and sensors that can detect any unusual activity in the premises.",
       date: "Nov 18, 2024",
       readTime: 3,
       link: "https://idrw.org/xterra-robotics-showcases-its-robo-dog-for-industrial-security/",
@@ -79,7 +79,7 @@ const News = () => {
       id: 2,
       category: "Press",
       title:
-        "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
+        "Start-Up xTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
       summary:
         "xTerra Robotics is at the forefront of developing autonomous legged robots for specialized use. The company, established in 2023 at the Start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, aims to enhance efficiency, safety, and speed in various tasks.",
       date: "Nov 13, 2024",
@@ -123,9 +123,9 @@ const News = () => {
       id: 6,
       category: "Press",
       title:
-        "Start-Up XTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
+        "Start-Up xTerra Robotics Develops Diverse Autonomous Legged Robots For Specialized Use",
       summary:
-        "XTerra Robotics, established in 2023 at the start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, is an innovative Indian start-up focused on robotics and artificial intelligence. The company specializes in developing autonomous-legged robots, aiming to enhance efficiency, safety, and speed in various tasks.",
+        "xTerra Robotics, established in 2023 at the start-up Incubation and Innovation Centre (SIIC) of IIT Kanpur, is an innovative Indian start-up focused on robotics and artificial intelligence. The company specializes in developing autonomous-legged robots, aiming to enhance efficiency, safety, and speed in various tasks.",
       date: "Nov 12, 2024",
       readTime: 7,
       link: "https://www.indiandefensenews.in/2024/11/start-up-xterra-robotics-develops.html",

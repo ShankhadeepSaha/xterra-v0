@@ -9,7 +9,7 @@ const images = [
   {
     src: "/images/iitk.jpg", // Replace with your image path
     alt: "Cobot C1 Image 2",
-    className: "col-span-1 row-span-2", // Small section// Small section// Small section
+    className: "col-span-1 row-span-2", // Small section
   },
   {
     src: "/images/iitk.jpg", // Replace with your image path
@@ -31,7 +31,8 @@ const images = [
 export default function BentoBoxShowcase() {
   return (
     <div className="bg-white text-gray-800 p-4 sm:p-6 md:p-8">
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+      {/* Grid layout for larger screens, stacked layout for small screens */}
+      <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {images.map((image, index) => (
           <div
             key={index}
