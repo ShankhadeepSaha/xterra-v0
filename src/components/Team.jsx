@@ -45,7 +45,7 @@ function Team() {
     },
     {
       name: "Shakti S. Gupta",
-      title: "Director Hardware & Simulation",
+      title: "Chairman",
       image: "/images/ssg.jpeg",
       description: "Professor in the Department of Mechanical Engineering at IIT Kanpur with three decades of teaching and project experience in DRDO and academia. Expert in end-to-end product development."
     }
